@@ -363,6 +363,7 @@ svg.i { display: inline-block; flex: none; }
 .results-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 26px 20px; }
 .video-item { margin: 0; }
 .video-box { position: relative; aspect-ratio: 9 / 16; border: var(--line); box-shadow: var(--shadow); background: var(--ink); overflow: hidden; }
+.video-box video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; background: var(--ink); }
 .video-box iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
 .video-empty { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 12px; text-align: center; color: var(--cream); font: 500 9px/1.5 "DM Mono", monospace; letter-spacing: 0.04em; padding: 12px;
   background: repeating-linear-gradient(135deg, #11110f 0 14px, #1b1b18 14px 28px); }
@@ -1039,7 +1040,8 @@ MOVE.</strong>
   // ---------- Demo & Hasil video (11 kotak YouTube) ----------
   // Isi link YouTube di sini kapan saja. Boleh berupa link penuh, link Shorts,
   // youtu.be, atau cukup ID videonya. Kosongkan ("") = tampil placeholder.
-  var DEMO_VIDEO = { title: 'Demo cara kerja aplikasi', youtube: '' };
+  // Demo: video singkat dihosting sendiri (src + poster). Boleh diganti link YouTube (kosongkan src).
+  var DEMO_VIDEO = { title: 'Demo singkat · 55 detik', youtube: '', src: 'video/demo-singkat.mp4', poster: 'video/demo-singkat-poster.jpg' };
   var RESULT_VIDEOS = [
     { title: 'Hasil video 01', youtube: '' },
     { title: 'Hasil video 02', youtube: '' },
@@ -1073,7 +1075,13 @@ MOVE.</strong>
     var box = document.createElement('div');
     box.className = 'video-box' + (land ? ' land' : '');
     var id = youtubeId(item.youtube);
-    if (id) {
+    if (item.src && !id) {
+      var v = document.createElement('video');
+      v.src = item.src; if (item.poster) v.poster = item.poster;
+      v.controls = true; v.playsInline = true; v.preload = 'none';
+      v.setAttribute('playsinline', ''); v.setAttribute('aria-label', item.title);
+      box.appendChild(v);
+    } else if (id) {
       var f = document.createElement('iframe');
       f.src = 'https://www.youtube-nocookie.com/embed/' + id + '?rel=0&playsinline=1';
       f.title = item.title;
