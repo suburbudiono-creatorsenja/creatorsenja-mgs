@@ -1,0 +1,1007 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#fdfbf7">
+<meta name="description" content="Motion Graphic Studio — buat video motion graphic vertikal 9:16 yang siap tampil.">
+<title>Motion Graphic Studio — Bikin Ide Bergerak</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root { --ink: #11110f; --cream: #fdfbf7; --yellow: #ffe600; --coral: #ff6b6b; --teal: #08b8c9; --lime: #baf58c; --line: 3px solid var(--ink); --shadow: 5px 5px 0 var(--ink); }
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body { background: var(--cream); color: var(--ink); font-family: "Plus Jakarta Sans", sans-serif; }
+
+a { color: inherit; text-decoration: none; }
+
+button { font: inherit; color: inherit; }
+
+.wrap { max-width: 1200px; margin: 0px auto; padding-left: 28px; padding-right: 28px; }
+
+.nav { height: 89px; display: flex; align-items: center; justify-content: space-between; border-bottom: var(--line); position: relative; z-index: 3; }
+
+.wordmark { display: flex; flex-direction: column; font-size: 12px; font-weight: 800; line-height: 0.9; letter-spacing: -0.04em; }
+
+.wordmark b { background: var(--yellow); padding: 3px 5px; margin: 2px 0px; width: max-content; }
+
+.nav-links { display: flex; align-items: center; gap: 31px; font-size: 13px; font-weight: 700; }
+
+.nav-links a:not(.button) { transition: opacity 0.2s; }
+
+.nav-links a:not(.button):hover { opacity: 0.55; }
+
+.button { display: inline-flex; align-items: center; justify-content: center; gap: 12px; border: var(--line); box-shadow: var(--shadow); padding: 14px 19px; font-weight: 800; font-size: 13px; transition: transform 0.16s, box-shadow 0.16s; }
+
+.button:hover { transform: translate(3px, 3px); box-shadow: 2px 2px 0 var(--ink); }
+
+.button-dark { background: var(--ink); color: var(--cream); }
+
+.menu-button { display: none; border: 0px; background: transparent; padding: 5px; }
+
+.hero { display: grid; grid-template-columns: 1fr 1.03fr; gap: 70px; padding-top: 88px; padding-bottom: 91px; align-items: center; }
+
+.eyebrow, .section-kicker { font-family: "DM Mono", monospace; font-size: 11px; font-weight: 500; letter-spacing: 0.04em; }
+
+.eyebrow { display: flex; align-items: center; gap: 9px; margin-bottom: 23px; }
+
+.eyebrow-dot { width: 10px; height: 10px; border-radius: 50%; background: var(--coral); border: 2px solid var(--ink); }
+
+.hero h1 { font-size: clamp(48px, 6.2vw, 83px); letter-spacing: -0.08em; line-height: 0.95; margin: 0px; font-weight: 800; }
+
+.hero h1 em, .hero h2 span, .price-copy h2 span, .faq-title h2 span { font-style: normal; background: var(--yellow); padding: 0px 8px 2px; box-decoration-break: clone; -webkit-box-decoration-break: clone; }
+
+.asterisk { font-size: 0.5em; vertical-align: top; margin-left: 5px; }
+
+.hero-text { font-size: 17px; line-height: 1.6; max-width: 450px; margin: 29px 0px 30px; }
+
+.hero-actions { display: flex; align-items: center; gap: 26px; }
+
+.text-link { display: inline-flex; align-items: center; gap: 7px; font-weight: 800; font-size: 13px; border-bottom: 2px solid var(--ink); padding-bottom: 4px; }
+
+.hero-proof { display: flex; align-items: center; gap: 12px; margin-top: 48px; font-family: "DM Mono", monospace; font-size: 10px; line-height: 1.5; }
+
+.proof-avatars { display: flex; }
+
+.proof-avatars i { display: grid; place-items: center; width: 29px; height: 29px; border-radius: 50%; border: 2px solid var(--ink); font-style: normal; margin-left: -5px; font-size: 13px; }
+
+.proof-avatars i:first-child { margin-left: 0px; background: var(--teal); }
+
+.proof-avatars i:nth-child(2) { background: var(--coral); }
+
+.proof-avatars i:nth-child(3) { background: var(--yellow); }
+
+.hero-visual { position: relative; padding: 11px 8px 15px 30px; }
+
+.product-window { border: var(--line); background: white; box-shadow: var(--shadow); position: relative; overflow: hidden; }
+
+.window-topbar { height: 39px; border-bottom: var(--line); display: flex; align-items: center; padding: 0px 13px; gap: 12px; font-family: "DM Mono", monospace; font-size: 9px; }
+
+.window-dots { display: flex; gap: 4px; }
+
+.window-dots i { display: block; width: 8px; height: 8px; border: 1px solid var(--ink); border-radius: 50%; background: var(--coral); }
+
+.window-dots i:nth-child(2) { background: var(--yellow); }
+
+.window-dots i:nth-child(3) { background: var(--lime); }
+
+.window-status { margin-left: auto; color: rgb(51, 129, 93); font-size: 8px; }
+
+.editor-body { display: grid; grid-template-columns: 112px 1fr 112px; min-height: 345px; }
+
+.editor-sidebar, .editor-properties { padding: 18px 11px; border-right: 2px solid var(--ink); }
+
+.editor-properties { border-top: 0px; border-right: 0px; border-bottom: 0px; border-image: none; border-left: 2px solid var(--ink); }
+
+.sidebar-label { font-family: "DM Mono", monospace; font-size: 8px; display: block; margin-bottom: 15px; }
+
+.template { background: transparent; width: 100%; border-width: 0px 0px 1px; border-style: none none solid; border-color: currentcolor currentcolor rgb(200, 200, 200); border-image: none; padding: 10px 0px; display: flex; justify-content: space-between; font-size: 10px; cursor: pointer; text-align: left; }
+
+.template.active { font-weight: 800; border-bottom: 2px solid var(--ink); }
+
+.sidebar-mini-card { background: var(--lime); border: 2px solid var(--ink); display: flex; align-items: center; gap: 7px; padding: 8px; margin-top: 42px; font-size: 9px; font-weight: 800; box-shadow: 2px 2px 0 var(--ink); }
+
+.phone-stage { background: rgb(241, 238, 231); display: grid; place-items: center; position: relative; }
+
+.phone-frame { width: 145px; aspect-ratio: 9 / 16; border: 5px solid var(--ink); border-radius: 12px; padding: 4px; background: var(--ink); box-shadow: 4px 4px 0 var(--ink); }
+
+.phone-art { height: 100%; color: var(--ink); position: relative; overflow: hidden; padding: 18px 12px; display: flex; flex-direction: column; }
+
+.art-launch { background: var(--yellow); }
+
+.art-quote { background: var(--coral); }
+
+.art-promo { background: var(--teal); }
+
+.art-kicker, .art-footer { font: 7px "DM Mono", monospace; }
+
+.phone-art strong { font-size: 25px; letter-spacing: -0.1em; line-height: 0.85; white-space: pre; margin-top: 30px; z-index: 1; }
+
+.art-orbit { position: absolute; width: 117px; height: 117px; border: 13px solid var(--ink); border-radius: 50%; right: -39px; bottom: 52px; }
+
+.art-footer { margin-top: auto; }
+
+.play-button { position: absolute; bottom: 18px; left: 50%; transform: translateX(-50%); width: 38px; height: 38px; border-radius: 50%; display: grid; place-items: center; background: var(--yellow); border: 2px solid var(--ink); }
+
+.property-row { display: flex; justify-content: space-between; border-bottom: 1px solid rgb(200, 200, 200); padding: 11px 0px; font: 9px "DM Mono", monospace; }
+
+.property-row b { font-family: "Plus Jakarta Sans"; }
+
+.export-line { background: var(--ink); color: white; padding: 10px 7px; display: flex; align-items: center; gap: 5px; font-size: 8px; margin-top: 30px; }
+
+.timeline { height: 37px; border-top: var(--line); display: flex; align-items: center; gap: 14px; padding: 0px 14px; font: 8px "DM Mono", monospace; }
+
+.timeline-track { flex: 1 1 0%; height: 6px; display: flex; gap: 3px; }
+
+.timeline-track b { flex: 1 1 0%; background: var(--yellow); border: 1px solid var(--ink); }
+
+.timeline-track b:nth-child(2) { background: var(--coral); }
+
+.timeline-track b:nth-child(3) { background: var(--teal); }
+
+.sticker { position: absolute; z-index: 1; left: -15px; top: 45px; width: 94px; height: 94px; border-radius: 50%; display: grid; place-items: center; text-align: center; transform: rotate(-12deg); background: var(--coral); border: var(--line); box-shadow: 3px 3px 0 var(--ink); font-size: 10px; line-height: 1.1; font-weight: 800; }
+
+.hero-note { position: absolute; right: -3px; bottom: 0px; font: 9px / 1.35 "DM Mono", monospace; text-align: right; }
+
+.hero-note b { font-family: "Plus Jakarta Sans"; font-size: 12px; }
+
+.marquee { background: var(--ink); color: var(--yellow); padding: 18px 0px; overflow: hidden; border-top: var(--line); border-bottom: var(--line); font-weight: 800; font-size: 14px; }
+
+.marquee-track { display: flex; align-items: center; justify-content: space-around; gap: 35px; min-width: 950px; white-space: nowrap; }
+
+.marquee i { color: var(--coral); font-style: normal; font-size: 20px; }
+
+.section { padding-top: 125px; padding-bottom: 125px; }
+
+.section-heading { display: flex; align-items: end; justify-content: space-between; gap: 40px; margin-bottom: 54px; }
+
+.section h2, .preview-copy h2, .price-copy h2, .faq-title h2, .contact-inner h2 { font-size: clamp(34px, 4vw, 54px); line-height: 1; letter-spacing: -0.07em; margin: 17px 0px 0px; }
+
+.section-intro { max-width: 350px; font-size: 14px; line-height: 1.7; margin: 0px 20px 2px 0px; }
+
+.feature-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 17px; }
+
+.feature-card { min-height: 294px; border: var(--line); box-shadow: var(--shadow); padding: 23px 20px 18px; position: relative; transition: transform 0.2s; }
+
+.feature-card:hover { transform: translateY(-5px); }
+
+.card-yellow { background: var(--yellow); }
+
+.card-coral { background: var(--coral); }
+
+.card-teal { background: var(--teal); }
+
+.card-lime { background: var(--lime); }
+
+.feature-top { display: flex; justify-content: space-between; align-items: start; font: 11px "DM Mono", monospace; }
+
+.feature-card h3 { font-size: 21px; letter-spacing: -0.06em; margin: 52px 0px 13px; }
+
+.feature-card p { font-size: 12px; line-height: 1.55; margin: 0px; }
+
+.card-arrow { position: absolute; bottom: 16px; right: 17px; }
+
+.preview-section { background: var(--ink); color: var(--cream); padding: 120px 0px; }
+
+.preview-layout { display: grid; grid-template-columns: 0.7fr 1.3fr; gap: 85px; align-items: center; }
+
+.preview-copy h2 { margin-bottom: 25px; }
+
+.preview-copy p { color: rgb(213, 210, 204); font-size: 14px; line-height: 1.7; max-width: 360px; }
+
+.check-list { display: grid; gap: 12px; margin: 27px 0px 34px; font-size: 12px; font-weight: 700; }
+
+.check-list span { display: flex; gap: 9px; align-items: center; }
+
+.check-list svg { color: var(--yellow); }
+
+.light-link { color: var(--yellow); border-color: var(--yellow); }
+
+.preview-section .product-window { box-shadow: 7px 7px 0 var(--yellow); }
+
+.price-section { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; padding-top: 125px; padding-bottom: 125px; }
+
+.price-copy p { font-size: 14px; line-height: 1.7; max-width: 355px; }
+
+.price-card { border: var(--line); background: var(--yellow); padding: 28px 30px 30px; box-shadow: var(--shadow); }
+
+.price-card-top { display: flex; justify-content: space-between; font: 500 10px "DM Mono", monospace; }
+
+.price-badge { background: var(--ink); color: var(--yellow); padding: 5px 7px; }
+
+.price { font-size: 58px; font-weight: 800; letter-spacing: -0.08em; margin: 37px 0px 0px; }
+
+.price-card p { font: 11px "DM Mono", monospace; margin: 1px 0px 22px; }
+
+.price-divider { border-top: 2px solid var(--ink); margin-bottom: 17px; }
+
+.price-feature { display: flex; align-items: center; gap: 9px; font-size: 12px; margin: 11px 0px; }
+
+.full-button { width: 100%; margin-top: 21px; }
+
+.faq-section { border-top: var(--line); padding-top: 120px; padding-bottom: 120px; display: grid; grid-template-columns: 0.72fr 1.28fr; gap: 100px; }
+
+.faq-title p { font-size: 12px; line-height: 1.6; max-width: 250px; margin-top: 27px; }
+
+.faq-title a { text-decoration: underline; font-weight: 700; }
+
+.faq-list { border-top: var(--line); }
+
+.faq-item { border-bottom: 2px solid var(--ink); }
+
+.faq-item button { width: 100%; border: 0px; background: transparent; display: grid; grid-template-columns: 45px 1fr 25px; gap: 10px; text-align: left; align-items: center; padding: 22px 0px; cursor: pointer; }
+
+.faq-item button > span { font: 11px "DM Mono", monospace; }
+
+.faq-item button b { font-size: 14px; }
+
+.faq-item button svg { transition: transform 0.2s; }
+
+.faq-item.active button svg { transform: rotate(180deg); }
+
+.faq-item p { max-width: 650px; margin: 0px 30px 24px 55px; font-size: 13px; line-height: 1.65; color: rgb(79, 77, 73); }
+
+.contact-section { background: var(--coral); border-top: var(--line); border-bottom: var(--line); padding: 80px 0px; }
+
+.contact-inner { display: flex; justify-content: space-between; align-items: end; gap: 50px; }
+
+.contact-inner h2 { margin-top: 17px; }
+
+.contact-links { min-width: 300px; }
+
+.contact-links a { display: flex; justify-content: space-between; align-items: center; border-bottom: 2px solid var(--ink); padding: 13px 0px; font-size: 14px; font-weight: 800; }
+
+.contact-links p { font: 10px / 1.5 "DM Mono", monospace; margin-top: 20px; }
+
+.footer { display: flex; justify-content: space-between; align-items: center; padding-top: 35px; padding-bottom: 35px; }
+
+.footer-links { display: flex; gap: 23px; align-items: center; font: 10px "DM Mono", monospace; }
+
+.footer-links a { text-decoration: underline; }
+
+.reveal { animation: 0.7s ease 0s 1 normal both running rise; }
+
+.reveal-delay { animation-delay: 0.16s; }
+
+@keyframes rise { 
+  0% { opacity: 0; transform: translateY(18px); }
+  100% { opacity: 1; transform: none; }
+}
+
+@media (max-width: 850px) {
+  .nav { height: 73px; }
+  .menu-button { display: block; }
+  .nav-links { display: none; position: absolute; top: 73px; left: 0px; right: 0px; background: var(--cream); border: var(--line); padding: 20px; flex-direction: column; align-items: stretch; gap: 18px; box-shadow: var(--shadow); }
+  .nav-links.open { display: flex; }
+  .nav-cta { justify-content: center; }
+  .hero { grid-template-columns: 1fr; gap: 45px; padding-top: 65px; padding-bottom: 75px; }
+  .hero-visual { max-width: 650px; margin: auto; width: 100%; }
+  .feature-grid { grid-template-columns: repeat(2, 1fr); }
+  .section-heading { align-items: start; flex-direction: column; gap: 18px; }
+  .section { padding-top: 80px; padding-bottom: 80px; }
+  .preview-layout { grid-template-columns: 1fr; gap: 55px; }
+  .preview-layout .product-window { max-width: 680px; }
+  .price-section { gap: 45px; padding-top: 80px; padding-bottom: 80px; }
+  .faq-section { gap: 50px; padding-top: 80px; padding-bottom: 80px; }
+  .contact-inner { align-items: start; flex-direction: column; }
+  .contact-links { width: 100%; max-width: 500px; }
+  .footer { align-items: start; flex-direction: column; gap: 30px; }
+  .footer-links { flex-wrap: wrap; line-height: 1.5; }
+}
+
+@media (max-width: 560px) {
+  .wrap { padding-left: 18px; padding-right: 18px; }
+  .hero h1 { font-size: 48px; }
+  .hero-text { font-size: 15px; }
+  .hero-actions { align-items: start; flex-direction: column; gap: 20px; }
+  .hero-visual { padding-left: 17px; padding-right: 3px; }
+  .sticker { left: -8px; top: 28px; transform: scale(0.8) rotate(-12deg); }
+  .hero-note { right: -1px; font-size: 8px; }
+  .editor-body { grid-template-columns: 72px 1fr 72px; min-height: 270px; }
+  .editor-sidebar, .editor-properties { padding: 13px 7px; }
+  .template { font-size: 8px; }
+  .template svg { display: none; }
+  .sidebar-mini-card { margin-top: 26px; font-size: 7px; padding: 5px; }
+  .window-topbar { padding: 0px 8px; }
+  .window-title { font-size: 7px; }
+  .window-status { font-size: 6px; }
+  .phone-frame { width: 105px; }
+  .phone-art { padding: 11px 8px; }
+  .phone-art strong { font-size: 19px; margin-top: 18px; }
+  .art-kicker, .art-footer { font-size: 5px; }
+  .art-orbit { width: 85px; height: 85px; border-width: 9px; }
+  .property-row { font-size: 7px; }
+  .export-line { font-size: 6px; margin-top: 18px; }
+  .timeline { padding: 0px 8px; gap: 7px; font-size: 6px; }
+  .feature-grid { grid-template-columns: 1fr; gap: 16px; }
+  .feature-card { min-height: 250px; }
+  .feature-card h3 { margin-top: 42px; }
+  .section h2, .preview-copy h2, .price-copy h2, .faq-title h2, .contact-inner h2 { font-size: 38px; }
+  .price-section, .faq-section { grid-template-columns: 1fr; }
+  .price { font-size: 48px; }
+  .faq-item button { grid-template-columns: 32px 1fr 20px; gap: 7px; padding: 18px 0px; }
+  .faq-item button b { font-size: 13px; }
+  .faq-item p { margin-left: 39px; }
+  .footer-links { gap: 13px; }
+}
+
+.faq-item p { display: none; }
+.faq-item.active p { display: block; }
+.template svg { flex: none; }
+svg.i { display: inline-block; flex: none; }
+.phone-art strong { transition: opacity .2s; }
+.phone-art { transition: background .25s; }
+.art-orbit { transition: background .25s; }
+.marquee-track { animation: none; }
+:focus-visible { outline: 3px solid var(--ink); outline-offset: 3px; }
+.preview-section :focus-visible { outline-color: var(--yellow); }
+@media (prefers-reduced-motion: reduce) { .reveal { animation: none; } html { scroll-behavior: auto; } }
+
+
+/* ---------- Demo & Hasil video ---------- */
+.demo-section { padding-top: 125px; padding-bottom: 125px; border-top: var(--line); }
+.demo-block { display: grid; grid-template-columns: 300px 1fr; gap: 70px; align-items: center; margin-bottom: 90px; }
+.demo-copy h3 { font-size: clamp(26px, 3vw, 38px); letter-spacing: -0.07em; line-height: 1; margin: 16px 0 18px; }
+.demo-copy > p { font-size: 14px; line-height: 1.7; max-width: 420px; margin: 0 0 26px; }
+.demo-steps { list-style: none; margin: 0; padding: 0; display: grid; gap: 12px; max-width: 420px; }
+.demo-steps li { display: grid; grid-template-columns: 34px 1fr; gap: 12px; align-items: center; border: 2px solid var(--ink); background: white; padding: 10px 12px; font-size: 13px; font-weight: 700; box-shadow: 3px 3px 0 var(--ink); }
+.demo-steps b { display: grid; place-items: center; width: 30px; height: 30px; border: 2px solid var(--ink); border-radius: 50%; background: var(--yellow); font: 500 11px "DM Mono", monospace; }
+.results-head { display: flex; align-items: end; justify-content: space-between; gap: 30px; margin-bottom: 34px; }
+.results-head h3 { font-size: clamp(26px, 3vw, 38px); letter-spacing: -0.07em; line-height: 1; margin: 16px 0 0; }
+.results-head p { font-size: 13px; line-height: 1.6; max-width: 320px; margin: 0; }
+.results-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 26px 20px; }
+.video-item { margin: 0; }
+.video-box { position: relative; aspect-ratio: 9 / 16; border: var(--line); box-shadow: var(--shadow); background: var(--ink); overflow: hidden; }
+.video-box iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+.video-empty { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 12px; text-align: center; color: var(--cream); font: 500 9px/1.5 "DM Mono", monospace; letter-spacing: 0.04em; padding: 12px;
+  background: repeating-linear-gradient(135deg, #11110f 0 14px, #1b1b18 14px 28px); }
+.video-empty .vplay { display: grid; place-items: center; width: 46px; height: 46px; border-radius: 50%; background: var(--yellow); color: var(--ink); border: 2px solid var(--cream); }
+.video-item:nth-child(4n+2) .vplay { background: var(--coral); }
+.video-item:nth-child(4n+3) .vplay { background: var(--teal); }
+.video-item:nth-child(4n+4) .vplay { background: var(--lime); }
+.video-item figcaption { display: flex; gap: 10px; align-items: baseline; margin-top: 16px; font-size: 12px; font-weight: 800; line-height: 1.35; }
+.video-item figcaption span { font: 500 10px "DM Mono", monospace; flex: none; }
+.demo-block .video-box { box-shadow: 7px 7px 0 var(--yellow), 7px 7px 0 3px var(--ink); }
+@media (max-width: 1050px) { .results-grid { grid-template-columns: repeat(3, 1fr); } }
+@media (max-width: 850px) {
+  .demo-section { padding-top: 80px; padding-bottom: 80px; }
+  .demo-block { grid-template-columns: 1fr; gap: 40px; justify-items: start; margin-bottom: 70px; }
+  .demo-block .video-item { width: min(300px, 100%); }
+  .results-head { align-items: start; flex-direction: column; gap: 14px; }
+}
+@media (max-width: 560px) { .results-grid { grid-template-columns: repeat(2, 1fr); gap: 22px 14px; } .video-item figcaption { font-size: 11px; } }
+</style>
+
+<style id="tambahan-landing">
+/* ---------- Tambahan: isi aplikasi, benefit, bonus, closing ---------- */
+.more-section { padding-top: 125px; padding-bottom: 125px; border-top: var(--line); }
+.more-section h2 { font-size: clamp(34px, 4vw, 54px); line-height: 1; letter-spacing: -0.07em; margin: 17px 0 0; }
+.more-section h2 span { font-style: normal; background: var(--yellow); padding: 0 8px 2px; box-decoration-break: clone; -webkit-box-decoration-break: clone; }
+.mf-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 17px; }
+.mf-card { border: var(--line); background: white; box-shadow: var(--shadow); padding: 22px 20px 20px; display: flex; flex-direction: column; gap: 10px; transition: transform .2s; }
+.mf-card:hover { transform: translateY(-4px); }
+.mf-top { display: flex; align-items: center; justify-content: space-between; font: 500 11px "DM Mono", monospace; }
+.mf-ico { display: grid; place-items: center; width: 38px; height: 38px; border: 2px solid var(--ink); border-radius: 50%; background: var(--yellow); }
+.mf-card:nth-child(4n+2) .mf-ico { background: var(--coral); }
+.mf-card:nth-child(4n+3) .mf-ico { background: var(--teal); }
+.mf-card:nth-child(4n+4) .mf-ico { background: var(--lime); }
+.mf-card h3 { font-size: 19px; letter-spacing: -0.05em; line-height: 1.1; margin: 8px 0 0; }
+.mf-card p { font-size: 13px; line-height: 1.6; margin: 0; }
+.mf-big { font-size: 40px; font-weight: 800; letter-spacing: -0.08em; line-height: 1; }
+
+.ba-wrap { margin-top: 90px; }
+.ba-head { margin-bottom: 34px; }
+.ba-head h3 { font-size: clamp(28px, 3.4vw, 44px); letter-spacing: -0.07em; line-height: 1; margin: 16px 0 0; }
+.ba-head h3 span { background: var(--yellow); padding: 0 8px 2px; box-decoration-break: clone; -webkit-box-decoration-break: clone; }
+.ba-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 26px; }
+.ba-col { border: var(--line); box-shadow: var(--shadow); padding: 26px 26px 14px; }
+.ba-col.bad { background: var(--coral); }
+.ba-col.good { background: var(--lime); }
+.ba-label { display: inline-block; background: var(--ink); color: var(--cream); font: 500 10px "DM Mono", monospace; letter-spacing: .04em; padding: 5px 8px; margin-bottom: 14px; }
+.ba-col ul { list-style: none; margin: 0; padding: 0; }
+.ba-col li { display: grid; grid-template-columns: 24px 1fr; gap: 10px; padding: 14px 0; border-top: 2px solid var(--ink); font-size: 14px; font-weight: 700; line-height: 1.45; }
+.ba-col li:first-child { border-top: 0; }
+.ba-col li b { font-size: 16px; line-height: 1.2; }
+
+.fit-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 26px; margin-top: 90px; }
+.fit-card { border: var(--line); background: white; padding: 24px 26px; box-shadow: var(--shadow); }
+.fit-card h4 { font-size: 20px; letter-spacing: -0.05em; margin: 0 0 14px; }
+.fit-card ul { margin: 0; padding: 0; list-style: none; display: grid; gap: 10px; font-size: 13px; line-height: 1.55; }
+.fit-card li { display: grid; grid-template-columns: 20px 1fr; gap: 8px; }
+
+.bonus-section { background: var(--lime); border-top: var(--line); border-bottom: var(--line); padding: 125px 0; }
+.bonus-intro { max-width: 700px; margin-bottom: 54px; }
+.bonus-intro h2 { font-size: clamp(34px, 4vw, 54px); line-height: 1; letter-spacing: -0.07em; margin: 17px 0 20px; }
+.bonus-intro h2 span { background: var(--yellow); padding: 0 8px 2px; box-decoration-break: clone; -webkit-box-decoration-break: clone; }
+.bonus-intro p { font-size: 15px; line-height: 1.7; margin: 0; max-width: 560px; }
+.bonus-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 22px; }
+.bonus-card { border: var(--line); background: white; box-shadow: var(--shadow); padding: 24px 24px 22px; position: relative; display: flex; flex-direction: column; gap: 12px; }
+.bonus-tag { display: inline-flex; align-items: center; gap: 8px; align-self: flex-start; background: var(--ink); color: var(--yellow); font: 500 11px "DM Mono", monospace; letter-spacing: .04em; padding: 6px 9px; }
+.bonus-card h3 { font-size: 24px; letter-spacing: -0.06em; line-height: 1.05; margin: 4px 0 0; }
+.bonus-card p { font-size: 14px; line-height: 1.65; margin: 0; }
+.bonus-card small { font: 500 10px/1.5 "DM Mono", monospace; opacity: .75; margin-top: auto; padding-top: 6px; }
+.bonus-value { position: absolute; top: 16px; right: 16px; background: var(--coral); border: 2px solid var(--ink); font: 500 10px "DM Mono", monospace; padding: 4px 7px; transform: rotate(3deg); }
+.bonus-card.b1 { background: var(--yellow); }
+.bonus-card.b3 { background: var(--teal); }
+
+.stack { margin-top: 54px; display: grid; grid-template-columns: 1.1fr .9fr; gap: 26px; align-items: stretch; }
+.stack-list { border: var(--line); background: var(--ink); color: var(--cream); box-shadow: 7px 7px 0 var(--yellow); padding: 28px 30px; }
+.stack-list h3 { font-size: 26px; letter-spacing: -0.06em; margin: 0 0 18px; color: var(--yellow); }
+.stack-row { display: flex; align-items: baseline; gap: 10px; padding: 11px 0; border-bottom: 1px dashed rgba(253,251,247,.35); font-size: 14px; font-weight: 700; }
+.stack-row span:first-child { flex: 1; }
+.stack-row .v { font: 500 13px "DM Mono", monospace; color: var(--cream); white-space: nowrap; }
+.stack-row.total { border-bottom: 0; padding-top: 18px; font-size: 16px; }
+.stack-row.total .v { text-decoration: line-through; text-decoration-thickness: 2px; color: var(--coral); }
+.stack-pay { border: var(--line); background: var(--yellow); box-shadow: var(--shadow); padding: 28px 30px; display: flex; flex-direction: column; justify-content: center; gap: 10px; }
+.stack-pay .k { font: 500 11px "DM Mono", monospace; letter-spacing: .04em; }
+.stack-pay .big { font-size: clamp(46px, 5vw, 64px); font-weight: 800; letter-spacing: -0.08em; line-height: 1; }
+.stack-pay p { font-size: 14px; line-height: 1.6; margin: 0 0 8px; }
+.stack-pay .button { width: 100%; }
+
+.closing-section { background: var(--yellow); border-top: var(--line); padding: 110px 0; text-align: center; }
+.closing-inner { max-width: 760px; margin: 0 auto; }
+.closing-inner h2 { font-size: clamp(36px, 5vw, 66px); line-height: .98; letter-spacing: -0.08em; margin: 18px 0 22px; }
+.closing-inner h2 span { background: var(--ink); color: var(--yellow); padding: 0 10px 3px; box-decoration-break: clone; -webkit-box-decoration-break: clone; }
+.closing-inner p { font-size: 16px; line-height: 1.65; margin: 0 auto 30px; max-width: 560px; }
+.closing-points { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px 22px; margin-top: 28px; font: 500 11px "DM Mono", monospace; }
+.closing-points span { display: inline-flex; align-items: center; gap: 6px; }
+.closing-inner .button { font-size: 15px; padding: 18px 28px; }
+
+@media (max-width: 1050px) { .mf-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 850px) {
+  .more-section, .bonus-section { padding-top: 80px; padding-bottom: 80px; }
+  .ba-wrap, .fit-grid { margin-top: 64px; }
+  .ba-grid, .fit-grid, .bonus-grid, .stack { grid-template-columns: 1fr; }
+  .closing-section { padding: 80px 0; }
+}
+@media (max-width: 560px) {
+  .more-section h2, .bonus-intro h2, .closing-inner h2 { font-size: 38px; }
+  .mf-grid { grid-template-columns: 1fr; }
+  .ba-col, .fit-card, .stack-list, .stack-pay { padding-left: 20px; padding-right: 20px; }
+  .bonus-card h3 { font-size: 21px; }
+  .bonus-value { position: static; align-self: flex-start; transform: none; }
+  .stack-row { font-size: 13px; }
+  .closing-inner .button { width: 100%; }
+}
+</style>
+</head>
+<body>
+<svg xmlns="http://www.w3.org/2000/svg" style="display:none" aria-hidden="true">
+  <symbol id="arrow-up-right" viewBox="0 0 24 24"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></symbol>
+  <symbol id="arrow-down-right" viewBox="0 0 24 24"><path d="m7 7 10 10"/><path d="M17 7v10H7"/></symbol>
+  <symbol id="check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></symbol>
+  <symbol id="chevron-down" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></symbol>
+  <symbol id="menu" viewBox="0 0 24 24"><path d="M4 12h16"/><path d="M4 18h16"/><path d="M4 6h16"/></symbol>
+  <symbol id="play" viewBox="0 0 24 24"><polygon points="6 3 20 12 6 21 6 3" style="fill:currentColor"/></symbol>
+  <symbol id="download" viewBox="0 0 24 24"><path d="M12 15V3"/><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="m7 10 5 5 5-5"/></symbol>
+  <symbol id="wand" viewBox="0 0 24 24"><path d="m21.64 3.64-1.28-1.28a1.21 1.21 0 0 0-1.72 0L2.36 18.64a1.21 1.21 0 0 0 0 1.72l1.28 1.28a1.2 1.2 0 0 0 1.72 0L21.64 5.36a1.2 1.2 0 0 0 0-1.72"/><path d="m14 7 3 3"/><path d="M5 6v4"/><path d="M19 14v4"/><path d="M10 2v2"/><path d="M7 8H3"/><path d="M21 16h-4"/><path d="M11 3H9"/></symbol>
+  <symbol id="sparkles" viewBox="0 0 24 24"><path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"/><path d="M20 3v4"/><path d="M22 5h-4"/><path d="M4 17v2"/><path d="M5 18H3"/></symbol>
+  <symbol id="layers" viewBox="0 0 24 24"><path d="M12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83z"/><path d="M2 12a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 12"/><path d="M2 17a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 17"/></symbol>
+  <symbol id="palette" viewBox="0 0 24 24"><path d="M12 22a1 1 0 0 1 0-20 10 9 0 0 1 10 9 5 5 0 0 1-5 5h-2.25a1.75 1.75 0 0 0-1.4 2.8l.3.4a1.75 1.75 0 0 1-1.4 2.8z"/><circle cx="13.5" cy="6.5" r=".5" style="fill:currentColor"/><circle cx="17.5" cy="10.5" r=".5" style="fill:currentColor"/><circle cx="6.5" cy="12.5" r=".5" style="fill:currentColor"/><circle cx="8.5" cy="7.5" r=".5" style="fill:currentColor"/></symbol>
+  <symbol id="mic" viewBox="0 0 24 24"><path d="m11 7.601-5.994 8.19a1 1 0 0 0 .1 1.298l.817.818a1 1 0 0 0 1.314.087L15.09 12"/><path d="M16.5 21.174C15.5 20.5 14.372 20 13 20c-2.058 0-3.928 2.356-6 2-2.072-.356-2.775-3.369-1.5-4.5"/><circle cx="16" cy="7" r="5"/></symbol>
+</svg>
+
+<main id="top">
+  <nav class="nav wrap" data-testid="main-navigation">
+    <a class="wordmark" href="#top" data-testid="wordmark-link"><span>MOTION</span><b>GRAPHIC</b><span>STUDIO</span></a>
+    <div class="nav-links" id="nav-links">
+      <a href="#fitur" data-testid="nav-features-link">Fitur</a>
+      <a href="#demo" data-testid="nav-demo-link">Demo</a>
+      <a href="#preview" data-testid="nav-preview-link">Preview</a>
+      <a href="#faq" data-testid="nav-faq-link">FAQ</a>
+      <a data-testid="checkout-button" class="button button-dark nav-cta" href="http://lynk.id/suburbudiono/mwggp7mw50w1/checkout" target="_blank" rel="noreferrer">Beli Sekarang<svg class="i " width="18" height="18" aria-hidden="true" style="fill:none;stroke:currentColor;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round"><use href="#arrow-up-right"/></svg></a>
+    </div>
+    <button type="button" class="menu-button" id="menu-button" aria-label="Buka menu" aria-expanded="false" aria-controls="nav-links" data-testid="mobile-menu-button"><svg class="i " width="24" height="24" aria-hidden="true" style="fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round"><use href="#menu"/></svg></button>
+  </nav>
+
+  <section class="hero wrap">
+    <div class="hero-copy reveal">
+      <div class="eyebrow"><span class="eyebrow-dot"></span> BIKIN VIDEO. BIKIN GERAK.</div>
+      <h1>Ide bagus<br><em>harus</em> bergerak<span class="asterisk">✳</span></h1>
+      <p class="hero-text">Tool motion graphic di browser untuk mengubah ide, cerita, dan brand kamu jadi video siap tampil, vertikal 9:16 <b>dan</b> horizontal 16:9. 112 template, 345 ide siap pakai, ekspor MP4 sampai 60 fps.</p>
+      <div class="hero-actions">
+        <a data-testid="checkout-button" class="button button-dark " href="http://lynk.id/suburbudiono/mwggp7mw50w1/checkout" target="_blank" rel="noreferrer">Beli Sekarang<svg class="i " width="18" height="18" aria-hidden="true" style="fill:none;stroke:currentColor;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round"><use href="#arrow-up-right"/></svg></a>
+        <a class="text-link" href="#fitur" data-testid="hero-see-features-link">Lihat fitur <svg class="i " width="16" height="16" aria-hidden="true" style="fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round"><use href="#arrow-down-right"/></svg></a>
+      </div>
+      <div class="hero-proof">
+        <span class="proof-avatars"><i>✦</i><i>✺</i><i>●</i></span>
+        <span>Untuk creator yang<br><b>ingin tampil beda.</b></span>
+      </div>
+    </div>
+    <div class="hero-visual reveal reveal-delay">
+      <div class="sticker">BUAT<br>YANG<br>BERGERAK</div>
+      <div class="product-window" data-testid="product-preview">
+  <div class="window-topbar">
+    <div class="window-dots"><i></i><i></i><i></i></div>
+    <span class="window-title">MOTION / EDITOR</span>
+    <span class="window-status">● AUTO-SAVE</span>
+  </div>
+  <div class="editor-body">
+    <div class="editor-sidebar">
+      <span class="sidebar-label">TEMPLATE</span>
+      <button type="button" data-testid="template-launch-button" data-template="launch" class="template active">Launch<svg class="i " width="13" height="13" aria-hidden="true" style="fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round"><use href="#arrow-up-right"/></svg></button>
+      <button type="button" data-testid="template-quote-button" data-template="quote" class="template">Quote<svg class="i " width="13" height="13" aria-hidden="true" style="fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round"><use href="#arrow-up-right"/></svg></button>
+      <button type="button" data-testid="template-promo-button" data-template="promo" class="template">Promo<svg class="i " width="13" height="13" aria-hidden="true" style="fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round"><use href="#arrow-up-right"/></svg></button>
+      <div class="sidebar-mini-card"><svg class="i " width="18" height="18" aria-hidden="true" style="fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round"><use href="#wand"/></svg><span>Brand<br>Kit</span></div>
+    </div>
+    <div class="phone-stage">
+      <div class="phone-frame">
+        <div class="phone-art art-launch">
+          <span class="art-kicker">NEW DROP</span>
+          <strong>MAKE IT
+MOVE.</strong>
+          <div class="art-orbit"></div>
+          <span class="art-footer">MOTION / 2026</span>
+        </div>
+      </div>
+      <div class="play-button"><svg class="i " width="19" height="19" aria-hidden="true" style="fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round"><use href="#play"/></svg></div>
+    </div>
+    <div class="editor-properties">
+      <span class="sidebar-label">SCENE 01</span>
+      <div class="property-row"><span>Duration</span><b>04.5s</b></div>
+      <div class="property-row"><span>Format</span><b>9:16 · 16:9</b></div>
+      <div class="property-row"><span>Type</span><b>MP4 60fps</b></div>
+      <div class="export-line"><svg class="i " width="14" height="14" aria-hidden="true" style="fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round"><use href="#download"/></svg> Export video</div>
+    </div>
+  </div>
+  <div class="timeline">
+    <span>TIMELINE</span>
+    <div class="timeline-track"><b></b><b></b><b></b></div>
+    <span>00:04 / 00:12</span>
+  </div>
+</div>
+      <div class="hero-note">NO INSTALL<br><b>JUST CREATE.</b></div>
+    </div>
+  </section>
+
+  <div class="marquee" aria-label="Keunggulan produk" data-testid="benefit-marquee">
+    <div class="marquee-track">
+      <span>TANPA INSTALL</span><i>✳</i><span>9:16 + 16:9</span><i>✳</i><span>112 TEMPLATE</span><i>✳</i><span>345 PRESET</span><i>✳</i><span>MP4 60 FPS</span><i>✳</i><span>BRAND KIT</span>
+    </div>
+  </div>
+
+  <section class="section wrap" id="fitur">
+    <div class="section-heading">
+      <div>
+        <span class="section-kicker">/ KENAPA MOTION?</span>
+        <h2>Semua yang kamu<br><span>butuhkan. Satu tempat.</span></h2>
+      </div>
+      <p class="section-intro">Dari ide pertama sampai video siap upload, Motion Graphic Studio membuat proses kreatif terasa lebih ringan dan menyenangkan.</p>
+    </div>
+    <div class="feature-grid">
+        <article class="feature-card card-yellow" data-testid="feature-card-01">
+          <div class="feature-top"><span>01</span><svg class="i " width="29" height="29" aria-hidden="true" style="fill:none;stroke:currentColor;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round"><use href="#sparkles"/></svg></div>
+          <h3>Mulai dari ide</h3>
+          <p>Pilih dari 345 preset ide atau 7 alur konten siap pakai, atau tulis idemu lalu salin prompt sutradara ke ChatGPT/Gemini. Scene tersusun dalam hitungan menit.</p>
+          <span class="card-arrow"><svg class="i " width="20" height="20" aria-hidden="true" style="fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round"><use href="#arrow-up-right"/></svg></span>
+        </article>
+        <article class="feature-card card-coral" data-testid="feature-card-02">
+          <div class="feature-top"><span>02</span><svg class="i " width="29" height="29" aria-hidden="true" style="fill:none;stroke:currentColor;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round"><use href="#layers"/></svg></div>
+          <h3>Atur setiap scene</h3>
+          <p>112 template animasi yang otomatis menyesuaikan 9:16 dan 16:9. Atur teks, durasi, ritme animasi, dan sisipkan penghubung singkat agar video terasa cepat.</p>
+          <span class="card-arrow"><svg class="i " width="20" height="20" aria-hidden="true" style="fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round"><use href="#arrow-up-right"/></svg></span>
+        </article>
+        <article class="feature-card card-teal" data-testid="feature-card-03">
+          <div class="feature-top"><span>03</span><svg class="i " width="29" height="29" aria-hidden="true" style="fill:none;stroke:currentColor;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round"><use href="#palette"/></svg></div>
+          <h3>Bikin jadi milikmu</h3>
+          <p>Simpan logo, warna, font, dan tokohmu di Brand Kit sekali, lalu terpakai di semua video. Pilih dari 18 gaya visual dan 17 font.</p>
+          <span class="card-arrow"><svg class="i " width="20" height="20" aria-hidden="true" style="fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round"><use href="#arrow-up-right"/></svg></span>
+        </article>
+        <article class="feature-card card-lime" data-testid="feature-card-04">
+          <div class="feature-top"><span>04</span><svg class="i " width="29" height="29" aria-hidden="true" style="fill:none;stroke:currentColor;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round"><use href="#mic"/></svg></div>
+          <h3>Suara yang hidup</h3>
+          <p>Voice-over, musik, dan efek suara otomatis. Musik mengecil sendiri saat ada narasi, plus caption karaoke yang bikin penonton bertahan.</p>
+          <span class="card-arrow"><svg class="i " width="20" height="20" aria-hidden="true" style="fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round"><use href="#arrow-up-right"/></svg></span>
+        </article>
+    </div>
+  </section>
+
+
+  <section class="more-section wrap" id="isi">
+    <div class="section-heading">
+      <div>
+        <span class="section-kicker">/ ISI APLIKASI</span>
+        <h2>Lebih lengkap<br><span>dari kelihatannya.</span></h2>
+      </div>
+      <p class="section-intro">Bukan sekadar template kosong. Kamu mendapat contoh, preset, alur konten, gaya visual, Brand Kit, dan alat suara yang siap dipakai dari menit pertama.</p>
+    </div>
+    <div class="mf-grid">
+<article class="mf-card"><div class="mf-top"><span>01</span><span class="mf-ico"><svg class="i" width="20" height="20" aria-hidden="true" style="fill:none;stroke:currentColor;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round"><use href="#sparkles"/></svg></span></div><h3>69 contoh video &amp; 345 preset ide</h3><p>Buka satu contoh atau preset, ganti nama brand dan teksnya, selesai. Tersedia untuk promosi, edukasi, kuliner, properti, affiliate, sampai dakwah.</p></article>
+<article class="mf-card"><div class="mf-top"><span>02</span><span class="mf-ico"><svg class="i" width="20" height="20" aria-hidden="true" style="fill:none;stroke:currentColor;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round"><use href="#layers"/></svg></span></div><h3>112 template, 9:16 &amp; 16:9</h3><p>Hook, daftar, grafik, testimoni, harga, peta, kuis, berita, skor, resep, listing properti, dan banyak lagi. Tata letaknya menyesuaikan rasio sendiri, bukan sekadar dipotong.</p></article>
+<article class="mf-card"><div class="mf-top"><span>03</span><span class="mf-ico"><svg class="i" width="20" height="20" aria-hidden="true" style="fill:none;stroke:currentColor;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round"><use href="#palette"/></svg></span></div><h3>18 gaya visual + 17 font</h3><p>Neo-brutalist, clean, Pop Komik, glass, retro, majalah, terminal, sampai gaya Ramadan, Andalusia, dan batik. Font judul dan teks bisa diganti.</p></article>
+<article class="mf-card"><div class="mf-top"><span>04</span><span class="mf-ico"><svg class="i" width="20" height="20" aria-hidden="true" style="fill:none;stroke:currentColor;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round"><use href="#wand"/></svg></span></div><h3>7 alur konten sekali klik<span style="display:inline-block;font:700 10px/1 'DM Mono',monospace;letter-spacing:.08em;background:var(--lime);border:2px solid var(--ink);padding:3px 6px;margin-left:6px;vertical-align:middle">BARU</span></h3><p>Hook-Masalah-Solusi, 3 kesalahan, sebelum-sesudah, listicle, storytelling, promo kilat, dan tutorial. Lima scene langsung tersusun, tinggal ganti teks.</p></article>
+<article class="mf-card"><div class="mf-top"><span>05</span><span class="mf-ico"><svg class="i" width="20" height="20" aria-hidden="true" style="fill:none;stroke:currentColor;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round"><use href="#download"/></svg></span></div><h3>Ekspor dua rasio sekaligus<span style="display:inline-block;font:700 10px/1 'DM Mono',monospace;letter-spacing:.08em;background:var(--lime);border:2px solid var(--ink);padding:3px 6px;margin-left:6px;vertical-align:middle">BARU</span></h3><p>Satu klik menghasilkan MP4 9:16 untuk Reels/TikTok/Shorts dan 16:9 untuk YouTube. Pilih kualitas standar, tinggi, atau 60 fps yang mulus.</p></article>
+<article class="mf-card"><div class="mf-top"><span>06</span><span class="mf-ico"><svg class="i" width="20" height="20" aria-hidden="true" style="fill:none;stroke:currentColor;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round"><use href="#palette"/></svg></span></div><h3>Brand Kit<span style="display:inline-block;font:700 10px/1 'DM Mono',monospace;letter-spacing:.08em;background:var(--lime);border:2px solid var(--ink);padding:3px 6px;margin-left:6px;vertical-align:middle">BARU</span></h3><p>Logo, avatar, warna, font, tokoh, dan transisi tersimpan. Bisa banyak kit untuk banyak klien, plus ekspor dan impor kit.</p></article>
+<article class="mf-card"><div class="mf-top"><span>07</span><span class="mf-ico"><svg class="i" width="20" height="20" aria-hidden="true" style="fill:none;stroke:currentColor;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round"><use href="#sparkles"/></svg></span></div><h3>Template siap jualan<span style="display:inline-block;font:700 10px/1 'DM Mono',monospace;letter-spacing:.08em;background:var(--lime);border:2px solid var(--ink);padding:3px 6px;margin-left:6px;vertical-align:middle">BARU</span></h3><p>Ulasan & rating bintang, flash sale dengan stok menipis dan timer, harga coret, testimoni, callout produk, dan corong penjualan.</p></article>
+<article class="mf-card"><div class="mf-top"><span>08</span><span class="mf-ico"><svg class="i" width="20" height="20" aria-hidden="true" style="fill:none;stroke:currentColor;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round"><use href="#play"/></svg></span></div><h3>Caption karaoke + subtitle .srt</h3><p>Kata yang sedang dibaca ikut menyala. Unduh subtitle .srt untuk YouTube dan Facebook, dan cek zona aman TikTok/Reels/Shorts di pratinjau.</p></article>
+<article class="mf-card"><div class="mf-top"><span>09</span><span class="mf-ico"><svg class="i" width="20" height="20" aria-hidden="true" style="fill:none;stroke:currentColor;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round"><use href="#mic"/></svg></span></div><h3>Suara, musik &amp; efek otomatis</h3><p>Unggah voice-over dan musikmu atau rekam langsung. Efek suara otomatis tiga mode, musik turun saat narasi, fade masuk dan keluar.</p></article>
+<article class="mf-card"><div class="mf-top"><span>10</span><span class="mf-ico"><svg class="i" width="20" height="20" aria-hidden="true" style="fill:none;stroke:currentColor;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round"><use href="#wand"/></svg></span></div><h3>Prompt sutradara AI</h3><p>Tulis brief, salin prompt ke ChatGPT, Gemini, atau Claude, lalu tempel hasilnya. Mode bebas memilih template yang paling cocok dengan isi brief.</p></article>
+<article class="mf-card"><div class="mf-top"><span>11</span><span class="mf-ico"><svg class="i" width="20" height="20" aria-hidden="true" style="fill:none;stroke:currentColor;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round"><use href="#download"/></svg></span></div><h3>Sampul video otomatis<span style="display:inline-block;font:700 10px/1 'DM Mono',monospace;letter-spacing:.08em;background:var(--lime);border:2px solid var(--ink);padding:3px 6px;margin-left:6px;vertical-align:middle">BARU</span></h3><p>Frame pertama MP4 langsung berisi sampul yang rapi, jadi tampilan awal di WhatsApp, galeri, dan platform tidak kosong. Bisa unduh PNG juga.</p></article>
+<article class="mf-card"><div class="mf-top"><span>12</span><span class="mf-ico"><svg class="i" width="20" height="20" aria-hidden="true" style="fill:none;stroke:currentColor;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round"><use href="#play"/></svg></span></div><h3>Talking head + B-roll<span style="display:inline-block;font:700 10px/1 'DM Mono',monospace;letter-spacing:.08em;background:var(--yellow);border:2px solid var(--ink);padding:3px 6px;margin-left:6px;vertical-align:middle">BETA</span></h3><p>Unggah video wajahmu berbicara, grafik ditumpuk di atasnya, keluar satu MP4 utuh. Bisa juga memasukkan klip video sendiri ke dalam scene.</p></article>
+    </div>
+
+    <div class="ba-wrap">
+      <div class="ba-head">
+        <span class="section-kicker">/ YANG BERUBAH</span>
+        <h3>Yang kamu dapat bukan cuma aplikasi.<br><span>Tapi waktu dan tenaga.</span></h3>
+      </div>
+      <div class="ba-grid">
+        <div class="ba-col bad"><span class="ba-label">TANPA MOTION GRAPHIC STUDIO</span><ul><li><span>&#10005;</span><b>Edit manual berjam-jam di timeline untuk satu video</b></li><li><span>&#10005;</span><b>Bayar editor per video, atau langganan software tiap bulan</b></li><li><span>&#10005;</span><b>Ide numpuk di catatan karena bingung mulai dari mana</b></li><li><span>&#10005;</span><b>Tampilan tiap video beda-beda, brand tidak terasa</b></li><li><span>&#10005;</span><b>Install software berat dan belajar dari nol</b></li></ul></div>
+        <div class="ba-col good"><span class="ba-label">DENGAN MOTION GRAPHIC STUDIO</span><ul><li><span><svg class="i" width="18" height="18" aria-hidden="true" style="fill:none;stroke:currentColor;stroke-width:3;stroke-linecap:round;stroke-linejoin:round"><use href="#check"/></svg></span><b>Pilih preset, ganti teks, export. Hitungan menit</b></li><li><span><svg class="i" width="18" height="18" aria-hidden="true" style="fill:none;stroke:currentColor;stroke-width:3;stroke-linecap:round;stroke-linejoin:round"><use href="#check"/></svg></span><b>Bayar sekali Rp50.000, dipakai selamanya</b></li><li><span><svg class="i" width="18" height="18" aria-hidden="true" style="fill:none;stroke:currentColor;stroke-width:3;stroke-linecap:round;stroke-linejoin:round"><use href="#check"/></svg></span><b>69 contoh, 345 preset, dan 7 alur untuk langsung dipakai</b></li><li><span><svg class="i" width="18" height="18" aria-hidden="true" style="fill:none;stroke:currentColor;stroke-width:3;stroke-linecap:round;stroke-linejoin:round"><use href="#check"/></svg></span><b>Brand Kit membuat semua video konsisten, di 9:16 maupun 16:9</b></li><li><span><svg class="i" width="18" height="18" aria-hidden="true" style="fill:none;stroke:currentColor;stroke-width:3;stroke-linecap:round;stroke-linejoin:round"><use href="#check"/></svg></span><b>Buka di browser, tanpa install</b></li></ul></div>
+      </div>
+    </div>
+
+    <div class="fit-grid">
+      <div class="fit-card"><h4>Cocok untuk kamu kalau&hellip;</h4><ul><li><span><svg class="i" width="16" height="16" aria-hidden="true" style="fill:none;stroke:currentColor;stroke-width:3;stroke-linecap:round;stroke-linejoin:round"><use href="#check"/></svg></span><span>Kreator yang butuh video rutin untuk Reels, TikTok, Shorts, dan YouTube</span></li><li><span><svg class="i" width="16" height="16" aria-hidden="true" style="fill:none;stroke:currentColor;stroke-width:3;stroke-linecap:round;stroke-linejoin:round"><use href="#check"/></svg></span><span>Penjual dan pelaku UMKM yang mau bikin promo sendiri</span></li><li><span><svg class="i" width="16" height="16" aria-hidden="true" style="fill:none;stroke:currentColor;stroke-width:3;stroke-linecap:round;stroke-linejoin:round"><use href="#check"/></svg></span><span>Coach, freelancer, dan penjual produk digital yang perlu video penjelasan</span></li><li><span><svg class="i" width="16" height="16" aria-hidden="true" style="fill:none;stroke:currentColor;stroke-width:3;stroke-linecap:round;stroke-linejoin:round"><use href="#check"/></svg></span><span>Pemula yang tidak mau belajar software editing yang rumit</span></li></ul></div>
+      <div class="fit-card"><h4>Kurang cocok kalau&hellip;</h4><ul><li><span>&#10005;</span><span>Kamu butuh mengedit video live-action panjang (vlog, film). Ini tool motion graphic; fitur talking head masih beta dan ekspor maksimal 2 menit</span></li><li><span>&#10005;</span><span>Kamu mencari efek sinematik tingkat film. Fokusnya teks, ikon, dan animasi yang rapi</span></li><li><span>&#10005;</span><span>Kamu hanya memakai HP. Aplikasi bisa dibuka di HP, tapi paling lancar di laptop dengan Chrome atau Edge, terutama untuk ekspor</span></li><li><span>&#10005;</span><span>Kamu tidak mau berurusan dengan AI sama sekali. Fitur AI-nya opsional, tapi banyak bonus berbasis AI</span></li></ul></div>
+    </div>
+  </section>
+
+  <section class="demo-section wrap" id="demo">
+    <div class="demo-block">
+      <figure class="video-item" id="demo-video"></figure>
+      <div class="demo-copy">
+        <span class="section-kicker">/ CARA KERJA</span>
+        <h3>Lihat demo<br><span style="background:var(--yellow);padding:0 8px 2px">penggunaannya.</span></h3>
+        <p>Tonton langkah demi langkah cara memakai Motion Graphic Studio, dari memilih template sampai export video.</p>
+        <ol class="demo-steps">
+          <li><b>01</b> Pilih preset, alur, atau tulis idemu</li>
+          <li><b>02</b> Atur scene, teks, dan warna brand</li>
+          <li><b>03</b> Ekspor MP4 9:16, 16:9, atau keduanya</li>
+        </ol>
+      </div>
+    </div>
+    <div class="results-head">
+      <div>
+        <span class="section-kicker">/ HASIL VIDEO</span>
+        <h3>10 video, dibuat<br><span style="background:var(--yellow);padding:0 8px 2px">dengan aplikasi ini.</span></h3>
+      </div>
+      <p>Contoh nyata video 9:16 dan 16:9 yang dihasilkan langsung dari Motion Graphic Studio.</p>
+    </div>
+    <div class="results-grid" id="results-grid"></div>
+  </section>
+
+  <section class="preview-section" id="preview">
+    <div class="wrap preview-layout">
+      <div class="preview-copy">
+        <span class="section-kicker">/ LIHAT CARANYA</span>
+        <h2>Kontrol penuh.<br><span>Tanpa ribet.</span></h2>
+        <p>Rancang scene, pilih gaya dan font, atur suara, lalu ekspor. Satu proyek bisa jadi video vertikal untuk ponsel dan horizontal untuk YouTube.</p>
+        <div class="check-list">
+          <span><svg class="i " width="15" height="15" aria-hidden="true" style="fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round"><use href="#check"/></svg> Editor scene yang intuitif</span>
+          <span><svg class="i " width="15" height="15" aria-hidden="true" style="fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round"><use href="#check"/></svg> Identitas brand yang konsisten</span>
+          <span><svg class="i " width="15" height="15" aria-hidden="true" style="fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round"><use href="#check"/></svg> Ekspor 9:16 + 16:9 sekaligus</span>
+        </div>
+        <a class="text-link light-link" href="http://lynk.id/suburbudiono/mwggp7mw50w1/checkout" target="_blank" rel="noreferrer" data-testid="preview-checkout-link">Coba sekarang <svg class="i " width="16" height="16" aria-hidden="true" style="fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round"><use href="#arrow-up-right"/></svg></a>
+      </div>
+      <div class="product-window" data-testid="product-preview">
+  <div class="window-topbar">
+    <div class="window-dots"><i></i><i></i><i></i></div>
+    <span class="window-title">MOTION / EDITOR</span>
+    <span class="window-status">● AUTO-SAVE</span>
+  </div>
+  <div class="editor-body">
+    <div class="editor-sidebar">
+      <span class="sidebar-label">TEMPLATE</span>
+      <button type="button" data-testid="template-launch-button" data-template="launch" class="template active">Launch<svg class="i " width="13" height="13" aria-hidden="true" style="fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round"><use href="#arrow-up-right"/></svg></button>
+      <button type="button" data-testid="template-quote-button" data-template="quote" class="template">Quote<svg class="i " width="13" height="13" aria-hidden="true" style="fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round"><use href="#arrow-up-right"/></svg></button>
+      <button type="button" data-testid="template-promo-button" data-template="promo" class="template">Promo<svg class="i " width="13" height="13" aria-hidden="true" style="fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round"><use href="#arrow-up-right"/></svg></button>
+      <div class="sidebar-mini-card"><svg class="i " width="18" height="18" aria-hidden="true" style="fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round"><use href="#wand"/></svg><span>Brand<br>Kit</span></div>
+    </div>
+    <div class="phone-stage">
+      <div class="phone-frame">
+        <div class="phone-art art-launch">
+          <span class="art-kicker">NEW DROP</span>
+          <strong>MAKE IT
+MOVE.</strong>
+          <div class="art-orbit"></div>
+          <span class="art-footer">MOTION / 2026</span>
+        </div>
+      </div>
+      <div class="play-button"><svg class="i " width="19" height="19" aria-hidden="true" style="fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round"><use href="#play"/></svg></div>
+    </div>
+    <div class="editor-properties">
+      <span class="sidebar-label">SCENE 01</span>
+      <div class="property-row"><span>Duration</span><b>04.5s</b></div>
+      <div class="property-row"><span>Format</span><b>9:16 · 16:9</b></div>
+      <div class="property-row"><span>Type</span><b>MP4 60fps</b></div>
+      <div class="export-line"><svg class="i " width="14" height="14" aria-hidden="true" style="fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round"><use href="#download"/></svg> Export video</div>
+    </div>
+  </div>
+  <div class="timeline">
+    <span>TIMELINE</span>
+    <div class="timeline-track"><b></b><b></b><b></b></div>
+    <span>00:04 / 00:12</span>
+  </div>
+</div>
+    </div>
+  </section>
+
+  <section class="bonus-section" id="bonus">
+    <div class="wrap">
+      <div class="bonus-intro">
+        <span class="section-kicker">/ 4 BONUS</span>
+        <h2>Beli aplikasinya.<br><span>Bonusnya ikut semua.</span></h2>
+        <p>Aplikasi sudah cukup untuk mulai bikin video. Empat bonus ini membuat prosesnya makin cepat, dari ide, brief, suara, sampai prompt.</p>
+      </div>
+      <div class="bonus-grid">
+<article class="bonus-card b1"><span class="bonus-value">NILAI Rp100.000</span><span class="bonus-tag">&#127873; BONUS 01</span><h3>50 Brief per Niche</h3><p>Brief siap pakai untuk video berdurasi 20&ndash;120 detik, sudah dibagi per niche. Pilih satu, tempel, dan videomu mulai terbentuk.</p><small>Menghemat waktu riset ide dan menulis brief.</small></article>
+<article class="bonus-card b2"><span class="bonus-value">NILAI Rp75.000</span><span class="bonus-tag">&#127873; BONUS 02</span><h3>Aplikasi Brief Generator</h3><p>Bikin brief sendiri untuk niche apa pun dan langsung jadi scene. Sudah mengikuti 69 gaya contoh, 112 template, dan rasio 9:16 atau 16:9. Berjalan dengan Gemini bawaan akunmu, tanpa API key tambahan.</p><small>Butuh akun Google untuk membuka Gemini Canvas.</small></article>
+<article class="bonus-card b3"><span class="bonus-value">NILAI Rp75.000</span><span class="bonus-tag">&#127873; BONUS 03</span><h3>Aplikasi TTS Generator</h3><p>Ubah naskah jadi suara voice-over untuk videomu. Berjalan di Gemini Canvas, tanpa API key tambahan.</p><small>Butuh akun Google untuk membuka Gemini Canvas.</small></article>
+<article class="bonus-card b4"><span class="bonus-value">NILAI Rp100.000</span><span class="bonus-tag">&#127873; BONUS 04</span><h3>Master Prompt Animasi Motion Graphic di ChatGPT &amp; Claude</h3><p>Prompt siap tempel untuk membuat animasi motion graphic langsung di ChatGPT dan Claude, tanpa aplikasi tambahan.</p><small>Untuk file MP4 siap upload, gunakan Motion Graphic Studio.</small></article>
+      </div>
+      <div class="stack">
+        <div class="stack-list">
+          <h3>Semua yang kamu dapat</h3>
+<div class="stack-row"><span>Aplikasi Motion Graphic Studio (lifetime)</span><span class="v">Rp150.000</span></div><div class="stack-row"><span>&#127873; 50 Brief per Niche (20&ndash;120 detik)</span><span class="v">Rp100.000</span></div><div class="stack-row"><span>&#127873; Aplikasi Brief Generator</span><span class="v">Rp75.000</span></div><div class="stack-row"><span>&#127873; Aplikasi TTS Generator</span><span class="v">Rp75.000</span></div><div class="stack-row"><span>&#127873; Master Prompt Animasi Motion Graphic</span><span class="v">Rp100.000</span></div><div class="stack-row total"><span>Perkiraan total nilai</span><span class="v">Rp500.000</span></div>
+        </div>
+        <div class="stack-pay">
+          <span class="k">HARGA UNTUKMU HARI INI</span>
+          <div class="big">Rp50.000</div>
+          <p>Sekali bayar, akses selamanya. Aplikasi dan keempat bonus sudah termasuk. Tanpa langganan bulanan.</p>
+          <a data-testid="checkout-button" class="button button-dark" href="http://lynk.id/suburbudiono/mwggp7mw50w1/checkout" target="_blank" rel="noreferrer">Ambil Semuanya Sekarang<svg class="i" width="18" height="18" aria-hidden="true" style="fill:none;stroke:currentColor;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round"><use href="#arrow-up-right"/></svg></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="price-section wrap" id="harga">
+    <div class="price-copy">
+      <span class="section-kicker">/ SATU KALI BAYAR</span>
+      <h2>Mulai bikin<br><span>lebih serius.</span></h2>
+      <p>Tools yang kamu butuhkan untuk membuat video yang terasa profesional, tanpa langganan bulanan.</p>
+    </div>
+    <div class="price-card" data-testid="pricing-card">
+      <div class="price-card-top"><span>AKSES PENUH</span><span class="price-badge">LIFETIME</span></div>
+      <div class="price">Rp50.000</div>
+      <p>sekali bayar · langsung mulai</p>
+      <div class="price-divider"></div>
+        <div class="price-feature"><svg class="i " width="16" height="16" aria-hidden="true" style="fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round"><use href="#check"/></svg> 112 template &amp; 345 preset ide</div>
+        <div class="price-feature"><svg class="i " width="16" height="16" aria-hidden="true" style="fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round"><use href="#check"/></svg> Format 9:16 + 16:9, MP4 sampai 60 fps</div>
+        <div class="price-feature"><svg class="i " width="16" height="16" aria-hidden="true" style="fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round"><use href="#check"/></svg> Brand Kit, 18 gaya &amp; 17 font</div>
+        <div class="price-feature"><svg class="i " width="16" height="16" aria-hidden="true" style="fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round"><use href="#check"/></svg> Suara, musik &amp; efek otomatis</div>
+      <a data-testid="checkout-button" class="button button-dark full-button" href="http://lynk.id/suburbudiono/mwggp7mw50w1/checkout" target="_blank" rel="noreferrer">Beli Sekarang<svg class="i " width="18" height="18" aria-hidden="true" style="fill:none;stroke:currentColor;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round"><use href="#arrow-up-right"/></svg></a>
+    </div>
+  </section>
+
+  <section class="faq-section wrap" id="faq">
+    <div class="faq-title">
+      <span class="section-kicker">/ PERTANYAAN</span>
+      <h2>Masih<br><span>penasaran?</span></h2>
+      <p>Kalau belum ketemu jawabannya, hubungi kami di <a href="mailto:suburbudiono9@gmail.com" data-testid="faq-email-link">suburbudiono9@gmail.com</a>.</p>
+    </div>
+    <div class="faq-list">
+        <div class="faq-item active">
+          <button type="button" data-testid="faq-question-1" aria-expanded="true">
+            <span>01</span><b>Apa itu Motion Graphic Studio?</b><svg class="i " width="20" height="20" aria-hidden="true" style="fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round"><use href="#chevron-down"/></svg>
+          </button>
+          <p data-testid="faq-answer-1">Motion Graphic Studio adalah tool berbasis browser untuk membuat video motion graphic vertikal 9:16 dan horizontal 16:9, tanpa perlu install software berat. Isinya 112 template, 69 contoh video, dan 345 preset ide.</p>
+        </div>
+        <div class="faq-item">
+          <button type="button" data-testid="faq-question-2" aria-expanded="false">
+            <span>02</span><b>Apakah cocok untuk TikTok, Reels, dan YouTube?</b><svg class="i " width="20" height="20" aria-hidden="true" style="fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round"><use href="#chevron-down"/></svg>
+          </button>
+          <p data-testid="faq-answer-2">Cocok. Pilih 9:16 untuk TikTok, Instagram Reels, dan YouTube Shorts, atau 16:9 untuk YouTube dan presentasi. Kamu juga bisa mengekspor keduanya sekaligus. Ada garis bantu zona aman supaya teks penting tidak tertutup tombol TikTok/Reels.</p>
+        </div>
+        <div class="faq-item">
+          <button type="button" data-testid="faq-question-3" aria-expanded="false">
+            <span>03</span><b>Bagaimana cara membelinya?</b><svg class="i " width="20" height="20" aria-hidden="true" style="fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round"><use href="#chevron-down"/></svg>
+          </button>
+          <p data-testid="faq-answer-3">Klik tombol “Beli Sekarang”, selesaikan pembayaran di halaman checkout, lalu kamu menerima file aplikasi beserta kata sandi lisensinya. Masukkan kata sandi sekali, aplikasi langsung bisa dipakai.</p>
+        </div>
+        <div class="faq-item">
+          <button type="button" data-testid="faq-question-4" aria-expanded="false">
+            <span>04</span><b>Apakah video bisa diekspor?</b><svg class="i " width="20" height="20" aria-hidden="true" style="fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round"><use href="#chevron-down"/></svg>
+          </button>
+          <p data-testid="faq-answer-4">Bisa. Ekspor MP4 720p atau 1080p, kualitas standar, tinggi, atau 60 fps, satu rasio atau dua rasio sekaligus. Video sudah berisi sampul di frame pertama, dan subtitle .srt bisa diunduh terpisah.</p>
+        </div>
+        <div class="faq-item">
+          <button type="button" data-testid="faq-question-5" aria-expanded="false">
+            <span>05</span><b>Apa saja yang saya dapat setelah membeli?</b><svg class="i" width="20" height="20" aria-hidden="true" style="fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round"><use href="#chevron-down"/></svg>
+          </button>
+          <p data-testid="faq-answer-5">Aplikasi Motion Graphic Studio dengan akses lifetime, ditambah 4 bonus: 50 Brief per Niche (durasi 20&ndash;120 detik), aplikasi Brief Generator, aplikasi TTS Generator, dan Master Prompt Animasi Motion Graphic di ChatGPT &amp; Claude.</p>
+        </div>
+        <div class="faq-item">
+          <button type="button" data-testid="faq-question-6" aria-expanded="false">
+            <span>06</span><b>Apakah saya perlu API key?</b><svg class="i" width="20" height="20" aria-hidden="true" style="fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round"><use href="#chevron-down"/></svg>
+          </button>
+          <p data-testid="faq-answer-6">Untuk editor, preset, template, dan export, tidak perlu. Fitur AI otomatis dan suara AI di dalam aplikasi memakai API key milikmu sendiri (biayanya mengikuti penyedia). Tanpa API key kamu tetap bisa memakai cara salin-tempel. Brief Generator dan TTS Generator berjalan di Gemini Canvas memakai Gemini bawaan akunmu.</p>
+        </div>
+        <div class="faq-item">
+          <button type="button" data-testid="faq-question-7" aria-expanded="false">
+            <span>07</span><b>Apa itu 50 Brief per Niche?</b><svg class="i" width="20" height="20" aria-hidden="true" style="fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round"><use href="#chevron-down"/></svg>
+          </button>
+          <p data-testid="faq-answer-7">Kumpulan 50 brief siap pakai yang sudah dibagi ke beberapa niche, untuk video berdurasi 20&ndash;120 detik. Kamu tinggal memilih yang cocok, menempelkannya, lalu menyusun videonya.</p>
+        </div>
+        <div class="faq-item">
+          <button type="button" data-testid="faq-question-8" aria-expanded="false">
+            <span>08</span><b>Apakah ChatGPT dan Claude bisa langsung menghasilkan video?</b><svg class="i" width="20" height="20" aria-hidden="true" style="fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round"><use href="#chevron-down"/></svg>
+          </button>
+          <p data-testid="faq-answer-8">Master prompt di bonus ini membuat animasi motion graphic langsung di ChatGPT dan Claude. Untuk file MP4 siap upload, gunakan Motion Graphic Studio.</p>
+        </div>
+        <div class="faq-item">
+          <button type="button" data-testid="faq-question-9" aria-expanded="false">
+            <span>09</span><b>Berapa durasi video yang bisa dibuat?</b><svg class="i" width="20" height="20" aria-hidden="true" style="fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round"><use href="#chevron-down"/></svg>
+          </button>
+          <p data-testid="faq-answer-9">Dari sekitar 5 sampai 120 detik dengan suara (sampai 240 detik tanpa audio), dalam format 9:16 atau 16:9.</p>
+        </div>
+        <div class="faq-item">
+          <button type="button" data-testid="faq-question-10" aria-expanded="false">
+            <span>10</span><b>Apakah ada biaya langganan bulanan?</b><svg class="i" width="20" height="20" aria-hidden="true" style="fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round"><use href="#chevron-down"/></svg>
+          </button>
+          <p data-testid="faq-answer-10">Tidak ada. Kamu membayar sekali dan bisa memakainya selamanya.</p>
+        </div>
+        <div class="faq-item">
+          <button type="button" data-testid="faq-question-11" aria-expanded="false">
+            <span>11</span><b>Perangkat apa yang dibutuhkan?</b><svg class="i" width="20" height="20" aria-hidden="true" style="fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round"><use href="#chevron-down"/></svg>
+          </button>
+          <p data-testid="faq-answer-11">Laptop atau komputer dengan Chrome atau Edge terbaru memberi hasil paling stabil, terutama saat ekspor MP4. Di HP aplikasi tetap bisa dibuka untuk menyusun scene, tetapi ekspor bisa lebih lambat atau terbatas, khususnya di iPhone/Safari.</p>
+        </div>
+        <div class="faq-item">
+          <button type="button" data-testid="faq-question-12" aria-expanded="false">
+            <span>12</span><b>Bisakah memakai video wajah atau klip saya sendiri?</b><svg class="i" width="20" height="20" aria-hidden="true" style="fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round"><use href="#chevron-down"/></svg>
+          </button>
+          <p data-testid="faq-answer-12">Bisa, lewat fitur talking head + B-roll dan klip video di dalam scene. Fitur ini masih beta: pakai MP4 (H.264) atau WebM maksimal 300 MB, video utama maksimal 3 menit, di Chrome/Edge laptop. Video iPhone (HEVC/.mov) sebaiknya diubah dulu ke MP4. Ekspornya lebih lama, dan video hanya tersimpan di browser yang dipakai.</p>
+        </div>
+        <div class="faq-item">
+          <button type="button" data-testid="faq-question-13" aria-expanded="false">
+            <span>13</span><b>Apakah ada watermark?</b><svg class="i" width="20" height="20" aria-hidden="true" style="fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round"><use href="#chevron-down"/></svg>
+          </button>
+          <p data-testid="faq-answer-13">Tidak ada watermark dari kami. Nama dan logo yang tampil di video adalah brand kamu sendiri, dan bisa diatur di Brand Kit.</p>
+        </div>
+    </div>
+  </section>
+
+  <section class="closing-section" id="closing">
+    <div class="wrap closing-inner">
+      <span class="section-kicker">/ KEPUTUSAN KECIL, DAMPAK BESAR</span>
+      <h2>Satu video dari editor bisa lebih mahal.<br><span>Ini Rp50.000, selamanya.</span></h2>
+      <p>Aplikasi motion graphic dengan 112 template dan ekspor 9:16 + 16:9, ditambah 50 brief, Brief Generator, TTS Generator, dan master prompt. Semua dalam satu pembelian, tanpa langganan.</p>
+      <a data-testid="checkout-button" class="button button-dark"  href="http://lynk.id/suburbudiono/mwggp7mw50w1/checkout" target="_blank" rel="noreferrer">Beli Sekarang, Rp50.000<svg class="i" width="18" height="18" aria-hidden="true" style="fill:none;stroke:currentColor;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round"><use href="#arrow-up-right"/></svg></a>
+      <div class="closing-points">
+        <span><svg class="i" width="14" height="14" aria-hidden="true" style="fill:none;stroke:currentColor;stroke-width:3;stroke-linecap:round;stroke-linejoin:round"><use href="#check"/></svg> Sekali bayar</span>
+        <span><svg class="i" width="14" height="14" aria-hidden="true" style="fill:none;stroke:currentColor;stroke-width:3;stroke-linecap:round;stroke-linejoin:round"><use href="#check"/></svg> Akses lifetime</span>
+        <span><svg class="i" width="14" height="14" aria-hidden="true" style="fill:none;stroke:currentColor;stroke-width:3;stroke-linecap:round;stroke-linejoin:round"><use href="#check"/></svg> 4 bonus termasuk</span>
+        <span><svg class="i" width="14" height="14" aria-hidden="true" style="fill:none;stroke:currentColor;stroke-width:3;stroke-linecap:round;stroke-linejoin:round"><use href="#check"/></svg> Tanpa install</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact-section">
+    <div class="wrap contact-inner">
+      <div>
+        <span class="section-kicker">/ PUNYA PERTANYAAN?</span>
+        <h2>Mari ngobrol<br><span>tentang ide kamu.</span></h2>
+      </div>
+      <div class="contact-links">
+        <a href="mailto:suburbudiono9@gmail.com" data-testid="contact-email-link">suburbudiono9@gmail.com <svg class="i " width="18" height="18" aria-hidden="true" style="fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round"><use href="#arrow-up-right"/></svg></a>
+        <a href="https://wa.me/6285278054762" target="_blank" rel="noreferrer" data-testid="contact-whatsapp-link">+62 852-7805-4762 <svg class="i " width="18" height="18" aria-hidden="true" style="fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round"><use href="#arrow-up-right"/></svg></a>
+        <p>Alamat studio placeholder<br>Indonesia</p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer wrap">
+    <a class="wordmark" href="#top" data-testid="footer-wordmark-link"><span>MOTION</span><b>GRAPHIC</b><span>STUDIO</span></a>
+    <div class="footer-links">
+      <a href="#faq" data-testid="footer-privacy-link">Privasi</a>
+      <a href="#faq" data-testid="footer-terms-link">Syarat &amp; Ketentuan</a>
+      <span>© 2026 Motion Graphic Studio</span>
+    </div>
+  </footer>
+</main>
+
+<script>
+(function () {
+  // Menu mobile
+  var menuBtn = document.getElementById('menu-button');
+  var navLinks = document.getElementById('nav-links');
+  menuBtn.addEventListener('click', function () {
+    var open = navLinks.classList.toggle('open');
+    menuBtn.setAttribute('aria-expanded', open);
+  });
+  navLinks.addEventListener('click', function (e) {
+    if (e.target.closest('a')) { navLinks.classList.remove('open'); menuBtn.setAttribute('aria-expanded', 'false'); }
+  });
+
+  // Template editor (berlaku di kedua jendela editor)
+  var templates = {
+    launch: { cls: 'art-launch', kicker: 'NEW DROP',   title: 'MAKE IT\nMOVE.',    footer: 'MOTION / 2026' },
+    quote:  { cls: 'art-quote',  kicker: 'QUOTE OF THE DAY', title: 'IDEA\nBAGUS\nBERGERAK.', footer: 'MOTION / QUOTE' },
+    promo:  { cls: 'art-promo',  kicker: 'PROMO 50%',  title: 'DISKON\nGEDE.',     footer: 'MOTION / PROMO' }
+  };
+  document.querySelectorAll('.product-window').forEach(function (win) {
+    win.querySelectorAll('.template').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        var t = templates[btn.dataset.template];
+        win.querySelectorAll('.template').forEach(function (b) { b.classList.toggle('active', b === btn); });
+        var art = win.querySelector('.phone-art');
+        art.className = 'phone-art ' + t.cls;
+        art.querySelector('.art-kicker').textContent = t.kicker;
+        art.querySelector('strong').textContent = t.title;
+        art.querySelector('.art-footer').textContent = t.footer;
+      });
+    });
+  });
+
+  // FAQ accordion
+  document.querySelectorAll('.faq-item > button').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var item = btn.parentElement;
+      var willOpen = !item.classList.contains('active');
+      document.querySelectorAll('.faq-item').forEach(function (i) {
+        i.classList.remove('active');
+        i.firstElementChild.setAttribute('aria-expanded', 'false');
+      });
+      if (willOpen) { item.classList.add('active'); btn.setAttribute('aria-expanded', 'true'); }
+    });
+  });
+
+  // ---------- Demo & Hasil video (11 kotak YouTube) ----------
+  // Isi link YouTube di sini kapan saja. Boleh berupa link penuh, link Shorts,
+  // youtu.be, atau cukup ID videonya. Kosongkan ("") = tampil placeholder.
+  var DEMO_VIDEO = { title: 'Demo cara kerja aplikasi', youtube: '' };
+  var RESULT_VIDEOS = [
+    { title: 'Hasil video 01', youtube: '' },
+    { title: 'Hasil video 02', youtube: '' },
+    { title: 'Hasil video 03', youtube: '' },
+    { title: 'Hasil video 04', youtube: '' },
+    { title: 'Hasil video 05', youtube: '' },
+    { title: 'Hasil video 06', youtube: '' },
+    { title: 'Hasil video 07', youtube: '' },
+    { title: 'Hasil video 08', youtube: '' },
+    { title: 'Hasil video 09', youtube: '' },
+    { title: 'Hasil video 10', youtube: '' }
+  ];
+
+  function youtubeId(v) {
+    v = (v || '').trim();
+    if (!v) return '';
+    if (/^[\w-]{11}$/.test(v)) return v;
+    var m = v.match(/(?:youtu\.be\/|shorts\/|embed\/|[?&]v=)([\w-]{11})/);
+    return m ? m[1] : '';
+  }
+
+  function buildVideoBox(item) {
+    var box = document.createElement('div');
+    box.className = 'video-box';
+    var id = youtubeId(item.youtube);
+    if (id) {
+      var f = document.createElement('iframe');
+      f.src = 'https://www.youtube-nocookie.com/embed/' + id + '?rel=0&playsinline=1';
+      f.title = item.title;
+      f.loading = 'lazy';
+      f.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
+      f.allowFullscreen = true;
+      box.appendChild(f);
+    } else {
+      box.innerHTML = '<div class="video-empty"><span class="vplay"><svg class="i" width="20" height="20" aria-hidden="true" style="fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round"><use href="#play"/></svg></span><span>VIDEO YOUTUBE<br>SEGERA HADIR</span></div>';
+    }
+    return box;
+  }
+
+  function buildVideoItem(item, num, tag) {
+    var fig = tag || document.createElement('figure');
+    fig.classList.add('video-item');
+    fig.appendChild(buildVideoBox(item));
+    var cap = document.createElement('figcaption');
+    var n = document.createElement('span'); n.textContent = num;
+    cap.appendChild(n); cap.appendChild(document.createTextNode(item.title));
+    fig.appendChild(cap);
+    return fig;
+  }
+
+  buildVideoItem(DEMO_VIDEO, 'DEMO', document.getElementById('demo-video'));
+  var grid = document.getElementById('results-grid');
+  RESULT_VIDEOS.forEach(function (v, i) {
+    grid.appendChild(buildVideoItem(v, String(i + 1).padStart(2, '0')));
+  });
+})();
+</script>
+</body>
+</html>
