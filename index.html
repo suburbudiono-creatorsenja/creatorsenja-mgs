@@ -4,7 +4,13 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#fdfbf7">
-<meta name="description" content="Motion Graphic Studio — buat video motion graphic vertikal 9:16 yang siap tampil.">
+<meta name="description" content="Motion Graphic Studio: buat video motion graphic 9:16 dan 16:9 langsung di browser. 112 template, 345 ide siap pakai, ekspor MP4 sampai 60 fps. Harga launching Rp50.000 sampai 31 Oktober.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://studio.creatorsenja.com/">
+<meta property="og:title" content="Motion Graphic Studio: bikin video motion graphic tanpa ngedit">
+<meta property="og:description" content="Aplikasi di browser untuk video 9:16 dan 16:9. 112 template, 345 ide, MP4 60 fps, plus buku panduan PDF. Harga launching Rp50.000.">
+<meta property="og:image" content="https://studio.creatorsenja.com/img/mockup-og.jpg">
+<meta name="twitter:card" content="summary_large_image">
 <title>Motion Graphic Studio — Bikin Ide Bergerak</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -468,6 +474,47 @@ svg.i { display: inline-block; flex: none; }
   .stack-row { font-size: 13px; }
   .closing-inner .button { width: 100%; }
 }
+
+/* ===== v2: launch bar, mockup, video horizontal, harga coret ===== */
+.launch-bar{background:var(--ink);color:var(--cream);font:500 12px/1.4 "DM Mono",monospace;letter-spacing:.02em;border-bottom:var(--line)}
+.launch-bar .wrap{display:flex;align-items:center;justify-content:center;gap:10px 18px;flex-wrap:wrap;padding-top:10px;padding-bottom:10px;text-align:center}
+.launch-bar b{color:var(--yellow);font-weight:500}
+.launch-bar s{opacity:.7}
+.launch-bar .cd{display:inline-flex;gap:6px}
+.launch-bar .cd span{background:var(--yellow);color:var(--ink);padding:2px 6px;min-width:34px;text-align:center}
+.launch-bar a{color:var(--yellow)}
+.hero-price{display:inline-flex;align-items:center;gap:10px;flex-wrap:wrap;margin-top:22px;border:2px solid var(--ink);background:#fff;padding:8px 12px;font:500 12px "DM Mono",monospace;box-shadow:3px 3px 0 var(--ink)}
+.hero-price s{opacity:.6}
+.hero-price b{font:800 16px "Plus Jakarta Sans",sans-serif;background:var(--yellow);padding:0 6px}
+.mock-section{padding-top:110px;padding-bottom:40px}
+.mock-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:50px;align-items:center}
+.mock-copy h2{font-size:clamp(34px,4.4vw,58px);letter-spacing:-.075em;line-height:.95;margin:16px 0 20px}
+.mock-copy h2 span{background:var(--yellow);padding:0 8px}
+.mock-copy p{font-size:16px;line-height:1.7;margin:0 0 18px}
+.mock-list{list-style:none;padding:0;margin:0;display:grid;gap:10px}
+.mock-list li{display:flex;gap:10px;align-items:flex-start;font-weight:700;font-size:15px}
+.mock-list li i{flex:none;font-style:normal;width:24px;height:24px;display:grid;place-items:center;background:var(--lime);border:2px solid var(--ink);font-size:12px}
+.mock-figure{margin:0;border:var(--line);box-shadow:var(--shadow);background:#fff;overflow:hidden}
+.mock-figure img{display:block;width:100%;height:auto}
+.results-sub{display:flex;align-items:center;gap:12px;margin:0 0 20px;font:500 11px "DM Mono",monospace;letter-spacing:.04em}
+.results-sub b{background:var(--ink);color:var(--yellow);padding:5px 8px;font-weight:500}
+.results-sub.h{margin-top:56px}
+.results-grid-h{display:grid;grid-template-columns:repeat(3,1fr);gap:26px 20px}
+.video-box.land{aspect-ratio:16/9}
+.yt-link{display:inline-flex;align-items:center;gap:6px;margin-top:8px;font:500 10px "DM Mono",monospace;letter-spacing:.03em;color:var(--ink);text-decoration:none;border-bottom:2px solid var(--coral)}
+.yt-link:hover{background:var(--yellow)}
+.price-was{font:500 12px "DM Mono",monospace;margin-top:30px}
+.price-was s{text-decoration-thickness:2px;text-decoration-color:var(--coral)}
+.price-card .price{margin-top:6px}
+.price-deadline{display:inline-block;background:var(--ink);color:var(--yellow);font:500 10px "DM Mono",monospace;padding:5px 8px;margin:6px 0 10px}
+.stack-pay .was{font:500 13px "DM Mono",monospace}
+.stack-pay .was s{text-decoration-thickness:2px;text-decoration-color:var(--coral)}
+.closing-note{font:500 12px "DM Mono",monospace;margin-top:14px}
+.bonus-card.b5{background:var(--coral)}
+.bonus-new{display:inline-block;font:700 10px/1 "DM Mono",monospace;letter-spacing:.08em;background:var(--yellow);border:2px solid var(--ink);padding:3px 6px;margin-left:6px;vertical-align:middle}
+@media (max-width:1050px){.results-grid-h{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:850px){.mock-grid{grid-template-columns:1fr;gap:34px}.mock-section{padding-top:80px}}
+@media (max-width:560px){.results-grid-h{grid-template-columns:1fr}.launch-bar{font-size:11px}.launch-bar .cd span{min-width:30px}.hero-price{font-size:11px}}
 </style>
 </head>
 <body>
@@ -487,6 +534,12 @@ svg.i { display: inline-block; flex: none; }
 </svg>
 
 <main id="top">
+  <div class="launch-bar" data-launch>
+    <div class="wrap">
+      <span><b>HARGA LAUNCHING Rp50.000</b> &middot; normal <s>Rp100.000</s> &middot; berlaku sampai 31 Oktober 2026</span>
+      <span class="cd" id="countdown" aria-label="Sisa waktu harga launching"><span data-cd="d">-- hari</span><span data-cd="h">-- jam</span><span data-cd="m">-- mnt</span><span data-cd="s">-- dtk</span></span>
+    </div>
+  </div>
   <nav class="nav wrap" data-testid="main-navigation">
     <a class="wordmark" href="#top" data-testid="wordmark-link"><span>MOTION</span><b>GRAPHIC</b><span>STUDIO</span></a>
     <div class="nav-links" id="nav-links">
@@ -494,7 +547,7 @@ svg.i { display: inline-block; flex: none; }
       <a href="#demo" data-testid="nav-demo-link">Demo</a>
       <a href="#preview" data-testid="nav-preview-link">Preview</a>
       <a href="#faq" data-testid="nav-faq-link">FAQ</a>
-      <a data-testid="checkout-button" class="button button-dark nav-cta" href="http://lynk.id/suburbudiono/mwggp7mw50w1/checkout" target="_blank" rel="noreferrer">Beli Sekarang<svg class="i " width="18" height="18" aria-hidden="true" style="fill:none;stroke:currentColor;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round"><use href="#arrow-up-right"/></svg></a>
+      <a data-testid="checkout-button" class="button button-dark nav-cta" href="https://lynk.id/suburbudiono/mwggp7mw50w1/checkout" target="_blank" rel="noreferrer">Beli Sekarang<svg class="i " width="18" height="18" aria-hidden="true" style="fill:none;stroke:currentColor;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round"><use href="#arrow-up-right"/></svg></a>
     </div>
     <button type="button" class="menu-button" id="menu-button" aria-label="Buka menu" aria-expanded="false" aria-controls="nav-links" data-testid="mobile-menu-button"><svg class="i " width="24" height="24" aria-hidden="true" style="fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round"><use href="#menu"/></svg></button>
   </nav>
@@ -505,9 +558,10 @@ svg.i { display: inline-block; flex: none; }
       <h1>Ide bagus<br><em>harus</em> bergerak<span class="asterisk">✳</span></h1>
       <p class="hero-text">Tool motion graphic di browser untuk mengubah ide, cerita, dan brand kamu jadi video siap tampil, vertikal 9:16 <b>dan</b> horizontal 16:9. 112 template, 345 ide siap pakai, ekspor MP4 sampai 60 fps.</p>
       <div class="hero-actions">
-        <a data-testid="checkout-button" class="button button-dark " href="http://lynk.id/suburbudiono/mwggp7mw50w1/checkout" target="_blank" rel="noreferrer">Beli Sekarang<svg class="i " width="18" height="18" aria-hidden="true" style="fill:none;stroke:currentColor;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round"><use href="#arrow-up-right"/></svg></a>
+        <a data-testid="checkout-button" class="button button-dark " href="https://lynk.id/suburbudiono/mwggp7mw50w1/checkout" target="_blank" rel="noreferrer">Beli Sekarang<svg class="i " width="18" height="18" aria-hidden="true" style="fill:none;stroke:currentColor;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round"><use href="#arrow-up-right"/></svg></a>
         <a class="text-link" href="#fitur" data-testid="hero-see-features-link">Lihat fitur <svg class="i " width="16" height="16" aria-hidden="true" style="fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round"><use href="#arrow-down-right"/></svg></a>
       </div>
+      <div class="hero-price" data-launch><span>HARGA LAUNCHING</span><s>Rp100.000</s><b>Rp50.000</b><span>s.d. 31 Okt</span></div>
       <div class="hero-proof">
         <span class="proof-avatars"><i>✦</i><i>✺</i><i>●</i></span>
         <span>Untuk creator yang<br><b>ingin tampil beda.</b></span>
@@ -561,10 +615,26 @@ MOVE.</strong>
 
   <div class="marquee" aria-label="Keunggulan produk" data-testid="benefit-marquee">
     <div class="marquee-track">
-      <span>TANPA INSTALL</span><i>✳</i><span>9:16 + 16:9</span><i>✳</i><span>112 TEMPLATE</span><i>✳</i><span>345 PRESET</span><i>✳</i><span>MP4 60 FPS</span><i>✳</i><span>BRAND KIT</span>
+      <span>TANPA INSTALL</span><i>✳</i><span>9:16 + 16:9</span><i>✳</i><span>112 TEMPLATE</span><i>✳</i><span>345 PRESET</span><i>✳</i><span>MP4 60 FPS</span><i>✳</i><span>BRAND KIT</span><i>✳</i><span>GRATIS UPDATE</span><i>✳</i><span>BUKU PANDUAN PDF</span>
     </div>
   </div>
 
+  <section class="mock-section wrap" id="produk">
+    <div class="mock-grid">
+      <div class="mock-copy reveal">
+        <span class="section-kicker">/ YANG KAMU DAPAT</span>
+        <h2>Aplikasi + panduan.<br><span>Langsung jalan.</span></h2>
+        <p>Buka aplikasinya di browser laptop, tulis ide, dan ekspor MP4 untuk Reels, TikTok, Shorts, atau YouTube. Bingung di satu langkah? Buka buku panduan bergambarnya.</p>
+        <ul class="mock-list">
+          <li><i>✓</i><span>Aplikasi Motion Graphic Studio, akses lifetime</span></li>
+          <li><i>✓</i><span>Gratis update ke versi berikutnya</span></li>
+          <li><i>✓</i><span>Buku panduan PDF bergambar &amp; video panduan</span></li>
+          <li><i>✓</i><span>4 bonus alat bantu: brief, Brief Generator, TTS, master prompt</span></li>
+        </ul>
+      </div>
+      <figure class="mock-figure reveal reveal-delay"><img src="img/mockup.webp" width="1600" height="1000" loading="lazy" decoding="async" alt="Mockup Motion Graphic Studio: aplikasi di laptop, hasil video di HP, dan buku panduan PDF"></figure>
+    </div>
+  </section>
   <section class="section wrap" id="fitur">
     <div class="section-heading">
       <div>
@@ -632,7 +702,7 @@ MOVE.</strong>
       </div>
       <div class="ba-grid">
         <div class="ba-col bad"><span class="ba-label">TANPA MOTION GRAPHIC STUDIO</span><ul><li><span>&#10005;</span><b>Edit manual berjam-jam di timeline untuk satu video</b></li><li><span>&#10005;</span><b>Bayar editor per video, atau langganan software tiap bulan</b></li><li><span>&#10005;</span><b>Ide numpuk di catatan karena bingung mulai dari mana</b></li><li><span>&#10005;</span><b>Tampilan tiap video beda-beda, brand tidak terasa</b></li><li><span>&#10005;</span><b>Install software berat dan belajar dari nol</b></li></ul></div>
-        <div class="ba-col good"><span class="ba-label">DENGAN MOTION GRAPHIC STUDIO</span><ul><li><span><svg class="i" width="18" height="18" aria-hidden="true" style="fill:none;stroke:currentColor;stroke-width:3;stroke-linecap:round;stroke-linejoin:round"><use href="#check"/></svg></span><b>Pilih preset, ganti teks, export. Hitungan menit</b></li><li><span><svg class="i" width="18" height="18" aria-hidden="true" style="fill:none;stroke:currentColor;stroke-width:3;stroke-linecap:round;stroke-linejoin:round"><use href="#check"/></svg></span><b>Bayar sekali Rp50.000, dipakai selamanya</b></li><li><span><svg class="i" width="18" height="18" aria-hidden="true" style="fill:none;stroke:currentColor;stroke-width:3;stroke-linecap:round;stroke-linejoin:round"><use href="#check"/></svg></span><b>69 contoh, 345 preset, dan 7 alur untuk langsung dipakai</b></li><li><span><svg class="i" width="18" height="18" aria-hidden="true" style="fill:none;stroke:currentColor;stroke-width:3;stroke-linecap:round;stroke-linejoin:round"><use href="#check"/></svg></span><b>Brand Kit membuat semua video konsisten, di 9:16 maupun 16:9</b></li><li><span><svg class="i" width="18" height="18" aria-hidden="true" style="fill:none;stroke:currentColor;stroke-width:3;stroke-linecap:round;stroke-linejoin:round"><use href="#check"/></svg></span><b>Buka di browser, tanpa install</b></li></ul></div>
+        <div class="ba-col good"><span class="ba-label">DENGAN MOTION GRAPHIC STUDIO</span><ul><li><span><svg class="i" width="18" height="18" aria-hidden="true" style="fill:none;stroke:currentColor;stroke-width:3;stroke-linecap:round;stroke-linejoin:round"><use href="#check"/></svg></span><b>Pilih preset, ganti teks, export. Hitungan menit</b></li><li><span><svg class="i" width="18" height="18" aria-hidden="true" style="fill:none;stroke:currentColor;stroke-width:3;stroke-linecap:round;stroke-linejoin:round"><use href="#check"/></svg></span><b>Bayar sekali <span data-price>Rp50.000</span>, dipakai selamanya</b></li><li><span><svg class="i" width="18" height="18" aria-hidden="true" style="fill:none;stroke:currentColor;stroke-width:3;stroke-linecap:round;stroke-linejoin:round"><use href="#check"/></svg></span><b>69 contoh, 345 preset, dan 7 alur untuk langsung dipakai</b></li><li><span><svg class="i" width="18" height="18" aria-hidden="true" style="fill:none;stroke:currentColor;stroke-width:3;stroke-linecap:round;stroke-linejoin:round"><use href="#check"/></svg></span><b>Brand Kit membuat semua video konsisten, di 9:16 maupun 16:9</b></li><li><span><svg class="i" width="18" height="18" aria-hidden="true" style="fill:none;stroke:currentColor;stroke-width:3;stroke-linecap:round;stroke-linejoin:round"><use href="#check"/></svg></span><b>Buka di browser, tanpa install</b></li></ul></div>
       </div>
     </div>
 
@@ -659,11 +729,14 @@ MOVE.</strong>
     <div class="results-head">
       <div>
         <span class="section-kicker">/ HASIL VIDEO</span>
-        <h3>10 video, dibuat<br><span style="background:var(--yellow);padding:0 8px 2px">dengan aplikasi ini.</span></h3>
+        <h3>15 video, dibuat<br><span style="background:var(--yellow);padding:0 8px 2px">dengan aplikasi ini.</span></h3>
       </div>
-      <p>Contoh nyata video 9:16 dan 16:9 yang dihasilkan langsung dari Motion Graphic Studio.</p>
+      <p>Contoh nyata video yang dihasilkan langsung dari Motion Graphic Studio: 10 vertikal 9:16 dan 5 horizontal 16:9. Klik untuk memutar, atau buka di YouTube.</p>
     </div>
+    <div class="results-sub"><b>VERTIKAL 9:16</b><span>Reels · TikTok · Shorts</span></div>
     <div class="results-grid" id="results-grid"></div>
+    <div class="results-sub h"><b>HORIZONTAL 16:9</b><span>YouTube · presentasi</span></div>
+    <div class="results-grid-h" id="results-grid-h"></div>
   </section>
 
   <section class="preview-section" id="preview">
@@ -677,7 +750,7 @@ MOVE.</strong>
           <span><svg class="i " width="15" height="15" aria-hidden="true" style="fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round"><use href="#check"/></svg> Identitas brand yang konsisten</span>
           <span><svg class="i " width="15" height="15" aria-hidden="true" style="fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round"><use href="#check"/></svg> Ekspor 9:16 + 16:9 sekaligus</span>
         </div>
-        <a class="text-link light-link" href="http://lynk.id/suburbudiono/mwggp7mw50w1/checkout" target="_blank" rel="noreferrer" data-testid="preview-checkout-link">Coba sekarang <svg class="i " width="16" height="16" aria-hidden="true" style="fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round"><use href="#arrow-up-right"/></svg></a>
+        <a class="text-link light-link" href="https://lynk.id/suburbudiono/mwggp7mw50w1/checkout" target="_blank" rel="noreferrer" data-testid="preview-checkout-link">Coba sekarang <svg class="i " width="16" height="16" aria-hidden="true" style="fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round"><use href="#arrow-up-right"/></svg></a>
       </div>
       <div class="product-window" data-testid="product-preview">
   <div class="window-topbar">
@@ -725,26 +798,29 @@ MOVE.</strong>
   <section class="bonus-section" id="bonus">
     <div class="wrap">
       <div class="bonus-intro">
-        <span class="section-kicker">/ 4 BONUS</span>
+        <span class="section-kicker">/ 6 BONUS</span>
         <h2>Beli aplikasinya.<br><span>Bonusnya ikut semua.</span></h2>
-        <p>Aplikasi sudah cukup untuk mulai bikin video. Empat bonus ini membuat prosesnya makin cepat, dari ide, brief, suara, sampai prompt.</p>
+        <p>Aplikasi sudah cukup untuk mulai bikin video. Enam bonus ini membuat prosesnya makin cepat dan makin mudah, dari ide, brief, suara, prompt, sampai panduan langkah demi langkah.</p>
       </div>
       <div class="bonus-grid">
 <article class="bonus-card b1"><span class="bonus-value">NILAI Rp100.000</span><span class="bonus-tag">&#127873; BONUS 01</span><h3>50 Brief per Niche</h3><p>Brief siap pakai untuk video berdurasi 20&ndash;120 detik, sudah dibagi per niche. Pilih satu, tempel, dan videomu mulai terbentuk.</p><small>Menghemat waktu riset ide dan menulis brief.</small></article>
 <article class="bonus-card b2"><span class="bonus-value">NILAI Rp75.000</span><span class="bonus-tag">&#127873; BONUS 02</span><h3>Aplikasi Brief Generator</h3><p>Bikin brief sendiri untuk niche apa pun dan langsung jadi scene. Sudah mengikuti 69 gaya contoh, 112 template, dan rasio 9:16 atau 16:9. Berjalan dengan Gemini bawaan akunmu, tanpa API key tambahan.</p><small>Butuh akun Google untuk membuka Gemini Canvas.</small></article>
 <article class="bonus-card b3"><span class="bonus-value">NILAI Rp75.000</span><span class="bonus-tag">&#127873; BONUS 03</span><h3>Aplikasi TTS Generator</h3><p>Ubah naskah jadi suara voice-over untuk videomu. Berjalan di Gemini Canvas, tanpa API key tambahan.</p><small>Butuh akun Google untuk membuka Gemini Canvas.</small></article>
 <article class="bonus-card b4"><span class="bonus-value">NILAI Rp100.000</span><span class="bonus-tag">&#127873; BONUS 04</span><h3>Master Prompt Animasi Motion Graphic di ChatGPT &amp; Claude</h3><p>Prompt siap tempel untuk membuat animasi motion graphic langsung di ChatGPT dan Claude, tanpa aplikasi tambahan.</p><small>Untuk file MP4 siap upload, gunakan Motion Graphic Studio.</small></article>
+<article class="bonus-card b5"><span class="bonus-value">NILAI Rp50.000</span><span class="bonus-tag">&#127873; BONUS 05</span><h3>Buku Panduan PDF Bergambar<span class="bonus-new">BARU</span></h3><p>34 halaman dengan screenshot asli dan penanda bernomor: dari membuka aplikasi, menulis brief, menempel hasil AI, mengatur scene, brand, suara, sampai ekspor MP4. Lengkap dengan resep cepat dan solusi masalah umum.</p><small>Bisa dibuka di HP maupun laptop.</small></article>
+<article class="bonus-card b6"><span class="bonus-value">NILAI Rp50.000</span><span class="bonus-tag">&#127873; BONUS 06</span><h3>Video Panduan Penggunaan<span class="bonus-new">BARU</span></h3><p>Tonton cara memakai Motion Graphic Studio langkah demi langkah, dari ide pertama sampai video siap upload. Cocok untuk kamu yang lebih mudah belajar dengan melihat.</p><small>Ditonton kapan saja, bisa diulang.</small></article>
       </div>
       <div class="stack">
         <div class="stack-list">
           <h3>Semua yang kamu dapat</h3>
-<div class="stack-row"><span>Aplikasi Motion Graphic Studio (lifetime)</span><span class="v">Rp150.000</span></div><div class="stack-row"><span>&#127873; 50 Brief per Niche (20&ndash;120 detik)</span><span class="v">Rp100.000</span></div><div class="stack-row"><span>&#127873; Aplikasi Brief Generator</span><span class="v">Rp75.000</span></div><div class="stack-row"><span>&#127873; Aplikasi TTS Generator</span><span class="v">Rp75.000</span></div><div class="stack-row"><span>&#127873; Master Prompt Animasi Motion Graphic</span><span class="v">Rp100.000</span></div><div class="stack-row total"><span>Perkiraan total nilai</span><span class="v">Rp500.000</span></div>
+<div class="stack-row"><span>Aplikasi Motion Graphic Studio (lifetime)</span><span class="v">Rp150.000</span></div><div class="stack-row"><span>&#127873; 50 Brief per Niche (20&ndash;120 detik)</span><span class="v">Rp100.000</span></div><div class="stack-row"><span>&#127873; Aplikasi Brief Generator</span><span class="v">Rp75.000</span></div><div class="stack-row"><span>&#127873; Aplikasi TTS Generator</span><span class="v">Rp75.000</span></div><div class="stack-row"><span>&#127873; Master Prompt Animasi Motion Graphic</span><span class="v">Rp100.000</span></div><div class="stack-row"><span>&#127873; Buku Panduan PDF Bergambar</span><span class="v">Rp50.000</span></div><div class="stack-row"><span>&#127873; Video Panduan Penggunaan</span><span class="v">Rp50.000</span></div><div class="stack-row"><span>Gratis update ke versi berikutnya</span><span class="v">Termasuk</span></div><div class="stack-row total"><span>Perkiraan total nilai</span><span class="v">Rp600.000</span></div>
         </div>
         <div class="stack-pay">
-          <span class="k">HARGA UNTUKMU HARI INI</span>
-          <div class="big">Rp50.000</div>
-          <p>Sekali bayar, akses selamanya. Aplikasi dan keempat bonus sudah termasuk. Tanpa langganan bulanan.</p>
-          <a data-testid="checkout-button" class="button button-dark" href="http://lynk.id/suburbudiono/mwggp7mw50w1/checkout" target="_blank" rel="noreferrer">Ambil Semuanya Sekarang<svg class="i" width="18" height="18" aria-hidden="true" style="fill:none;stroke:currentColor;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round"><use href="#arrow-up-right"/></svg></a>
+          <span class="k"><span data-launch>HARGA LAUNCHING &middot; SAMPAI 31 OKTOBER 2026</span></span>
+          <div class="was" data-launch>Harga normal <s>Rp100.000</s></div>
+          <div class="big" data-price>Rp50.000</div>
+          <p>Sekali bayar, akses selamanya, gratis update ke versi berikutnya. Aplikasi dan keenam bonus sudah termasuk. Tanpa langganan bulanan.</p>
+          <a data-testid="checkout-button" class="button button-dark" href="https://lynk.id/suburbudiono/mwggp7mw50w1/checkout" target="_blank" rel="noreferrer">Ambil Semuanya Sekarang<svg class="i" width="18" height="18" aria-hidden="true" style="fill:none;stroke:currentColor;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round"><use href="#arrow-up-right"/></svg></a>
         </div>
       </div>
     </div>
@@ -758,14 +834,18 @@ MOVE.</strong>
     </div>
     <div class="price-card" data-testid="pricing-card">
       <div class="price-card-top"><span>AKSES PENUH</span><span class="price-badge">LIFETIME</span></div>
-      <div class="price">Rp50.000</div>
+      <div class="price-was" data-launch>Harga normal <s>Rp100.000</s></div>
+      <div class="price" data-price>Rp50.000</div>
+      <span class="price-deadline" data-launch>HARGA LAUNCHING S.D. 31 OKTOBER 2026</span>
       <p>sekali bayar · langsung mulai</p>
       <div class="price-divider"></div>
         <div class="price-feature"><svg class="i " width="16" height="16" aria-hidden="true" style="fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round"><use href="#check"/></svg> 112 template &amp; 345 preset ide</div>
         <div class="price-feature"><svg class="i " width="16" height="16" aria-hidden="true" style="fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round"><use href="#check"/></svg> Format 9:16 + 16:9, MP4 sampai 60 fps</div>
         <div class="price-feature"><svg class="i " width="16" height="16" aria-hidden="true" style="fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round"><use href="#check"/></svg> Brand Kit, 18 gaya &amp; 17 font</div>
         <div class="price-feature"><svg class="i " width="16" height="16" aria-hidden="true" style="fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round"><use href="#check"/></svg> Suara, musik &amp; efek otomatis</div>
-      <a data-testid="checkout-button" class="button button-dark full-button" href="http://lynk.id/suburbudiono/mwggp7mw50w1/checkout" target="_blank" rel="noreferrer">Beli Sekarang<svg class="i " width="18" height="18" aria-hidden="true" style="fill:none;stroke:currentColor;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round"><use href="#arrow-up-right"/></svg></a>
+              <div class="price-feature"><svg class="i " width="16" height="16" aria-hidden="true" style="fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round"><use href="#check"/></svg> Gratis update ke versi berikutnya</div>
+        <div class="price-feature"><svg class="i " width="16" height="16" aria-hidden="true" style="fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round"><use href="#check"/></svg> 6 bonus, termasuk buku panduan PDF</div>
+      <a data-testid="checkout-button" class="button button-dark full-button" href="https://lynk.id/suburbudiono/mwggp7mw50w1/checkout" target="_blank" rel="noreferrer">Beli Sekarang<svg class="i " width="18" height="18" aria-hidden="true" style="fill:none;stroke:currentColor;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round"><use href="#arrow-up-right"/></svg></a>
     </div>
   </section>
 
@@ -804,7 +884,7 @@ MOVE.</strong>
           <button type="button" data-testid="faq-question-5" aria-expanded="false">
             <span>05</span><b>Apa saja yang saya dapat setelah membeli?</b><svg class="i" width="20" height="20" aria-hidden="true" style="fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round"><use href="#chevron-down"/></svg>
           </button>
-          <p data-testid="faq-answer-5">Aplikasi Motion Graphic Studio dengan akses lifetime, ditambah 4 bonus: 50 Brief per Niche (durasi 20&ndash;120 detik), aplikasi Brief Generator, aplikasi TTS Generator, dan Master Prompt Animasi Motion Graphic di ChatGPT &amp; Claude.</p>
+          <p data-testid="faq-answer-5">Aplikasi Motion Graphic Studio dengan akses lifetime dan gratis update ke versi berikutnya, ditambah 6 bonus: 50 Brief per Niche (durasi 20&ndash;120 detik), aplikasi Brief Generator, aplikasi TTS Generator, Master Prompt Animasi Motion Graphic di ChatGPT &amp; Claude, Buku Panduan PDF bergambar, dan Video Panduan Penggunaan.</p>
         </div>
         <div class="faq-item">
           <button type="button" data-testid="faq-question-6" aria-expanded="false">
@@ -834,7 +914,7 @@ MOVE.</strong>
           <button type="button" data-testid="faq-question-10" aria-expanded="false">
             <span>10</span><b>Apakah ada biaya langganan bulanan?</b><svg class="i" width="20" height="20" aria-hidden="true" style="fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round"><use href="#chevron-down"/></svg>
           </button>
-          <p data-testid="faq-answer-10">Tidak ada. Kamu membayar sekali dan bisa memakainya selamanya.</p>
+          <p data-testid="faq-answer-10">Tidak ada. Kamu membayar sekali dan bisa memakainya selamanya, termasuk update ke versi berikutnya tanpa biaya tambahan.</p>
         </div>
         <div class="faq-item">
           <button type="button" data-testid="faq-question-11" aria-expanded="false">
@@ -854,19 +934,33 @@ MOVE.</strong>
           </button>
           <p data-testid="faq-answer-13">Tidak ada watermark dari kami. Nama dan logo yang tampil di video adalah brand kamu sendiri, dan bisa diatur di Brand Kit.</p>
         </div>
+        <div class="faq-item">
+          <button type="button" data-testid="faq-question-14" aria-expanded="false">
+            <span>14</span><b>Apakah saya dapat update versi berikutnya?</b><svg class="i" width="20" height="20" aria-hidden="true" style="fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round"><use href="#chevron-down"/></svg>
+          </button>
+          <p data-testid="faq-answer-14">Dapat, gratis. Setiap versi baru Motion Graphic Studio bisa kamu dapatkan tanpa biaya tambahan, jadi template dan fitur baru ikut kamu nikmati.</p>
+        </div>
+        <div class="faq-item">
+          <button type="button" data-testid="faq-question-15" aria-expanded="false">
+            <span>15</span><b>Sampai kapan harga Rp50.000 berlaku?</b><svg class="i" width="20" height="20" aria-hidden="true" style="fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round"><use href="#chevron-down"/></svg>
+          </button>
+          <p data-testid="faq-answer-15">Rp50.000 adalah harga launching dan berlaku sampai 31 Oktober 2026 pukul 23.59 WIB. Setelah itu harga kembali normal menjadi Rp100.000.</p>
+        </div>
     </div>
   </section>
 
   <section class="closing-section" id="closing">
     <div class="wrap closing-inner">
       <span class="section-kicker">/ KEPUTUSAN KECIL, DAMPAK BESAR</span>
-      <h2>Satu video dari editor bisa lebih mahal.<br><span>Ini Rp50.000, selamanya.</span></h2>
-      <p>Aplikasi motion graphic dengan 112 template dan ekspor 9:16 + 16:9, ditambah 50 brief, Brief Generator, TTS Generator, dan master prompt. Semua dalam satu pembelian, tanpa langganan.</p>
-      <a data-testid="checkout-button" class="button button-dark"  href="http://lynk.id/suburbudiono/mwggp7mw50w1/checkout" target="_blank" rel="noreferrer">Beli Sekarang, Rp50.000<svg class="i" width="18" height="18" aria-hidden="true" style="fill:none;stroke:currentColor;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round"><use href="#arrow-up-right"/></svg></a>
+      <h2>Satu video dari editor bisa lebih mahal.<br><span>Ini <span data-price>Rp50.000</span>, selamanya.</span></h2>
+      <p>Aplikasi motion graphic dengan 112 template dan ekspor 9:16 + 16:9, ditambah 50 brief, Brief Generator, TTS Generator, master prompt, buku panduan PDF, dan video panduan. Semua dalam satu pembelian, tanpa langganan, gratis update.</p>
+      <a data-testid="checkout-button" class="button button-dark"  href="https://lynk.id/suburbudiono/mwggp7mw50w1/checkout" target="_blank" rel="noreferrer">Beli Sekarang, <span data-price>Rp50.000</span><svg class="i" width="18" height="18" aria-hidden="true" style="fill:none;stroke:currentColor;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round"><use href="#arrow-up-right"/></svg></a>
+      <div class="closing-note" data-launch>Harga launching sampai 31 Oktober 2026. Setelah itu Rp100.000.</div>
       <div class="closing-points">
         <span><svg class="i" width="14" height="14" aria-hidden="true" style="fill:none;stroke:currentColor;stroke-width:3;stroke-linecap:round;stroke-linejoin:round"><use href="#check"/></svg> Sekali bayar</span>
         <span><svg class="i" width="14" height="14" aria-hidden="true" style="fill:none;stroke:currentColor;stroke-width:3;stroke-linecap:round;stroke-linejoin:round"><use href="#check"/></svg> Akses lifetime</span>
-        <span><svg class="i" width="14" height="14" aria-hidden="true" style="fill:none;stroke:currentColor;stroke-width:3;stroke-linecap:round;stroke-linejoin:round"><use href="#check"/></svg> 4 bonus termasuk</span>
+        <span><svg class="i" width="14" height="14" aria-hidden="true" style="fill:none;stroke:currentColor;stroke-width:3;stroke-linecap:round;stroke-linejoin:round"><use href="#check"/></svg> 6 bonus termasuk</span>
+        <span><svg class="i" width="14" height="14" aria-hidden="true" style="fill:none;stroke:currentColor;stroke-width:3;stroke-linecap:round;stroke-linejoin:round"><use href="#check"/></svg> Gratis update</span>
         <span><svg class="i" width="14" height="14" aria-hidden="true" style="fill:none;stroke:currentColor;stroke-width:3;stroke-linecap:round;stroke-linejoin:round"><use href="#check"/></svg> Tanpa install</span>
       </div>
     </div>
@@ -958,6 +1052,14 @@ MOVE.</strong>
     { title: 'Hasil video 09', youtube: '' },
     { title: 'Hasil video 10', youtube: '' }
   ];
+  // 5 contoh video horizontal 16:9 (YouTube biasa)
+  var RESULT_VIDEOS_H = [
+    { title: 'Video horizontal 01', youtube: '' },
+    { title: 'Video horizontal 02', youtube: '' },
+    { title: 'Video horizontal 03', youtube: '' },
+    { title: 'Video horizontal 04', youtube: '' },
+    { title: 'Video horizontal 05', youtube: '' }
+  ];
 
   function youtubeId(v) {
     v = (v || '').trim();
@@ -967,9 +1069,9 @@ MOVE.</strong>
     return m ? m[1] : '';
   }
 
-  function buildVideoBox(item) {
+  function buildVideoBox(item, land) {
     var box = document.createElement('div');
-    box.className = 'video-box';
+    box.className = 'video-box' + (land ? ' land' : '');
     var id = youtubeId(item.youtube);
     if (id) {
       var f = document.createElement('iframe');
@@ -985,14 +1087,22 @@ MOVE.</strong>
     return box;
   }
 
-  function buildVideoItem(item, num, tag) {
+  function buildVideoItem(item, num, tag, land) {
     var fig = tag || document.createElement('figure');
     fig.classList.add('video-item');
-    fig.appendChild(buildVideoBox(item));
+    fig.appendChild(buildVideoBox(item, land));
     var cap = document.createElement('figcaption');
     var n = document.createElement('span'); n.textContent = num;
     cap.appendChild(n); cap.appendChild(document.createTextNode(item.title));
     fig.appendChild(cap);
+    var id = youtubeId(item.youtube);
+    if (id) {
+      var a = document.createElement('a');
+      a.className = 'yt-link'; a.target = '_blank'; a.rel = 'noreferrer';
+      a.href = /shorts\//.test(item.youtube) ? 'https://www.youtube.com/shorts/' + id : 'https://youtu.be/' + id;
+      a.textContent = 'Tonton di YouTube \u2197';
+      fig.appendChild(a);
+    }
     return fig;
   }
 
@@ -1001,6 +1111,34 @@ MOVE.</strong>
   RESULT_VIDEOS.forEach(function (v, i) {
     grid.appendChild(buildVideoItem(v, String(i + 1).padStart(2, '0')));
   });
+  var gridH = document.getElementById('results-grid-h');
+  RESULT_VIDEOS_H.forEach(function (v, i) {
+    gridH.appendChild(buildVideoItem(v, 'H' + String(i + 1).padStart(2, '0'), null, true));
+  });
+
+  // ---------- Harga launching: Rp50.000 s.d. 31 Oktober 2026 23:59 WIB ----------
+  // Setelah batas waktu, semua harga di halaman otomatis tampil Rp100.000
+  // dan keterangan harga launching disembunyikan. Ubah juga harga di lynk.id.
+  var DEADLINE = new Date('2026-10-31T23:59:59+07:00').getTime();
+  function pad(n) { return String(n).padStart(2, '0'); }
+  function endLaunch() {
+    document.querySelectorAll('[data-launch]').forEach(function (el) { el.hidden = true; el.style.display = 'none'; });
+    document.querySelectorAll('[data-price]').forEach(function (el) { el.textContent = 'Rp100.000'; });
+  }
+  function tick() {
+    var left = DEADLINE - Date.now();
+    if (left <= 0) { endLaunch(); return false; }
+    var s = Math.floor(left / 1000), d = Math.floor(s / 86400), h = Math.floor(s % 86400 / 3600), m = Math.floor(s % 3600 / 60), sec = s % 60;
+    var cd = document.getElementById('countdown');
+    if (cd) {
+      cd.querySelector('[data-cd="d"]').textContent = d + ' hari';
+      cd.querySelector('[data-cd="h"]').textContent = pad(h) + ' jam';
+      cd.querySelector('[data-cd="m"]').textContent = pad(m) + ' mnt';
+      cd.querySelector('[data-cd="s"]').textContent = pad(sec) + ' dtk';
+    }
+    return true;
+  }
+  if (tick()) { var timer = setInterval(function () { if (!tick()) clearInterval(timer); }, 1000); }
 })();
 </script>
 </body>
