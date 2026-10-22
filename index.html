@@ -513,7 +513,7 @@ svg.i { display: inline-block; flex: none; }
 .closing-note{font:500 12px "DM Mono",monospace;margin-top:14px}
 .bonus-card.b5{background:var(--coral)}
 .bonus-new{display:inline-block;font:700 10px/1 "DM Mono",monospace;letter-spacing:.08em;background:var(--yellow);border:2px solid var(--ink);padding:3px 6px;margin-left:6px;vertical-align:middle}
-@media (max-width:1050px){.results-grid-h{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:700px){.results-grid-h{grid-template-columns:1fr}}
 @media (max-width:850px){.mock-grid{grid-template-columns:1fr;gap:34px}.mock-section{padding-top:80px}}
 @media (max-width:560px){.results-grid-h{grid-template-columns:1fr}.launch-bar{font-size:11px}.launch-bar .cd span{min-width:30px}.hero-price{font-size:11px}}
 </style>
@@ -732,7 +732,7 @@ MOVE.</strong>
         <span class="section-kicker">/ HASIL VIDEO</span>
         <h3>15 video, dibuat<br><span style="background:var(--yellow);padding:0 8px 2px">dengan aplikasi ini.</span></h3>
       </div>
-      <p>Contoh nyata video yang dihasilkan langsung dari Motion Graphic Studio: 10 vertikal 9:16 dan 5 horizontal 16:9. Klik untuk memutar, atau buka di YouTube.</p>
+      <p>Contoh nyata video yang dihasilkan langsung dari Motion Graphic Studio: 10 vertikal 9:16 dan 3 horizontal 16:9. Klik untuk memutar, atau buka di YouTube.</p>
     </div>
     <div class="results-sub"><b>VERTIKAL 9:16</b><span>Reels · TikTok · Shorts</span></div>
     <div class="results-grid" id="results-grid"></div>
@@ -1043,24 +1043,22 @@ MOVE.</strong>
   // Demo: video singkat dihosting sendiri (src + poster). Boleh diganti link YouTube (kosongkan src).
   var DEMO_VIDEO = { title: 'Demo singkat · 55 detik', youtube: '', src: 'video/demo-singkat.mp4', poster: 'video/demo-singkat-poster.jpg' };
   var RESULT_VIDEOS = [
-    { title: 'Hasil video 01', youtube: '' },
-    { title: 'Hasil video 02', youtube: '' },
-    { title: 'Hasil video 03', youtube: '' },
-    { title: 'Hasil video 04', youtube: '' },
-    { title: 'Hasil video 05', youtube: '' },
-    { title: 'Hasil video 06', youtube: '' },
-    { title: 'Hasil video 07', youtube: '' },
-    { title: 'Hasil video 08', youtube: '' },
-    { title: 'Hasil video 09', youtube: '' },
-    { title: 'Hasil video 10', youtube: '' }
+    { title: 'Hasil video 01', youtube: 'https://youtube.com/shorts/ggebHa3BFKQ' },
+    { title: 'Hasil video 02', youtube: 'https://youtube.com/shorts/cOtt0Q8hj6s' },
+    { title: 'Hasil video 03', youtube: 'https://youtube.com/shorts/CxDBXXmI_ps' },
+    { title: 'Hasil video 04', youtube: 'https://youtube.com/shorts/wxNqQ0KEEM8' },
+    { title: 'Hasil video 05', youtube: 'https://youtube.com/shorts/xxlwcczI06g' },
+    { title: 'Hasil video 06', youtube: 'https://youtube.com/shorts/dn2xXoO6qzY' },
+    { title: 'Hasil video 07', youtube: 'https://youtube.com/shorts/WVT2UaYl9uY' },
+    { title: 'Hasil video 08', youtube: 'https://youtube.com/shorts/HvsfIkL67Hk' },
+    { title: 'Hasil video 09', youtube: 'https://youtube.com/shorts/gGxZcM_umdU' },
+    { title: 'Hasil video 10', youtube: 'https://youtube.com/shorts/ggebHa3BFKQ' }
   ];
-  // 5 contoh video horizontal 16:9 (YouTube biasa)
+  // 3 contoh video horizontal 16:9 (YouTube biasa)
   var RESULT_VIDEOS_H = [
-    { title: 'Video horizontal 01', youtube: '' },
-    { title: 'Video horizontal 02', youtube: '' },
-    { title: 'Video horizontal 03', youtube: '' },
-    { title: 'Video horizontal 04', youtube: '' },
-    { title: 'Video horizontal 05', youtube: '' }
+    { title: 'Video horizontal 01', youtube: 'https://youtu.be/JYClP2Tavnw' },
+    { title: 'Video horizontal 02', youtube: 'https://youtu.be/N_MgtCHN6mw' },
+    { title: 'Video horizontal 03', youtube: 'https://youtu.be/l-Utc2ryiAE' }
   ];
 
   function youtubeId(v) {
