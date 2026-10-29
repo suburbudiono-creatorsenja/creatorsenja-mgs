@@ -1,0 +1,725 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AI Brief Motion Generator · Prompt video motion graphic yang langsung jadi</title>
+<meta name="description" content="Ubah ide, MP3 voice over, screenshot, atau video talking head jadi prompt video motion graphic untuk Claude dan ChatGPT. 50 gaya visual, sinkron VO, B-roll produk. Rp50.000 sekali bayar.">
+<link rel="canonical" href="https://studio.creatorsenja.com/ai-brief-motion-generator/">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://studio.creatorsenja.com/ai-brief-motion-generator/">
+<meta property="og:title" content="AI Brief Motion Generator · Prompt kamu yang bikin videonya jelek">
+<meta property="og:description" content="Ide, MP3 VO, screenshot, atau video talking head → prompt video motion graphic siap tempel ke Claude & ChatGPT. Rp50.000 sekali bayar.">
+<meta property="og:image" content="https://studio.creatorsenja.com/ai-brief-motion-generator/img/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#ffe600">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect x='2' y='2' width='28' height='28' rx='7' fill='%2308b8c9' stroke='%2311110f' stroke-width='3'/%3E%3Cpath d='M12 9.5v13l11-6.5z' fill='%23fdfbf7' stroke='%2311110f' stroke-width='2' stroke-linejoin='round'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#11110f;--cream:#fdfbf7;--paper:#fff;--yellow:#ffe600;--coral:#ff6b6b;--teal:#08b8c9;--lime:#baf58c;--sky:#9fd8ff;--muted:#5f5b52;--line:3px solid var(--ink);--shadow:5px 5px 0 var(--ink);--mono:"DM Mono",ui-monospace,SFMono-Regular,Menlo,monospace;--sans:"Plus Jakarta Sans",system-ui,-apple-system,"Segoe UI",sans-serif}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:84px;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--cream);color:var(--ink);font:400 16px/1.6 var(--sans);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img,video{display:block;max-width:100%}
+a{color:inherit}
+button{font:inherit;color:inherit}
+.wrap{width:min(1160px,100% - 32px);margin:0 auto}
+h1,h2,h3{margin:0;letter-spacing:-.05em;line-height:1.02;font-weight:800}
+h2{font-size:clamp(34px,4.6vw,58px);line-height:1.12}
+h3{font-size:22px;letter-spacing:-.03em;line-height:1.15}
+p{margin:0}
+.hl{background:var(--yellow);padding:0 8px;box-decoration-break:clone;-webkit-box-decoration-break:clone}
+.hl-ink{background:var(--ink);color:var(--yellow);padding:0 10px;box-decoration-break:clone;-webkit-box-decoration-break:clone}
+.kicker{display:inline-flex;align-items:center;gap:8px;font:500 12px var(--mono);letter-spacing:.08em;text-transform:uppercase}
+.kicker::before{content:"";width:10px;height:10px;border-radius:50%;background:var(--coral);border:2px solid var(--ink)}
+.sec{padding:104px 0;border-bottom:var(--line)}
+.sec-head{max-width:760px;margin-bottom:48px}
+.sec-head h2{margin-top:14px}
+.sec-head p{margin-top:16px;font-size:18px;max-width:620px;color:#2b2925}
+:focus-visible{outline:3px solid var(--teal);outline-offset:3px}
+
+/* tombol */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;border:var(--line);background:var(--ink);color:var(--cream);text-decoration:none;font:800 16px var(--sans);padding:15px 22px;box-shadow:var(--shadow);transition:transform .12s,box-shadow .12s;cursor:pointer;line-height:1.2;text-align:center}
+.btn:hover{transform:translate(-2px,-2px);box-shadow:7px 7px 0 var(--ink)}
+.btn:active{transform:translate(3px,3px);box-shadow:2px 2px 0 var(--ink)}
+.btn.y{background:var(--yellow);color:var(--ink)}
+.btn.w{background:var(--paper);color:var(--ink)}
+.btn.sm{padding:10px 15px;font-size:14px;box-shadow:3px 3px 0 var(--ink)}
+.btn svg{width:18px;height:18px;flex:none}
+.btn s{opacity:.6;font-weight:600}
+.link{font-weight:800;text-decoration:none;border-bottom:2px solid var(--ink);padding-bottom:3px;display:inline-flex;gap:6px;align-items:center}
+
+/* bar atas */
+.owner{background:var(--ink);color:var(--cream);font:500 12.5px var(--mono);text-align:center;padding:9px 16px}
+.owner a{color:var(--yellow);font-weight:500}
+.nav{position:sticky;top:0;z-index:50;background:var(--cream);border-bottom:var(--line)}
+.nav .wrap{display:flex;align-items:center;gap:20px;height:68px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;font-weight:800;letter-spacing:-.03em;font-size:15px;line-height:1}
+.brand i{width:34px;height:34px;border:var(--line);border-radius:9px;background:var(--teal);display:grid;place-items:center;box-shadow:2px 2px 0 var(--ink);flex:none}
+.brand i svg{width:14px;height:14px;margin-left:2px}
+.brand b{background:var(--yellow);padding:2px 5px;font-weight:800}
+.nav nav{margin-left:auto;display:flex;align-items:center;gap:2px}
+.nav nav a:not(.btn){font:500 12.5px var(--mono);text-decoration:none;padding:8px 10px;border:2px solid transparent}
+.nav nav a:not(.btn):hover{border-color:var(--ink);background:var(--paper)}
+.nav .btn{margin-left:10px}
+@media (max-width:900px){.nav nav a:not(.btn){display:none}}
+@media (max-width:420px){.brand span{display:none}}
+
+/* hero */
+.hero{background:var(--yellow);border-bottom:var(--line);padding:64px 0 84px;position:relative;overflow:hidden}
+.hero::before{content:"";position:absolute;inset:0;background-image:radial-gradient(var(--ink) 1.2px,transparent 1.3px);background-size:22px 22px;opacity:.13;pointer-events:none}
+.hero .wrap{position:relative;display:grid;grid-template-columns:1.12fr .88fr;gap:56px;align-items:center}
+.hero h1{font-size:clamp(44px,6.4vw,84px);margin:20px 0 24px}
+.hero h1 .strike{position:relative;white-space:nowrap}
+.hero h1 .strike::after{content:"";position:absolute;left:-2%;right:-2%;bottom:.08em;height:.14em;background:var(--coral);border:2px solid var(--ink);transform:rotate(-1.5deg);z-index:-1}
+.hero .lead{font-size:19px;max-width:560px;margin-bottom:28px}
+.hero .lead b{font-weight:800}
+.hero-cta{display:flex;flex-wrap:wrap;gap:14px;align-items:center}
+.price-chip{display:inline-flex;align-items:center;gap:10px;margin-top:22px;background:var(--paper);border:var(--line);box-shadow:3px 3px 0 var(--ink);padding:8px 14px;font:500 13px var(--mono)}
+.price-chip s{color:#8a857a}
+.price-chip b{font:800 18px var(--sans);letter-spacing:-.03em}
+.ticks{display:flex;flex-wrap:wrap;gap:8px 18px;margin-top:22px;font-weight:700;font-size:14px}
+.ticks span{display:inline-flex;align-items:center;gap:7px}
+.ticks span::before{content:"✓";width:20px;height:20px;border-radius:50%;background:var(--lime);border:2px solid var(--ink);display:grid;place-items:center;font-size:11px;font-weight:800}
+.phone{position:relative;justify-self:center;width:min(340px,100%)}
+.phone-body{border:6px solid var(--ink);border-radius:34px;background:var(--ink);padding:8px;box-shadow:12px 12px 0 var(--ink);position:relative}
+.phone video{width:100%;aspect-ratio:9/16;border-radius:24px;background:#000;object-fit:cover}
+.sound{position:absolute;left:50%;bottom:22px;transform:translateX(-50%);border:var(--line);background:var(--yellow);font:800 14px var(--sans);padding:10px 16px;box-shadow:3px 3px 0 var(--ink);cursor:pointer;white-space:nowrap;display:flex;align-items:center;gap:8px}
+.sound[hidden]{display:none}
+.sticker{position:absolute;z-index:2;right:-26px;top:38px;width:118px;height:118px;border-radius:50%;background:var(--coral);border:var(--line);box-shadow:3px 3px 0 var(--ink);display:grid;place-items:center;text-align:center;font:800 12.5px/1.15 var(--sans);transform:rotate(10deg);padding:10px}
+.vcap{margin-top:22px;font:500 12.5px var(--mono);text-align:center;background:var(--paper);border:2px solid var(--ink);padding:8px 12px}
+@media (max-width:900px){.hero .wrap{grid-template-columns:1fr;gap:48px}.hero{padding-top:44px}.sticker{right:-8px;top:-18px;width:100px;height:100px;font-size:11px}}
+
+/* marquee */
+.marquee{background:var(--ink);color:var(--yellow);border-bottom:var(--line);overflow:hidden;padding:16px 0;font-weight:800;font-size:15px;white-space:nowrap}
+.marquee .track{display:inline-flex;gap:28px;animation:mq 38s linear infinite;padding-left:28px}
+.marquee i{color:var(--coral);font-style:normal}
+@keyframes mq{to{transform:translateX(-50%)}}
+@media (prefers-reduced-motion:reduce){.marquee .track{animation:none}}
+
+/* masalah */
+.pains{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px}
+.pain{border:var(--line);background:var(--paper);box-shadow:var(--shadow);padding:22px;position:relative}
+.pain .x{width:36px;height:36px;border-radius:50%;background:var(--coral);border:var(--line);display:grid;place-items:center;font-weight:800;margin-bottom:16px}
+.pain h3{font-size:20px;margin-bottom:8px}
+.pain p{font-size:15px;color:#3a372f}
+@media (max-width:900px){.pains{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:540px){.pains{grid-template-columns:1fr}}
+
+/* titik balik */
+.turn{background:var(--ink);color:var(--cream)}
+.turn .sec-head p{color:#d9d4c8}
+.turn h2 .hl{color:var(--ink)}
+.vs{display:grid;grid-template-columns:.8fr 1.2fr;gap:22px;align-items:stretch}
+.vs-card{border:3px solid var(--cream);background:#1d1c19;padding:24px;display:flex;flex-direction:column;gap:14px}
+.vs-card.good{background:var(--cream);color:var(--ink);border-color:var(--cream);box-shadow:8px 8px 0 var(--teal)}
+.vs-label{font:500 12px var(--mono);letter-spacing:.06em;text-transform:uppercase;display:flex;align-items:center;gap:8px}
+.vs-label b{padding:2px 8px;border:2px solid currentColor;font-weight:500}
+.vs-card.bad .vs-label b{background:var(--coral);color:var(--ink);border-color:var(--ink)}
+.vs-card.good .vs-label b{background:var(--lime);border-color:var(--ink)}
+.vs pre{margin:0;font:400 13px/1.65 var(--mono);white-space:pre-wrap;word-break:break-word;flex:1}
+.vs-card.bad pre{font-size:17px;line-height:1.55;color:#f3efe6}
+.vs-card.good pre{background:var(--paper);border:2px solid var(--ink);padding:14px;max-height:430px;overflow:auto}
+.vs pre .h{color:#0b7d88;font-weight:500}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{font:500 12px var(--mono);border:2px solid currentColor;padding:4px 10px}
+.vs-card.bad .chip{color:var(--coral)}
+.vs-card.good .chip{background:var(--lime);border-color:var(--ink)}
+@media (max-width:860px){.vs{grid-template-columns:1fr}}
+
+/* cara kerja */
+.steps{display:grid;gap:28px}
+.step{display:grid;grid-template-columns:.85fr 1.15fr;gap:40px;align-items:center;border:var(--line);background:var(--paper);box-shadow:var(--shadow);padding:30px}
+.step:nth-child(even){grid-template-columns:1.15fr .85fr}
+.step:nth-child(even) .step-copy{order:2}
+.num{width:54px;height:54px;border-radius:50%;background:var(--yellow);border:var(--line);display:grid;place-items:center;font:800 24px var(--sans);box-shadow:3px 3px 0 var(--ink);margin-bottom:18px}
+.step:nth-child(2) .num{background:var(--teal)}
+.step:nth-child(3) .num{background:var(--lime)}
+.step h3{font-size:clamp(24px,2.6vw,32px);margin-bottom:12px}
+.step p{font-size:16px;color:#2f2c26}
+.step ul{margin:14px 0 0;padding:0;list-style:none;display:grid;gap:8px;font-size:15px}
+.step li{display:flex;gap:9px}
+.step li::before{content:"→";font-weight:800}
+.shot{border:var(--line);background:var(--cream);box-shadow:6px 6px 0 var(--ink);overflow:hidden}
+.shot .bar{display:flex;gap:6px;align-items:center;border-bottom:2px solid var(--ink);padding:8px 12px;background:var(--paper);font:500 11px var(--mono)}
+.shot .bar i{width:10px;height:10px;border-radius:50%;border:1.5px solid var(--ink);background:var(--coral)}
+.shot .bar i:nth-child(2){background:var(--yellow)}
+.shot .bar i:nth-child(3){background:var(--lime);margin-right:8px}
+.shot img{width:100%;height:auto}
+.shot.tall img{max-height:520px;object-fit:cover;object-position:top}
+@media (max-width:860px){.step,.step:nth-child(even){grid-template-columns:1fr;gap:26px;padding:22px}.step:nth-child(even) .step-copy{order:0}}
+
+/* sumber input */
+.srcs{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px}
+.src{border:var(--line);padding:24px;box-shadow:var(--shadow);display:flex;flex-direction:column;gap:12px;position:relative}
+.src:nth-child(1){background:var(--yellow)}
+.src:nth-child(2){background:var(--coral)}
+.src:nth-child(3){background:var(--teal)}
+.src:nth-child(4){background:var(--lime)}
+.src .ic{width:48px;height:48px;border:var(--line);border-radius:12px;background:var(--paper);display:grid;place-items:center}
+.src .ic svg{width:24px;height:24px}
+.src h3{font-size:21px}
+.src p{font-size:15px}
+.src small{font:500 11.5px var(--mono);margin-top:auto;border-top:2px solid var(--ink);padding-top:10px}
+.src .tag{position:absolute;top:-14px;right:14px;background:var(--ink);color:var(--yellow);font:500 11px var(--mono);padding:4px 9px;border:2px solid var(--ink)}
+@media (max-width:980px){.srcs{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:540px){.srcs{grid-template-columns:1fr}}
+
+/* gaya */
+.gbar{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:22px}
+.gbar button{border:2px solid var(--ink);background:var(--paper);padding:7px 13px;font:700 13px var(--sans);cursor:pointer;border-radius:999px}
+.gbar button[aria-pressed="true"]{background:var(--ink);color:var(--yellow)}
+.ggrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:14px}
+.g{border:2.5px solid var(--ink);background:var(--paper);padding:12px;display:flex;flex-direction:column;gap:7px;box-shadow:3px 3px 0 var(--ink)}
+.g .pal{display:flex;height:12px;border:2px solid var(--ink);border-radius:4px;overflow:hidden}
+.g .pal i{flex:1}
+.g .no{font:500 11px var(--mono);color:var(--muted)}
+.g b{font-size:13.5px;line-height:1.25;letter-spacing:-.01em}
+.g span{font-size:12.5px;color:var(--muted);line-height:1.35}
+.g.auto{background:var(--yellow)}
+.g.auto .pal{background:linear-gradient(90deg,var(--coral),var(--yellow),var(--teal),var(--lime))}
+.gmore{margin-top:24px;display:flex;justify-content:center}
+.ggrid.clip .g:nth-child(n+21){display:none}
+@media (max-width:600px){.ggrid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.g{padding:10px}.g b{font-size:12.5px}.g span{font-size:11.5px}.ggrid.clip .g:nth-child(n+11){display:none}}
+.rep{margin-top:40px;display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.rep>div{border:var(--line);padding:24px;background:var(--paper);box-shadow:var(--shadow)}
+.rep h3{margin-bottom:8px}
+.rep p{font-size:15px}
+.rep>div:first-child{background:var(--sky)}
+@media (max-width:760px){.rep{grid-template-columns:1fr}}
+
+/* fitur */
+.bento{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:18px}
+.f{border:var(--line);background:var(--paper);box-shadow:var(--shadow);padding:24px;display:flex;flex-direction:column;gap:10px;grid-column:span 2}
+.f.w3{grid-column:span 3}
+.f h3{font-size:21px}
+.f p{font-size:15px;color:#2f2c26}
+.f .em{width:44px;height:44px;border:var(--line);border-radius:50%;display:grid;place-items:center;font-size:20px;background:var(--yellow)}
+.f.c1 .em{background:var(--coral)}.f.c2 .em{background:var(--teal)}.f.c3 .em{background:var(--lime)}.f.c4 .em{background:var(--sky)}
+.f .shot{margin-top:8px;box-shadow:4px 4px 0 var(--ink)}
+.tl{margin-top:6px;border:2px solid var(--ink);background:var(--cream);font:400 12.5px/1.5 var(--mono);display:grid}
+.tl>div:not(.wave){display:grid;grid-template-columns:96px 1fr;gap:10px;padding:7px 12px;border-bottom:1.5px dashed #bdb7aa}
+.tl>div:last-child{border-bottom:0}
+@media (max-width:480px){.tl>div:not(.wave){grid-template-columns:1fr;gap:0}}
+.tl b{font-weight:500;color:#0b7d88}
+.tl div.on{background:var(--yellow)}
+.wave{display:flex;align-items:center;gap:3px;height:34px;padding:0 12px;border-bottom:2px solid var(--ink);background:var(--paper)}
+.wave i{flex:1;background:var(--ink);border-radius:2px}
+.wave i.gap{background:#d6d0c4}
+@media (max-width:980px){.bento{grid-template-columns:repeat(2,minmax(0,1fr))}.f,.f.w3{grid-column:span 1}.f.full{grid-column:1/-1}}
+@media (max-width:600px){.bento{grid-template-columns:1fr}}
+
+/* 3 versi */
+.engines{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.eng{border:var(--line);padding:26px;box-shadow:var(--shadow);background:var(--paper);display:flex;flex-direction:column;gap:12px}
+.eng:nth-child(1){background:var(--ink);color:var(--cream);box-shadow:var(--shadow),0 0 0 0}
+.eng .lbl{font:500 12px var(--mono);display:inline-block;padding:3px 9px;border:2px solid currentColor;width:max-content}
+.eng:nth-child(1) .lbl{color:var(--lime)}
+.eng h3{font-size:24px}
+.eng ul{margin:0;padding-left:18px;font-size:15px;display:grid;gap:6px}
+.eng .for{margin-top:auto;font:500 12.5px var(--mono);border-top:2px solid currentColor;padding-top:12px}
+.note{margin-top:22px;border-left:6px solid var(--teal);background:var(--paper);border-top:2px solid var(--ink);border-right:2px solid var(--ink);border-bottom:2px solid var(--ink);padding:14px 18px;font-size:15px}
+@media (max-width:900px){.engines{grid-template-columns:1fr}}
+
+/* untuk siapa */
+.who{display:grid;grid-template-columns:1.2fr .8fr;gap:22px}
+.who>div{border:var(--line);padding:28px;box-shadow:var(--shadow)}
+.who .yes{background:var(--lime)}
+.who .no{background:var(--paper)}
+.who h3{margin-bottom:16px}
+.who ul{margin:0;padding:0;list-style:none;display:grid;gap:12px;font-size:16px}
+.who li{display:flex;gap:12px;align-items:flex-start}
+.who li::before{flex:none;width:24px;height:24px;border-radius:50%;border:2px solid var(--ink);display:grid;place-items:center;font-size:12px;font-weight:800;margin-top:1px}
+.who .yes li::before{content:"✓";background:var(--paper)}
+.who .no li::before{content:"✕";background:var(--coral)}
+@media (max-width:860px){.who{grid-template-columns:1fr}}
+
+/* harga */
+.pricing{background:var(--teal)}
+.price-wrap{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+.price-wrap h2{margin-top:14px}
+.price-wrap .sub{margin-top:18px;font-size:18px;max-width:480px}
+.card{border:var(--line);background:var(--cream);box-shadow:10px 10px 0 var(--ink);padding:30px;position:relative}
+.card .badge{position:absolute;top:-17px;left:24px;background:var(--yellow);border:var(--line);font:500 12px var(--mono);padding:5px 12px}
+.card .top{display:flex;justify-content:space-between;align-items:center;font:500 12px var(--mono);margin-bottom:14px}
+.card .was{font:600 18px var(--sans);color:#7d786d}
+.card .was s{text-decoration-thickness:3px;text-decoration-color:var(--coral)}
+.card .now{font:800 clamp(52px,6vw,72px)/1.08 var(--sans);letter-spacing:-.06em;margin:4px 0 12px}
+.card .save{display:inline-block;background:var(--coral);border:2px solid var(--ink);font:800 13px var(--sans);padding:3px 10px;margin-bottom:8px}
+.card .terms{font:500 13px var(--mono);color:var(--muted)}
+.card ul{list-style:none;margin:22px 0 24px;padding:20px 0 0;border-top:2px dashed var(--ink);display:grid;gap:10px;font-size:15px}
+.card li{display:flex;gap:10px;align-items:flex-start}
+.card li::before{content:"✓";flex:none;width:21px;height:21px;border-radius:50%;background:var(--lime);border:2px solid var(--ink);display:grid;place-items:center;font-size:11px;font-weight:800;margin-top:1px}
+.card .btn{width:100%;font-size:18px}
+.card .after{margin-top:14px;font-size:13.5px;color:#3a372f;text-align:center}
+@media (max-width:860px){.price-wrap{grid-template-columns:1fr}}
+
+/* faq */
+.faq{display:grid;grid-template-columns:.75fr 1.25fr;gap:44px;align-items:start}
+.faq h2{position:sticky;top:110px}
+details{border:var(--line);background:var(--paper);margin-bottom:12px;box-shadow:3px 3px 0 var(--ink)}
+summary{list-style:none;cursor:pointer;padding:18px 54px 18px 20px;font-weight:800;font-size:17px;position:relative;letter-spacing:-.01em}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";position:absolute;right:16px;top:50%;transform:translateY(-50%);width:28px;height:28px;border:2px solid var(--ink);border-radius:50%;display:grid;place-items:center;font-size:18px;background:var(--yellow);line-height:1}
+details[open] summary::after{content:"–";background:var(--lime)}
+details .a{padding:0 20px 20px;font-size:15.5px;color:#2b2925;display:grid;gap:10px}
+@media (max-width:860px){.faq{grid-template-columns:1fr;gap:26px}.faq h2{position:static}}
+
+/* closing */
+.closing{background:var(--yellow);text-align:center}
+.closing h2{font-size:clamp(38px,5.6vw,72px);line-height:1.14;max-width:900px;margin:16px auto 0}
+.closing p{font-size:18px;max-width:600px;margin:20px auto 30px}
+.closing p.price-chip{font-size:13px;max-width:none}
+@media (max-width:520px){.price-chip{flex-wrap:wrap;justify-content:center;font-size:12px}.card .btn{font-size:16px}}
+.closing .hero-cta{justify-content:center}
+
+/* paket */
+.bundle{background:var(--ink);color:var(--cream)}
+.bundle .sec-head p{color:#d9d4c8}
+.bundle h2 .hl{color:var(--ink)}
+.bgrid{display:grid;grid-template-columns:1.25fr .75fr;gap:26px;align-items:start}
+.blist{border:3px solid var(--cream);padding:26px;display:grid;gap:12px;background:#1d1c19}
+.brow{display:flex;justify-content:space-between;gap:14px;align-items:flex-start;border-bottom:1px dashed #5b574f;padding-bottom:12px;font-size:15px}
+.brow:last-child{border-bottom:0;padding-bottom:0}
+.brow b{font-weight:700}
+.brow small{display:block;color:#b9b4a8;font-size:13px;margin-top:2px}
+.brow .tg{flex:none;font:500 11px var(--mono);border:2px solid var(--cream);padding:2px 8px}
+.brow .tg.y{background:var(--yellow);color:var(--ink);border-color:var(--yellow)}
+.brow .tg.l{background:var(--lime);color:var(--ink);border-color:var(--lime)}
+.bcard{border:var(--line);background:var(--yellow);color:var(--ink);box-shadow:8px 8px 0 var(--coral);padding:28px;position:sticky;top:100px}
+.bcard .k{font:500 12px var(--mono)}
+.bcard .was{margin-top:14px;font-weight:600;color:#5d5a50}
+.bcard .now{font:800 clamp(46px,5vw,60px)/1 var(--sans);letter-spacing:-.06em;margin:4px 0 10px}
+.bcard p{font-size:15px;margin-bottom:20px}
+.bcard .btn{width:100%}
+.bcard .link{margin-top:16px;justify-content:center;width:100%;font-size:14px}
+.cmp{margin-top:18px;font:500 12.5px var(--mono);background:var(--paper);border:2px solid var(--ink);padding:10px 12px}
+@media (max-width:900px){.bgrid{grid-template-columns:1fr}.bcard{position:static}}
+
+/* footer */
+footer{padding:44px 0 110px;font-size:14px}
+footer .wrap{display:flex;flex-wrap:wrap;gap:16px 28px;justify-content:space-between;align-items:center}
+footer nav{display:flex;flex-wrap:wrap;gap:8px 18px}
+footer a{font-weight:700}
+footer small{font:500 12px var(--mono);color:var(--muted)}
+
+/* sticky beli (HP) */
+.buybar{position:fixed;left:12px;right:12px;bottom:12px;z-index:60;display:none;align-items:center;justify-content:space-between;gap:12px;background:var(--cream);border:var(--line);box-shadow:4px 4px 0 var(--ink);padding:10px 10px 10px 16px;transform:translateY(140%);transition:transform .25s}
+.buybar.on{transform:none}
+.buybar span{font:500 12px var(--mono);line-height:1.3}
+.buybar span b{display:block;font:800 19px var(--sans);letter-spacing:-.03em}
+.buybar s{color:#8a857a;font-size:12px}
+@media (max-width:760px){.buybar{display:flex}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="arr" viewBox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="play" viewBox="0 0 24 24"><path d="M7 4.5v15l13-7.5z" fill="#fdfbf7" stroke="#11110f" stroke-width="2.2" stroke-linejoin="round"/></symbol>
+</svg>
+
+<div class="owner">Sudah beli paket Motion Graphic Studio? Aplikasi ini sudah termasuk (Bonus 07). <a href="#faq-pemilik">Cek di halaman aksesmu</a>.</div>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="AI Brief Motion Generator, ke atas"><i><svg viewBox="0 0 24 24"><use href="#play"/></svg></i><span>AI Brief <b>Motion</b> Generator</span></a>
+    <nav aria-label="Navigasi">
+      <a href="#cara">Cara kerja</a>
+      <a href="#gaya">50 gaya</a>
+      <a href="#fitur">Fitur</a>
+      <a href="#faq">FAQ</a>
+      <a class="btn sm y" data-buy href="#harga">Beli Rp50.000</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+<!-- HERO -->
+<section class="hero">
+  <div class="wrap">
+    <div>
+      <span class="kicker">Generator prompt video motion graphic</span>
+      <h1>Prompt kamu yang bikin videonya <span class="strike">jelek.</span></h1>
+      <p class="lead">Ubah <b>ide, MP3 voice over, screenshot, atau video talking head</b> jadi prompt video motion graphic yang rapi, sinkron dengan suara, dan konsisten di setiap adegan. Tinggal tempel ke Claude atau ChatGPT, lalu MP4-nya dibuatkan.</p>
+      <div class="hero-cta">
+        <a class="btn" data-buy href="#harga">Beli sekarang · Rp50.000 <svg><use href="#arr"/></svg></a>
+        <a class="link" href="#cara">Lihat cara kerjanya</a>
+      </div>
+      <div class="price-chip">Harga normal <s>Rp75.000</s> <b>Rp50.000</b> sekali bayar</div>
+      <div class="ticks"><span>Tanpa API key</span><span>Jalan di Gemini Canvas</span><span>Bisa di HP</span></div>
+    </div>
+    <div>
+      <div class="phone">
+        <div class="sticker">Dibuat dari prompt aplikasi ini</div>
+        <div class="phone-body">
+          <video id="heroVid" src="video/iklan-abmg-60s.mp4" poster="video/iklan-abmg-poster.jpg" muted autoplay loop playsinline preload="metadata" aria-label="Video iklan AI Brief Motion Generator, 60 detik"></video>
+          <button class="sound" id="soundBtn" type="button">🔊 Putar dengan suara</button>
+        </div>
+      </div>
+      <p class="vcap">Iklan 60 detik ini dibuat dari prompt aplikasinya sendiri, dieksekusi oleh Claude.</p>
+    </div>
+  </div>
+</section>
+
+<div class="marquee" aria-hidden="true"><div class="track">
+  <span>4 sumber input</span><i>✦</i><span>50 gaya visual</span><i>✦</i><span>Sinkron per kalimat VO</span><i>✦</i><span>Mode replika gaya</span><i>✦</i><span>B-roll foto produk</span><i>✦</i><span>Thumbnail frame pertama</span><i>✦</i><span>3 versi prompt</span><i>✦</i><span>Tanpa API key</span><i>✦</i>
+  <span>4 sumber input</span><i>✦</i><span>50 gaya visual</span><i>✦</i><span>Sinkron per kalimat VO</span><i>✦</i><span>Mode replika gaya</span><i>✦</i><span>B-roll foto produk</span><i>✦</i><span>Thumbnail frame pertama</span><i>✦</i><span>3 versi prompt</span><i>✦</i><span>Tanpa API key</span><i>✦</i>
+</div></div>
+
+<!-- MASALAH -->
+<section class="sec" id="masalah">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="kicker">Kenal rasanya?</span>
+      <h2>Sudah coba suruh AI bikin motion graphic, <span class="hl">hasilnya begini?</span></h2>
+      <p>Claude dan ChatGPT sebenarnya sanggup membuat video motion graphic yang bagus. Masalahnya, mereka hanya mengerjakan persis yang kamu tulis.</p>
+    </div>
+    <div class="pains">
+      <article class="pain"><div class="x">✕</div><h3>Teksnya rusak</h3><p>Huruf terpotong, salah eja, bertumpuk, atau keluar layar dan tertutup tombol TikTok.</p></article>
+      <article class="pain"><div class="x">✕</div><h3>Gaya tiap adegan beda</h3><p>Adegan pertama neon, adegan ketiga tiba-tiba pastel. Videonya terasa seperti potongan dari lima video lain.</p></article>
+      <article class="pain"><div class="x">✕</div><h3>Nggak nyambung sama suara</h3><p>Narasi sudah bicara soal harga, layarnya masih menampilkan judul. Penonton bingung lalu scroll.</p></article>
+      <article class="pain"><div class="x">✕</div><h3>10 kali prompt, tetap meleset</h3><p>Revisi terus, waktu habis, dan kamu akhirnya balik lagi ke template biasa.</p></article>
+    </div>
+  </div>
+</section>
+
+<!-- TITIK BALIK -->
+<section class="sec turn" id="kenapa">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="kicker">Titik baliknya</span>
+      <h2>Masalahnya bukan di AI-nya. <span class="hl">Tapi di prompt-nya.</span></h2>
+      <p>AI pembuat video butuh brief teknis: ukuran kanvas, detik kemunculan tiap elemen, posisi, warna hex, font, transisi, efek suara, sampai cara render MP4. Kalimat "buat yang keren" tidak memberi semua itu.</p>
+    </div>
+    <div class="vs">
+      <div class="vs-card bad">
+        <span class="vs-label"><b>PROMPT BIASA</b> 1 kalimat</span>
+        <pre>"Buatkan video promo motion graphic yang keren untuk aplikasi saya, 30 detik, ada teks dan musik."</pre>
+        <div class="chips"><span class="chip">✕ ukuran kanvas?</span><span class="chip">✕ timing?</span><span class="chip">✕ warna &amp; font?</span><span class="chip">✕ sinkron suara?</span></div>
+      </div>
+      <div class="vs-card good">
+        <span class="vs-label"><b>PROMPT DARI AI BRIEF MOTION GENERATOR</b> cuplikan asli</span>
+<pre><span class="h">## SPESIFIKASI</span>
+- Durasi 37,00 dtk, 1080×1920 (9:16), 30 fps = 1110 frame, MP4 H.264 + AAC
+- Palet: tinta #141414, kertas #FFF6E5, kuning #FFD23A, coral #FF6B57, teal #17B3A3
+- Font Google: display Plus Jakarta Sans 800, label DM Mono 500
+- Zona aman: teks penting tidak lebih rendah dari y=1498 (zona tombol Reels/TikTok)
+- Thumbnail = frame pertama: di detik 0 hook sudah tampil PENUH …
+
+<span class="h">## ADEGAN (koordinat kanvas 1080×1920)</span>
+2. 3,00–9,05 dtk · MASALAH
+   Teks layar: "Software mahal &amp; berat · Belajar berbulan-bulan · …"
+   Visual: Kartu brutalist 900×190 masuk dari kanan tepat saat disebut:
+   kuning (y=500) di 3,05; teal (y=760) di 4,35; coral (y=1020) di 5,75 …
+   SFX: thud 3,05 · thud 4,35 · thud 5,75 · coret 6,50
+
+<span class="h">## TIMELINE KALIMAT VO (detik di file)</span>
+- 3,02–5,37 "Software mahal, belajarnya lama,"
+- 5,74–7,39 "pakai AI malah teksnya rusak."
+
+<span class="h">## AUDIO</span> · <span class="h">## TEKNIS</span> · <span class="h">## QA SEBELUM KIRIM</span> · <span class="h">## REVISI</span></pre>
+        <div class="chips"><span class="chip">±16.000 karakter</span><span class="chip">dirakit otomatis</span><span class="chip">siap tempel</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CARA KERJA -->
+<section class="sec" id="cara">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="kicker">Cara kerja</span>
+      <h2>Tiga langkah. <span class="hl">Prompt sekelas motion designer.</span></h2>
+      <p>Kamu cukup membawa bahan. Aplikasi menyusun brief teknisnya, kamu cek, lalu prompt siap ditempel.</p>
+    </div>
+    <div class="steps">
+      <article class="step">
+        <div class="step-copy">
+          <div class="num">1</div>
+          <h3>Pilih sumber, AI menganalisa</h3>
+          <p>Mulai dari ide, file MP3 voice over, screenshot, atau video talking head. AI membaca isinya lalu merekomendasikan alur adegan, gaya, palet, font, dan musik.</p>
+          <ul><li>MP3 ditranskrip lengkap dengan detik tiap kalimat</li><li>Jeda bicara dipakai sebagai batas adegan</li></ul>
+        </div>
+        <figure class="shot"><div class="bar"><i></i><i></i><i></i>AI Brief Motion Generator</div><img src="img/app-sumber.webp" width="1100" height="624" alt="Langkah 1 aplikasi: pilihan sumber teks, MP3 VO, screenshot, dan video talking head" loading="lazy"></figure>
+      </article>
+      <article class="step">
+        <div class="step-copy">
+          <div class="num">2</div>
+          <h3>Cek brief, pilih gaya</h3>
+          <p>Semua rekomendasi bisa diubah: durasi, rasio, alur adegan, 50 gaya visual, warna, font, musik, dan efek suara. Tambahkan foto produk dan atur thumbnail di sini juga.</p>
+          <ul><li>Bagian bertanda ★ adalah rekomendasi AI</li><li>Alasan setiap rekomendasi ditulis jelas</li></ul>
+        </div>
+        <figure class="shot"><div class="bar"><i></i><i></i><i></i>Rekomendasi AI</div><img src="img/app-rekomendasi.webp" width="1100" height="425" alt="Kotak rekomendasi AI berisi ringkasan, alasan, gaya utama, dan palet" loading="lazy"></figure>
+      </article>
+      <article class="step">
+        <div class="step-copy">
+          <div class="num">3</div>
+          <h3>Salin prompt, tempel, jadi MP4</h3>
+          <p>Pilih versi Claude Pro, Claude Free, atau ChatGPT. Salin, lampirkan file yang diminta, lalu kirim. AI membangun animasinya dan merender MP4.</p>
+          <ul><li>Daftar lampiran ditulis otomatis</li><li>Unduh prompt (.txt) supaya tidak hilang</li></ul>
+        </div>
+        <figure class="shot tall"><div class="bar"><i></i><i></i><i></i>Prompt siap pakai</div><img src="img/app-prompt.webp" width="1100" height="1023" alt="Langkah 3: tab Claude Pro, Claude Free, ChatGPT dan isi prompt siap salin" loading="lazy"></figure>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- SUMBER -->
+<section class="sec" id="sumber">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="kicker">4 sumber input</span>
+      <h2>Mulai dari bahan <span class="hl">apa pun yang kamu punya.</span></h2>
+    </div>
+    <div class="srcs">
+      <article class="src"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#11110f" stroke-width="2.4" stroke-linecap="round"><path d="M5 6h14M5 12h14M5 18h9"/></svg></span><h3>Teks / Ide</h3><p>Tulis ide, naskah, atau info produk. Atau isi brief manual seperti master prompt.</p><small>Cocok untuk promo, edukasi, tips</small></article>
+      <article class="src"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#11110f" stroke-width="2.4" stroke-linecap="round"><path d="M4 10v4M8 7v10M12 4v16M16 8v8M20 11v2"/></svg></span><h3>MP3 voice over</h3><p>AI mendengar narasinya, mentranskrip, dan mencatat detik tiap kalimat supaya visual muncul tepat saat katanya diucapkan.</p><small>Pas untuk VO dari ElevenLabs atau TTS</small></article>
+      <article class="src"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#11110f" stroke-width="2.4" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="3"/><path d="M4 16l5-5 4 4 3-3 4 4"/></svg></span><h3>Screenshot</h3><p>Sampai 6 gambar: catatan, tweet, slide, atau desain. Teksnya dibaca jadi naskah, tampilannya bisa ditiru.</p><small>Ubah carousel jadi video</small></article>
+      <article class="src"><span class="tag">MODE PREMIUM · TERMASUK</span><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#11110f" stroke-width="2.4" stroke-linejoin="round"><circle cx="12" cy="9" r="4"/><path d="M5 20c1.5-4 4-5 7-5s5.5 1 7 5"/></svg></span><h3>Video talking head</h3><p>Wajahmu tetap tampil dengan grafis (split, picture-in-picture, overlay, atau cutaway), atau ambil suaranya saja.</p><small>Kata sandi diberikan di halaman akses</small></article>
+    </div>
+  </div>
+</section>
+
+<!-- GAYA -->
+<section class="sec" id="gaya" style="background:#f6f2ea">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="kicker">50 gaya visual</span>
+      <h2>Satu klik, <span class="hl">rasa videonya berubah total.</span></h2>
+      <p>Setiap gaya sudah lengkap dengan aturan warna, tipografi, bentuk, dan bahasa gerak. Pilih satu gaya utama dan maksimal dua pendukung, atau biarkan AI memilih campurannya.</p>
+    </div>
+    <div class="gbar" id="gbar" role="group" aria-label="Filter kategori gaya"></div>
+    <div class="ggrid clip" id="ggrid"></div>
+    <div class="gmore"><button class="btn w sm" type="button" id="gmore" aria-expanded="false">Lihat semua 50 gaya</button></div>
+    <div class="rep">
+      <div><h3>Mode replika gaya</h3><p>Punya video atau desain yang gayanya kamu suka? Unggah foto atau video referensinya. AI membedah palet, tipografi, elemen khas, transisi, dan ritme potongannya, lalu menguncinya di semua adegan. Yang ditiru gayanya saja, bukan logo atau isinya.</p></div>
+      <div><h3>Instruksi khusus gaya</h3><p>Tulis aturanmu sendiri, misalnya "semua teks rata kiri", "sudut kartu tajam", atau "tanpa efek glitch". Instruksi ini masuk ke prompt sebagai aturan wajib dan diutamakan di atas gaya preset.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- FITUR -->
+<section class="sec" id="fitur">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="kicker">Fitur</span>
+      <h2>Detail kecil yang membuat <span class="hl">hasilnya nggak meleset.</span></h2>
+    </div>
+    <div class="bento">
+      <article class="f w3 c1"><span class="em">🎙️</span><h3>Sinkron per kalimat VO</h3><p>Transkrip MP3 lengkap dengan detik mulai dan selesai tiap kalimat. Batas adegan jatuh di jeda bicara, dan setiap elemen muncul tepat saat katanya diucapkan. Musik otomatis turun saat narasi bicara.</p>
+        <div class="tl" aria-label="Contoh timeline kalimat VO"><div class="wave" aria-hidden="true"><i style="height:16px"></i><i style="height:10px"></i><i style="height:18px"></i><i style="height:26px"></i><i style="height:7px"></i><i style="height:8px"></i><i style="height:23px"></i><i style="height:9px"></i><i style="height:17px"></i><i style="height:24px"></i><i style="height:7px"></i><i style="height:22px"></i><i style="height:12px"></i><i style="height:7px"></i><i style="height:8px"></i><i style="height:19px"></i><i style="height:19px"></i><i style="height:8px"></i><i style="height:13px"></i><i style="height:8px"></i><i class="gap" style="height:3px"></i><i class="gap" style="height:3px"></i><i class="gap" style="height:3px"></i><i style="height:23px"></i><i style="height:19px"></i><i style="height:7px"></i><i style="height:24px"></i><i style="height:9px"></i><i style="height:13px"></i><i style="height:26px"></i><i style="height:26px"></i><i style="height:24px"></i><i style="height:7px"></i><i style="height:24px"></i><i style="height:24px"></i><i style="height:18px"></i><i style="height:7px"></i><i style="height:13px"></i><i style="height:7px"></i><i style="height:23px"></i><i class="gap" style="height:3px"></i><i class="gap" style="height:3px"></i><i style="height:10px"></i><i style="height:15px"></i><i style="height:19px"></i><i style="height:10px"></i><i style="height:23px"></i><i style="height:9px"></i><i style="height:24px"></i><i style="height:15px"></i><i style="height:23px"></i><i style="height:27px"></i><i style="height:11px"></i><i style="height:9px"></i><i style="height:24px"></i><i style="height:24px"></i></div><div><b>0,00–2,61</b><span>"Bikin motion graphic masih makan waktu berjam-jam?"</span></div><div class="on"><b>3,02–5,37</b><span>"Software mahal, belajarnya lama,"</span></div><div><b>5,74–7,39</b><span>"pakai AI malah teksnya rusak."</span></div></div></article>
+      <article class="f w3 c2"><span class="em">🖼️</span><h3>Galeri B-roll foto produk</h3><p>Unggah sampai 6 gambar milikmu. AI menentukan kapan gambar muncul dan cara tampilnya: di layar HP, kartu miring, layar penuh, atau produk melayang.</p><figure class="shot"><img src="img/app-broll.webp" width="1100" height="185" alt="Galeri B-roll berisi foto produk dan screenshot aplikasi dengan pengaturan waktu tampil" loading="lazy"></figure></article>
+      <article class="f c3"><span class="em">🎯</span><h3>Thumbnail frame pertama</h3><p>Detik 0 langsung menampilkan hook lengkap. Pratinjau saat diupload tidak kosong, dan kamu juga mendapat file thumbnail.png.</p></article>
+      <article class="f c4"><span class="em">🎬</span><h3>Storyboard detail AI</h3><p>Setiap adegan diisi koordinat piksel, ukuran font, detik kemunculan, transisi, dan efek suara. AI eksekutor tidak perlu menebak.</p></article>
+      <article class="f"><span class="em">📐</span><h3>4 rasio, sampai 3 menit</h3><p>9:16, 16:9, 1:1, atau 4:5. Durasi 3–180 detik, 24/30/60 fps. Zona aman tombol Reels dan TikTok dihitung otomatis.</p></article>
+      <article class="f c2"><span class="em">🎵</span><h3>Musik &amp; efek suara</h3><p>Back song sesuai mood dan BPM, plus efek suara di setiap gerakan penting. Semuanya dibuat oleh AI eksekutor, tanpa file musik dari luar.</p></article>
+      <article class="f c3"><span class="em">💾</span><h3>Prompt aman tersimpan</h3><p>Unduh tiap versi atau semuanya sekaligus (.txt). Hasil terakhir juga tersimpan di browser kalau Canvas reload.</p></article>
+      <article class="f c1"><span class="em">🔁</span><h3>Revisi lebih mudah</h3><p>Prompt sudah memuat QA (cek teks, audio, konsistensi) dan aturan revisi "satu pesan, satu masalah".</p></article>
+    </div>
+  </div>
+</section>
+
+<!-- 3 VERSI -->
+<section class="sec" id="versi" style="background:#f6f2ea">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="kicker">3 versi prompt</span>
+      <h2>Akun AI apa pun, <span class="hl">ada versinya.</span></h2>
+      <p>Setiap AI punya cara kerja dan batasan berbeda. Jadi aplikasinya menulis tiga prompt yang disesuaikan, bukan satu prompt untuk semua.</p>
+    </div>
+    <div class="engines">
+      <article class="eng"><span class="lbl">CLAUDE PRO · OPUS 5.5</span><h3>Satu pesan, langsung MP4</h3><ul><li>Animasi dibangun sebagai artifact HTML</li><li>Dirender jadi MP4 di code execution</li><li>Kirim MP4, gambar kontak, dan tabel storyboard</li></ul><span class="for">Hasil paling halus</span></article>
+      <article class="eng"><span class="lbl">CLAUDE FREE · SONNET 5.5</span><h3>Bertahap, hemat batas chat</h3><ul><li>Dipecah jadi 2–3 pesan berurutan</li><li>Artifact dulu, lalu render</li><li>Kalau render tidak bisa, putar artifact lalu rekam layar</li></ul><span class="for">Untuk akun gratis</span></article>
+      <article class="eng"><span class="lbl">CHATGPT · PYTHON</span><h3>Render di Code Interpreter</h3><ul><li>Gambar per frame dengan Python</li><li>Render per adegan supaya tidak terputus</li><li>Ada pesan cadangan kalau render berhenti</li></ul><span class="for">Untuk pengguna ChatGPT</span></article>
+    </div>
+    <p class="note"><b>Jujur dari awal:</b> aplikasi ini membuat <b>prompt</b>. Video MP4-nya dibuat oleh Claude atau ChatGPT di akunmu, jadi hasil akhirnya tergantung fitur akun yang kamu pakai.</p>
+  </div>
+</section>
+
+<!-- UNTUK SIAPA -->
+<section class="sec" id="untuk">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="kicker">Cocok atau tidak?</span>
+      <h2>Dibuat untuk yang ingin <span class="hl">video rapi tanpa jadi editor.</span></h2>
+    </div>
+    <div class="who">
+      <div class="yes"><h3>Cocok untuk kamu yang</h3><ul>
+        <li>Kreator konten dan affiliator yang butuh video motion graphic rutin untuk Reels, TikTok, atau Shorts</li>
+        <li>Pemilik produk dan UMKM yang ingin video promo dengan foto produk sendiri</li>
+        <li>Admin sosmed dan marketer yang harus membuat banyak variasi iklan</li>
+        <li>Guru, mentor, dan pembuat kelas yang ingin materi jadi video penjelasan</li>
+        <li>Sudah punya VO (ElevenLabs atau TTS) dan butuh visual yang sinkron</li>
+      </ul></div>
+      <div class="no"><h3>Kurang cocok kalau</h3><ul>
+        <li>Mencari tombol sekali klik yang langsung keluar video tanpa membuka Claude atau ChatGPT</li>
+        <li>Butuh video realistis berisi orang atau footage kamera. Hasilnya grafis motion graphic</li>
+        <li>Tidak punya akun Google untuk membuka Gemini Canvas</li>
+      </ul></div>
+    </div>
+  </div>
+</section>
+
+<!-- HARGA -->
+<section class="sec pricing" id="harga">
+  <div class="wrap price-wrap">
+    <div>
+      <span class="kicker">Harga</span>
+      <h2>Lebih murah dari <span class="hl">satu kali bayar editor.</span></h2>
+      <p class="sub">Sekali bayar, pakai untuk video sebanyak yang kamu mau. Tidak ada langganan, tidak perlu API key.</p>
+    </div>
+    <div class="card">
+      <span class="badge">AI BRIEF MOTION GENERATOR</span>
+      <div class="top"><span>AKSES APLIKASI</span><span>SEKALI BAYAR</span></div>
+      <div class="was">Harga normal <s>Rp75.000</s></div>
+      <div class="now">Rp50.000</div>
+      <span class="save">Hemat Rp25.000</span>
+      <ul>
+        <li>Aplikasi AI Brief Motion Generator di Gemini Canvas</li>
+        <li>4 sumber input, termasuk mode premium video talking head</li>
+        <li>50 gaya visual, mode replika gaya, dan instruksi khusus</li>
+        <li>Galeri B-roll 6 gambar dan thumbnail frame pertama</li>
+        <li>3 versi prompt: Claude Pro, Claude Free, ChatGPT</li>
+        <li>Update otomatis: versi terbaru langsung terpakai saat aplikasi dibuka</li>
+      </ul>
+      <a class="btn y" data-buy href="#harga">Beli sekarang · Rp50.000 <svg><use href="#arr"/></svg></a>
+      <p class="after">Setelah pembayaran, kamu menerima link halaman akses berisi link aplikasi, kata sandi mode premium, dan panduan singkat.</p>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="sec" id="faq">
+  <div class="wrap faq">
+    <h2>Pertanyaan yang <span class="hl">sering muncul.</span></h2>
+    <div>
+      <details open><summary>Apakah aplikasi ini langsung membuat video?</summary><div class="a"><p>Tidak. Aplikasi ini membuat <b>prompt</b> yang sangat detail. Prompt itu kamu tempel ke Claude atau ChatGPT, lalu AI tersebut yang membangun animasi dan merender MP4-nya.</p></div></details>
+      <details><summary>Perlu bayar Gemini atau API key?</summary><div class="a"><p>Tidak. Aplikasi berjalan di Gemini Canvas memakai akun Google-mu sendiri, tanpa API key tambahan.</p></div></details>
+      <details><summary>Bisa dipakai dengan Claude gratis?</summary><div class="a"><p>Bisa. Ada versi khusus Claude Free (Sonnet 5.5) yang dikirim bertahap supaya tidak terpotong. Kalau akunmu belum bisa merender MP4, animasinya tetap bisa diputar di artifact lalu direkam layar.</p><p>Hasil paling lancar didapat dengan Claude Pro (Opus 5.5) atau ChatGPT dengan Code Interpreter aktif.</p></div></details>
+      <details><summary>Bisa dipakai di HP?</summary><div class="a"><p>Bisa. Gemini Canvas, Claude, dan ChatGPT semuanya bisa dibuka di browser HP. Unggah file MP3, screenshot, atau foto produk juga bisa dari HP.</p></div></details>
+      <details><summary>Apakah hasilnya langsung sempurna?</summary><div class="a"><p>Biasanya sudah rapi di percobaan pertama, tapi AI tetap bisa salah sesekali. Karena itu setiap prompt memuat bagian QA dan aturan revisi. Cukup sebut satu masalah per pesan, misalnya "adegan 3: teksnya terpotong".</p></div></details>
+      <details><summary>Bagaimana dengan mode premium video talking head?</summary><div class="a"><p>Sudah termasuk. Kata sandinya diberikan langsung di halaman akses setelah pembayaran.</p></div></details>
+      <details><summary>Apa bedanya dengan Motion Graphic Studio?</summary><div class="a"><p><b>Motion Graphic Studio</b> adalah aplikasi editor: pilih template, ganti teks, ekspor MP4 langsung dari aplikasinya.</p><p><b>AI Brief Motion Generator</b> adalah generator prompt: kamu membawa ide atau VO, lalu Claude atau ChatGPT yang membuatkan videonya dengan gaya bebas.</p><p>Mau dua-duanya? Lihat paket komplit di bagian paling bawah halaman ini.</p></div></details>
+      <details id="faq-pemilik"><summary>Saya sudah beli Motion Graphic Studio. Perlu beli lagi?</summary><div class="a"><p>Tidak perlu. AI Brief Motion Generator sudah termasuk sebagai Bonus 07. Buka halaman akses pembeli Motion Graphic Studio dari link yang kamu terima saat pembelian.</p></div></details>
+      <details><summary>Bagaimana cara mendapatkan akses setelah bayar?</summary><div class="a"><p>Setelah pembayaran berhasil, kamu menerima link halaman akses. Di sana ada tombol untuk membuka aplikasi di Gemini Canvas, kata sandi mode premium, dan panduan singkat. Simpan link-nya supaya bisa dibuka lagi kapan saja.</p></div></details>
+      <details><summary>Kalau ada kendala, hubungi siapa?</summary><div class="a"><p>Hubungi WhatsApp <a href="https://wa.me/6285278054762" target="_blank" rel="noopener">+62 852-7805-4762</a>.</p></div></details>
+    </div>
+  </div>
+</section>
+
+<!-- CLOSING -->
+<section class="sec closing">
+  <div class="wrap">
+    <span class="kicker">Mulai hari ini</span>
+    <h2>Berhenti menebak prompt. <span class="hl-ink">Mulai bikin video yang nggak meleset.</span></h2>
+    <p>Bawa ide atau voice over-mu. Biarkan aplikasinya menulis brief seorang motion designer.</p>
+    <div class="hero-cta"><a class="btn" data-buy href="#harga">Beli sekarang · Rp50.000 <svg><use href="#arr"/></svg></a></div>
+    <p class="price-chip" style="margin:22px auto 0">Harga normal <s>Rp75.000</s> <b>Rp50.000</b> sekali bayar</p>
+  </div>
+</section>
+
+<!-- PAKET KOMPLIT -->
+<section class="sec bundle" id="paket">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="kicker">Pilihan paling hemat</span>
+      <h2>Mau sekalian aplikasi editornya? <span class="hl">Ambil paket komplit.</span></h2>
+      <p>Paket Motion Graphic Studio sudah termasuk AI Brief Motion Generator, ditambah aplikasi editor video dan 6 bonus lainnya.</p>
+    </div>
+    <div class="bgrid">
+      <div class="blist">
+        <div class="brow"><span><b>Aplikasi Motion Graphic Studio</b><small>112 template, 345 preset ide, 9:16 &amp; 16:9, MP4 sampai 60 fps, Brand Kit, suara &amp; musik otomatis</small></span><span class="tg y">UTAMA</span></div>
+        <div class="brow"><span><b>AI Brief Motion Generator</b><small>Aplikasi di halaman ini, versi lengkap</small></span><span class="tg l">TERMASUK</span></div>
+        <div class="brow"><span><b>50 Brief per Niche</b><small>Brief siap pakai untuk video 20–120 detik</small></span><span class="tg">BONUS</span></div>
+        <div class="brow"><span><b>Aplikasi Brief Generator</b><small>Bikin brief untuk niche apa pun, langsung jadi scene</small></span><span class="tg">BONUS</span></div>
+        <div class="brow"><span><b>Aplikasi TTS Generator</b><small>Ubah naskah jadi suara voice over</small></span><span class="tg">BONUS</span></div>
+        <div class="brow"><span><b>Master Prompt Animasi Motion Graphic</b><small>Untuk ChatGPT &amp; Claude</small></span><span class="tg">BONUS</span></div>
+        <div class="brow"><span><b>Buku Panduan PDF + Video Panduan</b><small>Langkah demi langkah dari ide sampai video siap upload</small></span><span class="tg">BONUS</span></div>
+      </div>
+      <div class="bcard">
+        <span class="k">PAKET KOMPLIT · MOTION GRAPHIC STUDIO</span>
+        <div class="was" data-launch>Harga normal <s>Rp100.000</s></div>
+        <div class="now" data-bprice>Rp100.000</div>
+        <p><span data-launch><b>Harga launching sampai 31 Oktober 2026.</b> </span>Sekali bayar, aplikasi editor dan ketujuh bonus sudah termasuk.</p>
+        <a class="btn" href="https://lynk.id/suburbudiono/mwggp7mw50w1/checkout" target="_blank" rel="noopener">Ambil paket komplit <svg><use href="#arr"/></svg></a>
+        <a class="link" href="https://studio.creatorsenja.com/" target="_blank" rel="noopener">Lihat detail paket <svg width="16" height="16"><use href="#arr"/></svg></a>
+        <div class="cmp" data-cmp>Selisihnya Rp50.000 dari harga aplikasi ini saja, sudah dapat aplikasi editor + 6 bonus lain.</div>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <a class="brand" href="#top"><i><svg viewBox="0 0 24 24"><use href="#play"/></svg></i><span>AI Brief <b>Motion</b> Generator</span></a>
+    <nav aria-label="Tautan bawah"><a href="https://wa.me/6285278054762" target="_blank" rel="noopener">WhatsApp</a><a href="https://chat.whatsapp.com/IeVJCDjMMY22NQjEJPe9Cn" target="_blank" rel="noopener">Group Belajar AI</a><a href="https://studio.creatorsenja.com/">Motion Graphic Studio</a><a href="https://creatorsenja.com/">Creator Senja</a></nav>
+    <small>by Subur Budiono · © 2026 Creatorsenja</small>
+  </div>
+</footer>
+
+<div class="buybar" id="buybar" aria-hidden="true"><span><s>Rp75.000</s><b>Rp50.000</b>sekali bayar</span><a class="btn sm y" data-buy href="#harga" tabindex="-1">Beli sekarang</a></div>
+
+<script>
+(function(){
+  /* ===== Ganti link checkout di sini kalau link Lynk sudah siap ===== */
+  var CHECKOUT_URL = '';
+  var FALLBACK = 'https://wa.me/6285278054762?text=' + encodeURIComponent('Halo kak Subur, saya mau beli AI Brief Motion Generator (Rp50.000).');
+  var buyUrl = CHECKOUT_URL || FALLBACK;
+  document.querySelectorAll('[data-buy]').forEach(function(a){ a.href = buyUrl; a.target = '_blank'; a.rel = 'noopener'; });
+
+  /* video hero */
+  var v = document.getElementById('heroVid'), sb = document.getElementById('soundBtn');
+  sb.addEventListener('click', function(){ v.muted = false; v.currentTime = 0; var p = v.play(); if (p && p.catch) p.catch(function(){}); sb.hidden = true; });
+  v.addEventListener('volumechange', function(){ sb.hidden = !v.muted; });
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) { v.removeAttribute('autoplay'); v.pause(); }
+
+  /* harga paket: harga launching MGS sampai 31 Okt 2026 */
+  var DEADLINE = new Date('2026-10-31T23:59:59+07:00').getTime();
+  var launch = Date.now() <= DEADLINE;
+  document.querySelectorAll('[data-launch]').forEach(function(el){ el.hidden = !launch; if (!launch) el.style.display = 'none'; });
+  document.querySelectorAll('[data-bprice]').forEach(function(el){ el.textContent = launch ? 'Rp50.000' : 'Rp100.000'; });
+  var cmp = document.querySelector('[data-cmp]');
+  if (cmp && launch) cmp.textContent = 'Sampai 31 Oktober harganya sama dengan aplikasi ini saja, sudah dapat aplikasi editor + 6 bonus lain.';
+
+  /* 50 gaya */
+  var GAYA=[[1,"HYPER-RED FUTURE-TECH AGENT",0,"merah #FF4655, navy, HUD",["#FF4655","#0B1020","#F2F4F8","#1C2A4A"]],[2,"CYBERPUNK NEON GLITCH",1,"magenta/cyan, scanline, RGB split",["#0B0B12","#FF2BD6","#00F0FF","#F2F2F7"]],[3,"APP-DEMO UI CHAOS",2,"mockup app, kartu, cursor, ripple",["#5B8CFF","#0F1115","#F5F7FB","#2ED47A","#FF6B6B"]],[4,"AI BRAINROT CHAOS",3,"tipografi ekstrem, zoom mendadak",["#00F5D4","#F72585","#FFE600","#000000"]],[5,"DATA STORM / HUD OVERLOAD",0,"angka, kode, radar berlapis",["#0A0F1E","#00E5FF","#7CFF6B","#FF3D71"]],[6,"TERMINAL HACKER",0,"monospace, ketikan, cursor",["#0B0F0C","#33FF66","#C8FFD4","#FFB000"]],[7,"HOLOGRAPHIC FUTURE INTERFACE",0,"panel transparan, orbit",["#070B1A","#7DF9FF","#B388FF","#FFFFFF"]],[8,"Y2K INTERNET CHAOS",1,"chrome semu, stiker pixel",["#FF6EC7","#7DF9FF","#FFF200","#1A1A2E","#E8E8F0"]],[9,"GLITCH EDITORIAL MAXIMALISM",4,"layout berlapis, offset warna",["#FF006E","#FFBE0B","#000000","#FFFFFF"]],[10,"SYNTHWAVE RETRO FUTURE",1,"grid perspektif, matahari",["#1A0B2E","#FF2E88","#FFB800","#00E5FF"]],[11,"VOX-INSPIRED EDITORIAL EXPLAINER",5,"diagram, peta, highlight kata",["#F4F0E6","#1B1B1B","#FFD400","#E4572E","#2E86AB"]],[12,"KINETIC TYPOGRAPHY IMPACT",4,"kata per suku kata, memantul",["#FFE600","#0A0A0A","#FFFFFF","#FF3B30"]],[13,"BOLD NEO-BRUTALIST",4,"bidang solid, garis tebal",["#141414","#FFF6E5","#FFD23A","#FF6B57","#17B3A3"]],[14,"APP-DEMO UI CHAOS - VIRAL MODE",2,"popup, cursor trail",["#5B8CFF","#FF6B6B","#0F1115","#F5F7FB"]],[15,"SWISS MINIMAL MOTION",4,"grid presisi, ruang negatif",["#F5F5F0","#111111","#E63946"]],[16,"DATA JOURNALISM MOTION",5,"grafik akurat, angka animasi",["#F8F9FA","#1B1F24","#2F6DF6","#E03131","#ADB5BD"]],[17,"PAPER CUT COLLAGE",6,"lapisan kertas, bayangan",["#F3E9D2","#E76F51","#2A9D8F","#264653","#F4A261"]],[18,"SCRAPBOOK MIXED MEDIA",6,"kolase, pita, kertas sobek",["#FFF8E7","#F4A261","#264653","#E76F51"]],[19,"INK SPLASH EDITORIAL",4,"mask tinta, sapuan kuas",["#F7F3EA","#111111","#C1121F"]],[20,"COMIC BOOK MOTION",3,"panel, halftone, impact frame",["#FFD43B","#E03131","#1C7ED6","#FFFFFF","#111111"]],[21,"CINEMATIC DOCUMENTARY",7,"push-in, grain (butuh foto)",["#0C0A08","#C8A45D","#F2EBDD"]],[22,"DARK PSYCHOLOGY THRILLER",7,"gelap, kontras tinggi",["#0A0A0F","#E63946","#F1F1F1"]],[23,"EPIC TRAILER MOTION",7,"build-up, riser, impact",["#0B0B0F","#FF7A00","#FFD166"]],[24,"MINIMAL LUXURY BRAND FILM",7,"hitam-krem-emas, gerak lambat",["#0C0A08","#F2EBDD","#C8A45D"]],[25,"SCI-FI INTERFACE CINEMA",0,"marker target, grid 3D semu",["#05070D","#5CF2FF","#FF9F1C"]],[26,"ANALOG FILM EXPERIMENTAL",1,"grain, flicker, light leak",["#1A1410","#F2E3C6","#E85D04"]],[27,"ABSTRACT LIQUID MOTION",7,"morphing, liquid wipe",["#7C5CFF","#22D3EE","#F472B6","#0B0B12"]],[28,"PARTICLE UNIVERSE",7,"partikel membentuk simbol",["#05060F","#FFFFFF","#7DF9FF","#FFD166"]],[29,"3D PARALLAX POSTER",7,"lapisan (butuh aset terpisah)",["#1D3557","#E63946","#F1FAEE","#A8DADC"]],[30,"CINEMATIC PRODUCT REVEAL",2,"hero object (butuh foto/3D)",["#0B0B0F","#FFFFFF","#C8A45D"]],[31,"CLAYMATION ULTRA VIRAL",6,"stop-motion plastisin (butuh aset)",["#FFB4A2","#B5E48C","#8ECAE6","#FFD166","#3D405B"]],[32,"3D ANIMATED STORYBOOK",6,"ilustrasi 3D (butuh aset)",["#FDF6EC","#2B2D42","#F4A261","#8ECAE6"]],[33,"PIXEL ART RETRO GAME",1,"sprite, HUD, skor",["#1B1B2F","#E43F5A","#F9ED69","#08D9D6","#FFFFFF"]],[34,"GAMING HUD CHAOS",0,"health bar, XP, achievement",["#39FF14","#7B2FF7","#0A0A1A","#FFFFFF"]],[35,"MEME CUTOUT ANIMATION",3,"cutout, stiker, squash-stretch",["#FFFFFF","#111111","#FFE600","#FF3B30"]],[36,"WHITEBOARD EXPLAINER",5,"garis digambar bertahap",["#FFFFFF","#1D4ED8","#111827","#E03131"]],[37,"EDUCATIONAL INFOGRAPHIC MOTION",5,"ikon, angka, diagram",["#12B886","#FFFFFF","#0B1B2B","#FFD43B"]],[38,"ISLAMIC WARM EDITORIAL",8,"ornamen geometris, palet hangat",["#0F3D3E","#F5EFE3","#C9A227","#2E8B7A"]],[39,"KIDS PAPERCRAFT ADVENTURE",6,"dunia kertas, gerak playful",["#FFD166","#06D6A0","#118AB2","#EF476F","#FFFBF0"]],[40,"HAND-DRAWN DOODLE CHAOS",6,"coretan, panah, underline",["#FFFDF7","#141414","#FF6B57","#FFD23A"]],[41,"CREATOR PODCAST VISUALIZER",3,"waveform, subtitle dinamis",["#011627","#FF9F1C","#2EC4B6","#FDFFFC"]],[42,"SOCIAL MEDIA COMMENT STORM",3,"bubble chat, reaksi",["#0B141A","#25D366","#FFFFFF","#FF3B5C"]],[43,"SPLIT-SCREEN MULTIVERSE",3,"panel saling merespons",["#4DABF7","#FF6B6B","#0F1115","#FFFFFF"]],[44,"POV SCREEN RECORDING SIMULATION",2,"cursor, scroll (simulasi)",["#F5F7FB","#5B8CFF","#0F1115"]],[45,"FAST CUT NEWS FLASH",3,"headline, ticker, stinger",["#E03131","#FFFFFF","#0B0B0B","#FFD43B"]],[46,"LO-FI CREATOR DESK",8,"meja ilustratif, grain halus",["#F59F00","#1F2937","#FDF6EC","#8ECAE6"]],[47,"MOTION COMIC HYBRID",7,"ilustrasi panel (butuh aset)",["#FFD43B","#111111","#E03131","#F8F9FA"]],[48,"VHS GLITCH MEME",1,"tracking error, timestamp",["#F9C80E","#EA3546","#1B1B1E","#FFFFFF"]],[49,"KINETIC PRODUCT AD",2,"headline, benefit card (butuh gambar)",["#2F6DF6","#FFFFFF","#101828","#FFB020"]],[50,"HYBRID VISUAL ENGINE - AUTO MIX",9,"1 utama + maks 2 pendukung",[]]];
+  var KAT = ['Teknologi & HUD','Retro & glitch','UI & produk','Viral & komik','Tipografi & editorial','Edukasi & data','Kertas & gambar tangan','Sinematik','Hangat & spiritual','Campuran otomatis'];
+  var grid = document.getElementById('ggrid'), bar = document.getElementById('gbar'), more = document.getElementById('gmore'), cur = -1;
+  function esc(s){ return String(s).replace(/[&<>"]/g, function(c){ return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]; }); }
+  function render(){
+    var list = GAYA.filter(function(g){ return cur < 0 || g[2] === cur; });
+    grid.innerHTML = list.map(function(g){
+      var auto = g[0] === 50;
+      var pal = auto ? '' : g[4].map(function(c){ return '<i style="background:' + esc(c) + '"></i>'; }).join('');
+      var nm = auto ? 'AI PILIH CAMPURAN' : g[1];
+      var ds = auto ? '1 gaya utama + maks 2 pendukung, dipilih sesuai isi' : g[3];
+      return '<div class="g' + (auto ? ' auto' : '') + '"><div class="pal">' + pal + '</div><span class="no">#' + String(g[0]).padStart(2,'0') + ' · ' + esc(KAT[g[2]]) + '</span><b>' + esc(nm) + '</b><span>' + esc(ds) + '</span></div>';
+    }).join('');
+    var clip = cur < 0 && grid.dataset.all !== '1';
+    grid.classList.toggle('clip', clip);
+    more.parentNode.hidden = !(cur < 0 && list.length > (innerWidth <= 600 ? 10 : 20) && grid.dataset.all !== '1');
+  }
+  var counts = KAT.map(function(_, i){ return GAYA.filter(function(g){ return g[2] === i; }).length; });
+  bar.innerHTML = '<button type="button" data-k="-1" aria-pressed="true">Semua 50</button>' + KAT.map(function(k, i){ return '<button type="button" data-k="' + i + '" aria-pressed="false">' + esc(k) + ' · ' + counts[i] + '</button>'; }).join('');
+  bar.addEventListener('click', function(e){ var b = e.target.closest('button'); if (!b) return; cur = +b.dataset.k; bar.querySelectorAll('button').forEach(function(x){ x.setAttribute('aria-pressed', String(x === b)); }); render(); });
+  more.addEventListener('click', function(){ grid.dataset.all = '1'; more.setAttribute('aria-expanded','true'); render(); });
+  render();
+
+  /* bar beli di HP */
+  var bb = document.getElementById('buybar'), hero = document.querySelector('.hero'), price = document.getElementById('harga'), clos = document.querySelector('.closing');
+  function onScroll(){
+    var past = hero.getBoundingClientRect().bottom < 0;
+    var r = price.getBoundingClientRect(), c = clos.getBoundingClientRect(), inPrice = (r.top < innerHeight && r.bottom > 0) || (c.top < innerHeight && c.bottom > 0);
+    var show = past && !inPrice;
+    bb.classList.toggle('on', show); bb.setAttribute('aria-hidden', String(!show));
+    bb.querySelector('a').tabIndex = show ? 0 : -1;
+  }
+  addEventListener('scroll', onScroll, {passive:true}); onScroll();
+})();
+</script>
+</body>
+</html>
