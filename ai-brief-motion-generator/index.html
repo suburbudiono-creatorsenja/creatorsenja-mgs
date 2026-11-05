@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>AI Brief Motion Generator Upgrade V1 · Prompt video motion graphic + 11 bonus</title>
-<meta name="description" content="AI Brief Motion Generator Upgrade V1: ide, MP3 VO, screenshot, atau video talking head jadi prompt video motion graphic untuk Claude dan ChatGPT. Brand Kit, naskah VO & suara, 50 gaya, plus 11 bonus. Rp50.000 sekali bayar.">
+<meta name="description" content="AI Brief Motion Generator Upgrade V1: ide, MP3 VO, screenshot, atau video talking head jadi prompt video motion graphic untuk Claude, ChatGPT, dan Gemini (render MP4 langsung di Gemini mode Tugas). Brand Kit, naskah VO & suara, 50 gaya, plus 11 bonus. Rp50.000 sekali bayar.">
 <link rel="canonical" href="https://studio.creatorsenja.com/ai-brief-motion-generator/">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://studio.creatorsenja.com/ai-brief-motion-generator/">
@@ -212,7 +212,10 @@ p{margin:0}
 @media (max-width:600px){.bento{grid-template-columns:1fr}}
 
 /* 3 versi */
-.engines{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.engines{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+.eng{position:relative}.eng .new{position:absolute;top:-14px;right:18px;background:var(--lime);color:var(--ink);border:var(--line);font:800 12px var(--mono);padding:4px 10px}
+.eng.gem{background:var(--yellow)}
+.newchip{display:flex;width:fit-content;max-width:100%;gap:8px;align-items:center;margin:12px 0 4px;padding:6px 12px 6px 6px;border:var(--line);background:var(--paper);box-shadow:3px 3px 0 var(--ink);font-weight:700;font-size:14px;color:var(--ink);text-decoration:none}.newchip b{background:var(--lime);border:2px solid var(--ink);padding:1px 7px;font:800 11px var(--mono)}
 .eng{border:var(--line);padding:26px;box-shadow:var(--shadow);background:var(--paper);display:flex;flex-direction:column;gap:12px}
 .eng:nth-child(1){background:var(--ink);color:var(--cream);box-shadow:var(--shadow),0 0 0 0}
 .eng .lbl{font:500 12px var(--mono);display:inline-block;padding:3px 9px;border:2px solid currentColor;width:max-content}
@@ -383,14 +386,15 @@ footer small{font:500 12px var(--mono);color:var(--muted)}
   <div class="wrap">
     <div>
       <span class="kicker">Generator prompt video motion graphic · Upgrade V1</span>
+      <a class="newchip" href="#versi"><b>BARU</b> Sekarang bisa render MP4 langsung di Gemini →</a>
       <h1>Prompt kamu yang bikin videonya <span class="strike">jelek.</span></h1>
-      <p class="lead">Ubah <b>ide, MP3 voice over, screenshot, atau video talking head</b> jadi prompt video motion graphic yang rapi, sinkron dengan suara, dan konsisten di setiap adegan. Tinggal tempel ke Claude atau ChatGPT, lalu MP4-nya dibuatkan.</p>
+      <p class="lead">Ubah <b>ide, MP3 voice over, screenshot, atau video talking head</b> jadi prompt video motion graphic yang rapi, sinkron dengan suara, dan konsisten di setiap adegan. Tinggal tempel ke Claude, ChatGPT, atau <b>Gemini</b>, lalu MP4-nya dibuatkan.</p>
       <div class="hero-cta">
         <a class="btn" data-buy href="#harga">Beli sekarang · Rp50.000 <svg><use href="#arr"/></svg></a>
         <a class="link" href="#cara">Lihat cara kerjanya</a>
       </div>
       <div class="price-chip">Harga normal <s>Rp75.000</s> <b>Rp50.000</b> sekali bayar</div>
-      <div class="ticks"><span>Tanpa API key</span><span>Jalan di Gemini Canvas</span><span>Bisa di HP</span><span>+11 bonus</span></div>
+      <div class="ticks"><span>Tanpa API key</span><span>Jalan di Gemini Canvas</span><span>Bisa di HP</span><span>Render MP4 di Gemini</span><span>+11 bonus</span></div>
     </div>
     <div>
       <div class="phone">
@@ -499,10 +503,10 @@ footer small{font:500 12px var(--mono);color:var(--muted)}
         <div class="step-copy">
           <div class="num">3</div>
           <h3>Salin prompt, tempel, jadi MP4</h3>
-          <p>Pilih versi Claude Pro, Claude Free, atau ChatGPT. Salin, lampirkan file yang diminta, lalu kirim. AI membangun animasinya dan merender MP4.</p>
+          <p>Pilih versi Claude Pro, Claude Free, ChatGPT, atau Gemini. Salin, lampirkan file yang diminta, lalu kirim. AI membangun animasinya dan merender MP4.</p>
           <ul><li>Daftar lampiran ditulis otomatis</li><li>Unduh prompt (.txt) supaya tidak hilang</li></ul>
         </div>
-        <figure class="shot tall"><div class="bar"><i></i><i></i><i></i>Prompt siap pakai</div><img src="img/up-prompt.webp" width="1100" height="1268" alt="Langkah 3: tab Claude Pro, Claude Free, ChatGPT, tombol unduh, daftar lampiran, dan isi prompt" loading="lazy"></figure>
+        <figure class="shot tall"><div class="bar"><i></i><i></i><i></i>Prompt siap pakai</div><img src="img/up-prompt.webp" width="1100" height="1268" alt="Langkah 3: tab Claude Pro, Claude Free, ChatGPT, Gemini, tombol unduh, daftar lampiran, dan isi prompt" loading="lazy"></figure>
       </article>
     </div>
   </div>
@@ -568,20 +572,21 @@ footer small{font:500 12px var(--mono);color:var(--muted)}
   </div>
 </section>
 
-<!-- 3 VERSI -->
+<!-- 4 VERSI -->
 <section class="sec" id="versi" style="background:#f6f2ea">
   <div class="wrap">
     <div class="sec-head">
-      <span class="kicker">3 versi prompt</span>
+      <span class="kicker">4 versi prompt</span>
       <h2>Akun AI apa pun, <span class="hl">ada versinya.</span></h2>
-      <p>Setiap AI punya cara kerja dan batasan berbeda. Jadi aplikasinya menulis tiga prompt yang disesuaikan, bukan satu prompt untuk semua.</p>
+      <p>Setiap AI punya cara kerja dan batasan berbeda. Jadi aplikasinya menulis empat prompt yang disesuaikan, bukan satu prompt untuk semua.</p>
     </div>
     <div class="engines">
       <article class="eng"><span class="lbl">CLAUDE PRO · OPUS 5.5</span><h3>Satu pesan, langsung MP4</h3><ul><li>Animasi dibangun sebagai artifact HTML</li><li>Dirender jadi MP4 di code execution</li><li>Kirim MP4, gambar kontak, dan tabel storyboard</li></ul><span class="for">Hasil paling halus</span></article>
       <article class="eng"><span class="lbl">CLAUDE FREE · SONNET 5.5</span><h3>Bertahap, hemat batas chat</h3><ul><li>Dipecah jadi 2–3 pesan berurutan</li><li>Artifact dulu, lalu render</li><li>Kalau render tidak bisa, putar artifact lalu rekam layar</li></ul><span class="for">Untuk akun gratis</span></article>
       <article class="eng"><span class="lbl">CHATGPT · PYTHON</span><h3>Render di Code Interpreter</h3><ul><li>Gambar per frame dengan Python</li><li>Render per adegan supaya tidak terputus</li><li>Ada pesan cadangan kalau render berhenti</li></ul><span class="for">Untuk pengguna ChatGPT</span></article>
+      <article class="eng gem"><span class="lbl">GEMINI · ARGON MODE TUGAS</span><span class="new">BARU</span><h3>Preview, revisi, lalu render MP4</h3><ul><li>Preview animasi tampil di Canvas, revisi sampai pas</li><li>Ketik "render final", Gemini merender MP4 1080×1920</li><li>Suara rapi di −14 LUFS, plus thumbnail &amp; subtitle .srt</li><li>Skill Gemini siap pasang supaya prompt lebih hemat</li></ul><span class="for">Untuk pelanggan Google AI Pro/Ultra</span></article>
     </div>
-    <p class="note"><b>Jujur dari awal:</b> aplikasi ini membuat <b>prompt</b>. Video MP4-nya dibuat oleh Claude atau ChatGPT di akunmu, jadi hasil akhirnya tergantung fitur akun yang kamu pakai.</p>
+    <p class="note"><b>Jujur dari awal:</b> aplikasi ini membuat <b>prompt</b>. Video MP4-nya dibuat oleh Claude, ChatGPT, atau Gemini di akunmu, jadi hasil akhirnya tergantung fitur akun yang kamu pakai.</p>
   </div>
 </section>
 
@@ -621,7 +626,7 @@ footer small{font:500 12px var(--mono);color:var(--muted)}
       <tr><th>Aspek</th><th>Ikut mini course motion graphic</th><th>AI Brief Motion Generator</th></tr>
       <tr><td>Video pertama jadi</td><td data-l="Mini course">Setelah belajar dulu, biasanya beberapa hari sampai beberapa minggu</td><td data-l="AI Brief Motion Generator" class="ok">Hari ini juga, beberapa menit setelah aplikasi dibuka</td></tr>
       <tr><td>Skill yang dibutuhkan</td><td data-l="Mini course">Menguasai software, keyframe, timing, dan prinsip animasi</td><td data-l="AI Brief Motion Generator" class="ok">Cukup bisa menulis ide atau naskah</td></tr>
-      <tr><td>Alat</td><td data-l="Mini course">Software editor (sebagian berbayar) dan perangkat yang cukup kuat</td><td data-l="AI Brief Motion Generator" class="ok">Browser atau HP, akun Google, dan Claude atau ChatGPT</td></tr>
+      <tr><td>Alat</td><td data-l="Mini course">Software editor (sebagian berbayar) dan perangkat yang cukup kuat</td><td data-l="AI Brief Motion Generator" class="ok">Browser atau HP, akun Google, dan Claude, ChatGPT, atau Gemini</td></tr>
       <tr><td>Waktu per video</td><td data-l="Mini course">Tetap dikerjakan manual, bisa berjam-jam untuk satu video</td><td data-l="AI Brief Motion Generator" class="ok">Brief teknis dirakit otomatis, kamu tinggal cek, tempel, dan revisi</td></tr>
       <tr><td>Variasi gaya</td><td data-l="Mini course">Terbatas pada gaya yang sudah kamu kuasai</td><td data-l="AI Brief Motion Generator" class="ok">50 gaya siap pakai plus replika dari foto atau video referensi</td></tr>
       <tr><td>Konsistensi brand</td><td data-l="Mini course">Diatur manual di setiap proyek</td><td data-l="AI Brief Motion Generator" class="ok">Brand Kit tersimpan dan dipakai otomatis</td></tr>
@@ -683,7 +688,7 @@ footer small{font:500 12px var(--mono);color:var(--muted)}
         <li>4 sumber input, termasuk mode premium video talking head</li>
         <li>Pengaturan durasi, Brand Kit, naskah VO &amp; suara, proyek &amp; riwayat</li>
         <li>50 gaya dengan pratinjau gerak, mode replika, dan galeri B-roll</li>
-        <li>3 versi prompt: Claude Pro, Claude Free, ChatGPT</li>
+        <li>4 versi prompt: Claude Pro, Claude Free, ChatGPT, dan <b>Gemini</b> (render MP4 langsung)</li>
         <li><span><b>11 bonus</b>: 20 proyek, 20 Brand Kit, 100 hook, 10 struktur ads, 50 prompt B-roll, lookbook, panduan jual jasa, kalender konten, panduan PDF, kit revisi, cheat sheet</span></li>
         <li>Update otomatis: versi terbaru langsung terpakai saat aplikasi dibuka</li>
       </ul>
@@ -698,16 +703,17 @@ footer small{font:500 12px var(--mono);color:var(--muted)}
   <div class="wrap faq">
     <h2>Pertanyaan yang <span class="hl">sering muncul.</span></h2>
     <div>
-      <details open><summary>Apakah aplikasi ini langsung membuat video?</summary><div class="a"><p>Tidak. Aplikasi ini membuat <b>prompt</b> yang sangat detail. Prompt itu kamu tempel ke Claude atau ChatGPT, lalu AI tersebut yang membangun animasi dan merender MP4-nya.</p></div></details>
+      <details open><summary>Apakah aplikasi ini langsung membuat video?</summary><div class="a"><p>Tidak. Aplikasi ini membuat <b>prompt</b> yang sangat detail. Prompt itu kamu tempel ke Claude, ChatGPT, atau Gemini, lalu AI tersebut yang membangun animasi dan merender MP4-nya.</p></div></details>
+      <details><summary>Bisa bikin videonya langsung di Gemini?</summary><div class="a"><p>Bisa. Pilih tab <b>Gemini</b> di aplikasi, lalu kirim prompt-nya ke Gemini model Argon di <b>mode Tugas</b>. Gemini membangun preview yang bisa kamu revisi, lalu merender MP4 1080×1920 setelah kamu ketik "render final".</p><p>Fitur render ini butuh langganan Google AI Pro atau Ultra. Pemakaian dihitung dari kuota Gemini-mu, jadi revisi di preview dulu dan render sekali di akhir.</p></div></details>
       <details><summary>Apa itu Upgrade V1?</summary><div class="a"><p>Versi terbaru AI Brief Motion Generator. Tambahannya: pengaturan durasi dan jumlah adegan di awal, rekomendasi gaya yang menjelaskan alasannya, pratinjau gerak 50 gaya, Brand Kit, naskah VO dan suara, format prompt Hybrid, serta simpan dan buka proyek.</p></div></details>
       <details><summary>Saya pembeli versi sebelumnya. Dapat upgrade?</summary><div class="a"><p>Dapat. Buka lagi halaman akses dari link pembelianmu. Link aplikasi Upgrade V1 dan semua file bonus sudah ditambahkan di sana.</p></div></details>
       <details><summary>Apa bedanya dengan ikut kursus motion graphic?</summary><div class="a"><p>Kursus mengajarkan skill membuat animasi sendiri, cocok kalau ingin jadi motion designer. Aplikasi ini membuat brief teknis supaya AI yang mengerjakan videonya, cocok kalau kamu butuh video sekarang untuk jualan atau konten. Perbandingan lengkapnya ada di bagian "Kursus atau aplikasi?" di atas.</p></div></details>
-      <details><summary>Perlu bayar Gemini atau API key?</summary><div class="a"><p>Tidak. Aplikasi berjalan di Gemini Canvas memakai akun Google-mu sendiri, tanpa API key tambahan.</p></div></details>
+      <details><summary>Perlu bayar Gemini atau API key?</summary><div class="a"><p>Tidak. Aplikasi berjalan di Gemini Canvas memakai akun Google-mu sendiri, tanpa API key tambahan. Langganan Google AI Pro/Ultra hanya perlu kalau kamu ingin merender MP4 di Gemini mode Tugas.</p></div></details>
       <details><summary>Bisa dipakai dengan Claude gratis?</summary><div class="a"><p>Bisa. Ada versi khusus Claude Free (Sonnet 5.5) yang dikirim bertahap supaya tidak terpotong. Kalau akunmu belum bisa merender MP4, animasinya tetap bisa diputar di artifact lalu direkam layar.</p><p>Hasil paling lancar didapat dengan Claude Pro (Opus 5.5) atau ChatGPT dengan Code Interpreter aktif.</p></div></details>
       <details><summary>Bisa dipakai di HP?</summary><div class="a"><p>Bisa. Gemini Canvas, Claude, dan ChatGPT semuanya bisa dibuka di browser HP. Unggah file MP3, screenshot, atau foto produk juga bisa dari HP.</p></div></details>
       <details><summary>Apakah hasilnya langsung sempurna?</summary><div class="a"><p>Biasanya sudah rapi di percobaan pertama, tapi AI tetap bisa salah sesekali. Karena itu setiap prompt memuat bagian QA dan aturan revisi. Cukup sebut satu masalah per pesan, misalnya "adegan 3: teksnya terpotong".</p></div></details>
       <details><summary>Bagaimana dengan mode premium video talking head?</summary><div class="a"><p>Sudah termasuk. Kata sandinya diberikan langsung di halaman akses setelah pembayaran.</p></div></details>
-      <details><summary>Apa bedanya dengan Motion Graphic Studio?</summary><div class="a"><p><b>Motion Graphic Studio</b> adalah aplikasi editor: pilih template, ganti teks, ekspor MP4 langsung dari aplikasinya.</p><p><b>AI Brief Motion Generator</b> adalah generator prompt: kamu membawa ide atau VO, lalu Claude atau ChatGPT yang membuatkan videonya dengan gaya bebas.</p><p>Mau dua-duanya? Lihat paket komplit di bagian paling bawah halaman ini.</p></div></details>
+      <details><summary>Apa bedanya dengan Motion Graphic Studio?</summary><div class="a"><p><b>Motion Graphic Studio</b> adalah aplikasi editor: pilih template, ganti teks, ekspor MP4 langsung dari aplikasinya.</p><p><b>AI Brief Motion Generator</b> adalah generator prompt: kamu membawa ide atau VO, lalu Claude, ChatGPT, atau Gemini yang membuatkan videonya dengan gaya bebas.</p><p>Mau dua-duanya? Lihat paket komplit di bagian paling bawah halaman ini.</p></div></details>
       <details id="faq-pemilik"><summary>Saya sudah beli Motion Graphic Studio. Perlu beli lagi?</summary><div class="a"><p>Tidak perlu. AI Brief Motion Generator sudah termasuk sebagai Bonus 07. Buka halaman akses pembeli Motion Graphic Studio dari link yang kamu terima saat pembelian.</p></div></details>
       <details><summary>Bagaimana cara mendapatkan akses setelah bayar?</summary><div class="a"><p>Setelah pembayaran berhasil, kamu menerima link halaman akses. Di sana ada tombol untuk membuka aplikasi di Gemini Canvas, kata sandi mode premium, dan panduan singkat. Simpan link-nya supaya bisa dibuka lagi kapan saja.</p></div></details>
       <details><summary>Kalau ada kendala, hubungi siapa?</summary><div class="a"><p>Hubungi WhatsApp <a href="https://wa.me/6285278054762" target="_blank" rel="noopener">+62 852-7805-4762</a>.</p></div></details>
